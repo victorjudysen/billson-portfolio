@@ -28,9 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile nav toggle
   const toggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
+  const mobileSheet = document.querySelector('.mobile-nav-sheet');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+  
   toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    mobileSheet.classList.toggle('open');
     toggle.classList.toggle('open');
+    document.body.style.overflow = mobileSheet.classList.contains('open') ? 'hidden' : '';
+  });
+
+  // Close mobile nav when clicking a link
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileSheet.classList.remove('open');
+      toggle.classList.remove('open');
+      document.body.style.overflow = '';
+    });
   });
 
   // Hero text reveal
