@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Billison — Creative Graphic Designer</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="#">BILLISON</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1 class="intro-line">Hi, My name is <span class="name">Billison</span></h1>
+        <h2 class="tagline">I’m a Creative Graphic Designer</h2>
+        <p class="lead">With a passion for crafting visual narratives that captivate and inspire, I transform ideas into stunning visual experiences that leave a lasting impression.</p>
+        <a class="cta" href="#contact">Let’s Work</a>
+      </div>
+      <div class="hero-showcase" aria-hidden="true">
+        <img src="assets/images/branding/branding-14.png" alt="Hero artwork"/>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ABOUT -->
+    <section id="about" class="about container">
+      <div class="about-left">
+        <h3 class="section-title">About Me</h3>
+        <h4>Creative Graphic Designer</h4>
+        <p class="muted">Create Awesome Project As You Need</p>
+        <p>Over the past 3 years I have been helping brands and businesses make a lasting impression through thoughtful design and compelling storytelling.</p>
+        <div class="stats">
+          <div class="stat"><strong>10+</strong><span>Projects Completed</span></div>
+          <div class="stat"><strong>2+</strong><span>Years Experience</span></div>
+          <div class="stat"><strong>50+</strong><span>Happy Clients</span></div>
+        </div>
+      </div>
+      <div class="about-right">
+        <img src="assets/images/branding/branding-3.png" alt="About image"/>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services container">
+      <h3 class="section-title">My Provided Services</h3>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="icon">🎨</div>
+          <h4>Graphic Design</h4>
+          <p>Branding, packaging and visual identity that speaks.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon">🖨️</div>
+          <h4>Branding & Printing</h4>
+          <p>Print materials and brand systems crafted with precision.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon">📱</div>
+          <h4>Social Media Management</h4>
+          <p>Engaging creatives for consistent social presence.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon">📈</div>
+          <h4>Digital Marketing</h4>
+          <p>Campaign creatives and ad assets optimized for conversion.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon">🎬</div>
+          <h4>Documentaries</h4>
+          <p>Visual storytelling and motion design for long-form projects.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon">📷</div>
+          <h4>Photography</h4>
+          <p>High-quality imagery that elevates the visual narrative.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio container">
+      <h3 class="section-title">Selected Works</h3>
+      <div class="portfolio-grid">
+        <figure class="port-item"><img src="assets/images/branding/branding-1.png" alt="project 1"><figcaption>Branding Project</figcaption></figure>
+        <figure class="port-item"><img src="assets/images/branding/branding-4.png" alt="project 2"><figcaption>Packaging</figcaption></figure>
+        <figure class="port-item"><img src="assets/images/print-design/print-design-1.png" alt="project 3"><figcaption>Print Design</figcaption></figure>
+        <figure class="port-item"><img src="assets/images/social-media-engagement/social-media-eng-1.png" alt="project 4"><figcaption>Social Campaign</figcaption></figure>
+        <figure class="port-item"><img src="assets/images/branding/branding-9.png" alt="project 5"><figcaption>Visual Identity</figcaption></figure>
+        <figure class="port-item"><img src="assets/images/print-design/print-design-2.png" alt="project 6"><figcaption>Brochure</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonials container">
+      <h3 class="section-title">What Clients Say</h3>
+      <div class="testimonial-card">
+        <blockquote>"Working with BHS DESIGNS was an absolute treat! They took our vague ideas and turned them into designs beyond our expectations — timely, creative, and highly professional. If you're looking for a designer who really cares about your brand, look no further – BHS DESIGNS is the way to go!"</blockquote>
+        <cite>— Satisfied Client</cite>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact container">
+      <div class="contact-left">
+        <h3 class="section-title">Let's Work</h3>
+        <p class="contact-info">Phone: <a href="tel:+25562040241">+25562040241</a><br>Instagram: <a href="https://instagram.com/bsbilly510" target="_blank">@bsbilly510</a><br>Email: <a href="mailto:bsbilly510@gmail.com">bsbilly510@gmail.com</a></p>
+        <p class="muted">I Listen, I Design, I Deliver</p>
+      </div>
+      <div class="contact-right">
+        <form class="contact-form" action="#" method="post" onsubmit="return false;">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="tagline">“I Listen, I Design, I Deliver”</p>
+      <p class="copyright">© <span id="year"></span> Billison — All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
