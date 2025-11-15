@@ -113,10 +113,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.contact-form');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const btn = form.querySelector('.btn');
-    gsap.to(btn, {scale:0.96, duration:0.08, yoyo:true, repeat:1});
-    // micro feedback
-    gsap.fromTo(form, {boxShadow:'0 0 0 rgba(255,255,255,0)'}, {boxShadow:'0 12px 40px rgba(0,0,0,0.45)', duration:0.4, yoyo:true, repeat:1});
+    const btn = form.querySelector('.btn-submit');
+    const btnText = btn.querySelector('span');
+    const originalText = btnText.textContent;
+    
+    // Animate button
+    gsap.to(btn, {scale:0.96, duration:0.1, yoyo:true, repeat:1});
+    
+    // Change text temporarily
+    btnText.textContent = 'Sending...';
+    gsap.to(btn, {background:'linear-gradient(135deg, #10b981, #059669)', duration:0.3});
+    
+    // Simulate success after delay
+    setTimeout(() => {
+      btnText.textContent = 'Message Sent!';
+      gsap.from(btn, {scale:1.1, duration:0.5, ease:'elastic.out(1, 0.5)'});
+      
+      // Reset after 2 seconds
+      setTimeout(() => {
+        btnText.textContent = originalText;
+        gsap.to(btn, {background:'linear-gradient(135deg, var(--accent), #ff8a6b)', duration:0.3});
+        form.reset();
+      }, 2000);
+    }, 1000);
   });
 
   // Set footer year
