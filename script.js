@@ -122,4 +122,23 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set footer year
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  // Back to top button
+  const backToTop = document.querySelector('.back-to-top');
+  
+  function toggleBackToTop() {
+    if (window.scrollY > 500) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  }
+  
+  toggleBackToTop();
+  window.addEventListener('scroll', toggleBackToTop, {passive: true});
+  
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    gsap.from(backToTop, {rotate: 360, duration: 0.6, ease: 'back.out(1.7)'});
+  });
+
 });
