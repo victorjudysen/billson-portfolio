@@ -162,15 +162,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Hero image alternating rotation
   const imagePool = [
-    '/images/branding/branding-14.png',
-    '/images/branding/branding-7.png',
-    '/images/branding/branding-1.png',
-    '/images/branding/branding-4.png',
-    '/images/branding/branding-9.png',
-    '/images/print-design/print-design-1.png',
-    '/images/social-media-engagement/social-media-eng-1.png',
-    '/images/social-media-engagement/social-media-eng-2.png',
-    '/images/branding/branding-3.png'
+    './images/branding/branding-14.png',
+    './images/branding/branding-7.png',
+    './images/branding/branding-1.png',
+    './images/branding/branding-4.png',
+    './images/branding/branding-9.png',
+    './images/print-design/print-design-1.png',
+    './images/social-media-engagement/social-media-eng-1.png',
+    './images/social-media-engagement/social-media-eng-2.png',
+    './images/branding/branding-3.png'
   ];
 
   const showcaseFrames = [
