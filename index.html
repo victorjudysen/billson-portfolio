@@ -17,16 +17,19 @@
 <body>
   <header class="site-header">
     <nav class="nav container">
-      <a class="logo" href="#">BILLSON</a>
+      <a class="logo" href="#">
+        <span class="logo-icon">B</span>
+        <span class="logo-text">BILLSON</span>
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span class="hamburger"></span>
       </button>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" class="nav-link"><span>About</span></a></li>
+        <li><a href="#services" class="nav-link"><span>Services</span></a></li>
+        <li><a href="#portfolio" class="nav-link"><span>Portfolio</span></a></li>
+        <li><a href="#testimonials" class="nav-link"><span>Testimonials</span></a></li>
+        <li><a href="#contact" class="nav-link nav-link-cta"><span>Contact</span></a></li>
       </ul>
     </nav>
   </header>
@@ -44,17 +47,61 @@
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-gradient"></div>
+      <div class="hero-particles"></div>
+    </div>
     <div class="container hero-inner">
       <div class="hero-text">
+        <div class="hero-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="10"></circle>
+          </svg>
+          <span>Available for freelance</span>
+        </div>
         <h1 class="intro-line">Hi, My name is <span class="name">Billson</span></h1>
-        <h2 class="tagline">I'm a Creative Graphic Designer</h2>
+        <h2 class="tagline">I'm a <span class="typing-text">Creative Graphic Designer</span></h2>
         <p class="lead">With a passion for crafting visual narratives that captivate and inspire, I transform ideas into stunning visual experiences that leave a lasting impression.</p>
-        <a class="cta" href="#contact">Let’s Work</a>
+        <div class="hero-actions">
+          <a class="cta cta-primary" href="#contact">
+            <span>Let's Work Together</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a class="cta cta-secondary" href="#portfolio">
+            <span>View Portfolio</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>2+</strong>
+            <span>Years Experience</span>
+          </div>
+          <div class="hero-stat">
+            <strong>50+</strong>
+            <span>Projects Done</span>
+          </div>
+          <div class="hero-stat">
+            <strong>10+</strong>
+            <span>Happy Clients</span>
+          </div>
+        </div>
       </div>
       <div class="hero-showcase" aria-hidden="true">
-        <img src="/images/branding/branding-14.png" alt="Hero artwork"/>
+        <div class="showcase-decoration"></div>
+        <div class="showcase-frame">
+          <img src="/images/branding/branding-14.png" alt="Hero artwork"/>
+        </div>
       </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <polyline points="19 12 12 19 5 12"></polyline>
+      </svg>
     </div>
   </section>
 
