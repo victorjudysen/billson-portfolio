@@ -107,9 +107,15 @@ h1, h2, h3, h4, h5, h6{
 .hero-stat span{font-size:.8rem;color:var(--muted);font-weight:600}
 .hero-showcase{position:relative;max-height:70vh;display:flex;align-items:center}
 .showcase-decoration{position:absolute;top:-30px;right:-30px;width:200px;height:200px;background:linear-gradient(135deg, var(--accent), #ff8a6b);border-radius:50%;filter:blur(80px);opacity:.4;animation:float 8s ease-in-out infinite}
-.showcase-frame{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.6);transform:translateY(0);will-change:transform;transition:transform .6s ease,box-shadow .6s ease;max-height:65vh}
-.showcase-frame:hover{transform:translateY(-20px) rotate(-3deg);box-shadow:0 40px 100px rgba(0,0,0,0.7)}
+.showcase-stack{position:relative;width:100%;height:100%}
+.showcase-frame{position:absolute;border-radius:24px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.6);will-change:transform;transition:transform .6s ease,box-shadow .6s ease;max-height:65vh;border:3px solid rgba(255,255,255,0.1)}
 .showcase-frame img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.showcase-frame-main{position:relative;width:100%;z-index:3;transform:translateY(0) rotate(0deg)}
+.showcase-frame-main:hover{transform:translateY(-15px) rotate(-2deg) scale(1.02);box-shadow:0 35px 90px rgba(0,0,0,0.7);z-index:10}
+.showcase-frame-secondary{width:85%;top:8%;right:-12%;z-index:2;opacity:.85;transform:rotate(8deg) scale(0.92);box-shadow:0 18px 60px rgba(0,0,0,0.5)}
+.showcase-frame-secondary:hover{transform:rotate(5deg) scale(0.95) translateY(-12px);opacity:1;box-shadow:0 30px 75px rgba(0,0,0,0.65);z-index:10}
+.showcase-frame-tertiary{width:75%;top:18%;left:-15%;z-index:1;opacity:.75;transform:rotate(-6deg) scale(0.85);box-shadow:0 15px 50px rgba(0,0,0,0.45)}
+.showcase-frame-tertiary:hover{transform:rotate(-3deg) scale(0.88) translateY(-10px);opacity:1;box-shadow:0 25px 65px rgba(0,0,0,0.6);z-index:10}
 .showcase-frame:hover img{transform:scale(1.1)}
 .scroll-indicator{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;color:var(--muted);font-size:.8rem;font-weight:600;animation:bounce 2s ease-in-out infinite;cursor:pointer}
 @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-10px)}}
