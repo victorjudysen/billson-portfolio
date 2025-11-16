@@ -160,4 +160,55 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.from(backToTop, {rotate: 360, duration: 0.6, ease: 'back.out(1.7)'});
   });
 
+  // Hero image alternating rotation
+  const imagePool = [
+    '/images/branding/branding-14.png',
+    '/images/branding/branding-7.png',
+    '/images/branding/branding-1.png',
+    '/images/branding/branding-4.png',
+    '/images/branding/branding-9.png',
+    '/images/print-design/print-design-1.png',
+    '/images/social-media-engagement/social-media-eng-1.png',
+    '/images/social-media-engagement/social-media-eng-2.png',
+    '/images/branding/branding-3.png'
+  ];
+
+  const showcaseFrames = [
+    document.querySelector('.showcase-frame-main img'),
+    document.querySelector('.showcase-frame-secondary img'),
+    document.querySelector('.showcase-frame-tertiary img')
+  ];
+
+  let currentIndices = [0, 1, 2]; // Starting indices for each frame
+
+  function rotateImages() {
+    showcaseFrames.forEach((img, frameIndex) => {
+      if (img) {
+        // Fade out current image
+        gsap.to(img, {
+          opacity: 0,
+          scale: 0.95,
+          duration: 0.6,
+          ease: 'power2.in',
+          onComplete: () => {
+            // Update to next image in pool
+            currentIndices[frameIndex] = (currentIndices[frameIndex] + 3) % imagePool.length;
+            img.src = imagePool[currentIndices[frameIndex]];
+            
+            // Fade in new image
+            gsap.to(img, {
+              opacity: 1,
+              scale: 1,
+              duration: 0.6,
+              ease: 'power2.out'
+            });
+          }
+        });
+      }
+    });
+  }
+
+  // Rotate images every 5 seconds
+  setInterval(rotateImages, 5000);
+
 });
