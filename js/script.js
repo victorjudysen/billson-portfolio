@@ -90,6 +90,60 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('mouseleave', () => gsap.to(item, {rotationY:0, rotationX:0, duration:0.6, ease:'power2.out'}));
   });
 
+  // Portfolio Filter System
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const portfolioItems = document.querySelectorAll('.port-item');
+  const portfolioGrid = document.querySelector('.portfolio-grid');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      
+      // Update active state
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      // Filter items with smooth animation
+      portfolioItems.forEach((item, index) => {
+        const category = item.dataset.category;
+        const shouldShow = filter === 'all' || category === filter;
+        
+        if (shouldShow) {
+          // Show item
+          gsap.to(item, {
+            opacity: 1,
+            scale: 1,
+            duration: 0.5,
+            ease: 'power3.out',
+            delay: index * 0.05,
+            onStart: () => {
+              item.classList.remove('hidden');
+              item.style.position = 'relative';
+            }
+          });
+        } else {
+          // Hide item
+          gsap.to(item, {
+            opacity: 0,
+            scale: 0.9,
+            duration: 0.3,
+            ease: 'power2.in',
+            onComplete: () => {
+              item.classList.add('hidden');
+              item.style.position = 'absolute';
+            }
+          });
+        }
+      });
+      
+      // Animate grid reorganization
+      gsap.from(portfolioGrid, {
+        duration: 0.4,
+        ease: 'power2.out'
+      });
+    });
+  });
+
   // Service card hover tilt (also for accessibility keyboard focus)
   document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('mouseenter', () => gsap.to(card, {y:-6, boxShadow:'0 24px 60px rgba(0,0,0,0.45)', duration:0.35}));

@@ -166,24 +166,41 @@ h1, h2, h3, h4, h5, h6{
 .service-card:hover p{color:var(--text)}
 
 /* PORTFOLIO */
-.portfolio{padding:5rem 0}
-.portfolio-header{text-align:center;margin-bottom:3rem}
+.portfolio{padding:6rem 0;position:relative}
+.portfolio::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:1400px;height:100%;background:radial-gradient(ellipse at top, rgba(0,40,244,0.05), transparent 70%);pointer-events:none;z-index:0}
+.portfolio-header{text-align:center;margin-bottom:3rem;position:relative;z-index:1}
 .portfolio-subtitle{font-size:1.15rem;color:var(--muted);margin-top:.5rem}
-.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem}
-.port-item{position:relative;overflow:hidden;border-radius:16px;cursor:pointer;transition:transform .4s cubic-bezier(.34,1.56,.64,1);aspect-ratio:4/3;box-shadow:0 4px 20px rgba(0,0,0,0.3)}
+
+/* Portfolio Filters */
+.portfolio-filters{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:3.5rem;position:relative;z-index:1;padding:0 1rem}
+.filter-btn{display:inline-flex;align-items:center;gap:.75rem;padding:.85rem 1.5rem;background:linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.1);border-radius:50px;color:var(--text);font-size:.9rem;font-weight:600;cursor:pointer;transition:all .3s cubic-bezier(.34,1.56,.64,1);position:relative;overflow:hidden;font-family:'Montserrat', sans-serif}
+.filter-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg, var(--accent), #4d7cff);opacity:0;transition:opacity .3s ease;z-index:-1}
+.filter-btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,40,244,0.3);border-color:rgba(0,40,244,0.4)}
+.filter-btn.active{background:linear-gradient(135deg, var(--accent), #4d7cff);border-color:var(--accent);color:#fff;transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,40,244,0.4)}
+.filter-btn.active::before{opacity:1}
+.filter-icon{display:flex;align-items:center;justify-content:center;width:24px;height:24px}
+.filter-count{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:24px;padding:0 .5rem;background:rgba(255,255,255,0.15);border-radius:12px;font-size:.75rem;font-weight:700}
+.filter-btn.active .filter-count{background:rgba(255,255,255,0.25)}
+
+/* Portfolio Grid */
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;position:relative;z-index:1}
+.port-item{position:relative;overflow:hidden;border-radius:20px;cursor:pointer;transition:all .4s cubic-bezier(.34,1.56,.64,1);aspect-ratio:4/3;box-shadow:0 8px 32px rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.08);opacity:1;transform:scale(1)}
+.port-item.hidden{opacity:0;transform:scale(0.9);pointer-events:none;position:absolute}
 .port-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1),filter .6s ease}
-.port-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);opacity:0;transition:opacity .5s ease;display:flex;flex-direction:column;justify-content:space-between;padding:2rem;z-index:2}
-.port-item:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 20px 50px rgba(0,0,0,0.5)}
-.port-item:hover img{transform:scale(1.15);filter:brightness(0.8)}
+.port-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 100%);opacity:0;transition:opacity .5s ease;display:flex;flex-direction:column;justify-content:space-between;padding:2rem;z-index:2}
+.port-item:hover{transform:translateY(-12px) scale(1.03);box-shadow:0 24px 60px rgba(0,40,244,0.3);border-color:rgba(0,40,244,0.3)}
+.port-item:hover img{transform:scale(1.15);filter:brightness(0.7)}
 .port-item:hover .port-overlay{opacity:1}
 .port-info{transform:translateY(20px);opacity:0;transition:transform .5s cubic-bezier(.34,1.56,.64,1),opacity .5s ease;transition-delay:.1s}
 .port-item:hover .port-info{transform:translateY(0);opacity:1}
-.port-category{display:inline-block;padding:.35rem .85rem;background:linear-gradient(135deg, var(--accent), #4d7cff);border-radius:20px;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.75rem}
-.port-info h4{margin:0;font-size:1.3rem;color:#fff;font-weight:700}
-.port-action{width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;align-self:flex-end;transform:scale(0.8);opacity:0;transition:transform .5s cubic-bezier(.34,1.56,.64,1),opacity .5s,background .3s;transition-delay:.15s}
-.port-item:hover .port-action{transform:scale(1);opacity:1}
-.port-action:hover{background:rgba(255,255,255,0.25);transform:scale(1.15)!important}
-.port-action svg{color:#fff}
+.port-category{display:inline-block;padding:.4rem .95rem;background:linear-gradient(135deg, var(--accent), #4d7cff);border-radius:20px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.75rem;box-shadow:0 4px 12px rgba(0,40,244,0.4)}
+.port-info h4{margin:0 0 .5rem 0;font-size:1.4rem;color:#fff;font-weight:700;font-family:'Creato Display', 'Montserrat', sans-serif}
+.port-desc{margin:0;font-size:.9rem;color:rgba(255,255,255,0.8);line-height:1.5}
+.port-action{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;align-self:flex-end;transform:scale(0.8) rotate(-45deg);opacity:0;transition:all .5s cubic-bezier(.34,1.56,.64,1);transition-delay:.15s}
+.port-item:hover .port-action{transform:scale(1) rotate(0deg);opacity:1}
+.port-action:hover{background:linear-gradient(135deg, var(--accent), #4d7cff);border-color:var(--accent);transform:scale(1.15) rotate(0deg)!important}
+.port-action svg{color:#fff;transition:transform .3s ease}
+.port-action:hover svg{transform:scale(1.1)}
 
 /* TESTIMONIAL */
 .testimonials{padding:5rem 0;background:linear-gradient(180deg, transparent, rgba(0,40,244,0.02), transparent);position:relative;overflow:hidden}
@@ -275,6 +292,9 @@ h1, h2, h3, h4, h5, h6{
   .about-left{text-align:center}
   .stats-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}
   .services-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}
+  .portfolio-filters{gap:.75rem}
+  .filter-btn{padding:.75rem 1.25rem;font-size:.85rem;gap:.5rem}
+  .filter-btn span:not(.filter-icon):not(.filter-count){display:none}
   .portfolio-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}
   .testimonials-wrapper{grid-template-columns:1fr;gap:1.5rem}
   .contact-wrapper{grid-template-columns:1fr;gap:2rem}
@@ -300,6 +320,9 @@ h1, h2, h3, h4, h5, h6{
   .stats-grid{grid-template-columns:1fr;gap:1rem}
   .services-grid{grid-template-columns:1fr;gap:1.5rem}
   .service-card{padding:2rem 1.5rem}
+  .portfolio-filters{flex-direction:column;align-items:stretch;gap:.75rem}
+  .filter-btn{justify-content:space-between;padding:1rem 1.5rem}
+  .filter-btn span:not(.filter-icon):not(.filter-count){display:inline}
   .portfolio-grid{grid-template-columns:1fr;gap:1.5rem}
   .testimonials-wrapper{grid-template-columns:1fr}
   .testimonial-card{padding:2rem 1.5rem}
