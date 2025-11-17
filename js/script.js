@@ -68,14 +68,43 @@ document.addEventListener('DOMContentLoaded', () => {
   // Staggered reveal for sections
   const sections = document.querySelectorAll('section');
   sections.forEach(section => {
-    const elems = section.querySelectorAll('h3, h4, p, .service-card, .port-item, .testimonial-card, img, .contact-form');
-    gsap.from(elems, {
-      scrollTrigger: {trigger: section, start: 'top 80%', once: true},
-      y: 30,
+    // Exclude portfolio items and testimonial cards from generic animation
+    // They have their own specific animations
+    const elems = section.querySelectorAll('h3, h4, p, .service-card, .contact-form, .about-right img');
+    if (elems.length > 0) {
+      gsap.from(elems, {
+        scrollTrigger: {trigger: section, start: 'top 80%', once: true},
+        y: 30,
+        opacity: 0,
+        duration: 0.9,
+        stagger: 0.08,
+        ease: 'power3.out'
+      });
+    }
+  });
+
+  // Portfolio items specific animation
+  gsap.utils.toArray('.port-item').forEach((item, index) => {
+    gsap.from(item, {
+      scrollTrigger: {trigger: item, start: 'top 85%', once: true},
+      y: 40,
       opacity: 0,
-      duration: 0.9,
-      stagger: 0.08,
+      scale: 0.95,
+      duration: 0.8,
+      delay: index * 0.05,
       ease: 'power3.out'
+    });
+  });
+
+  // Testimonial cards specific animation
+  gsap.utils.toArray('.testimonial-card').forEach((card, index) => {
+    gsap.from(card, {
+      scrollTrigger: {trigger: card, start: 'top 85%', once: true},
+      y: 20,
+      opacity: 0,
+      duration: 0.7,
+      delay: index * 0.1,
+      ease: 'power2.out'
     });
   });
 
@@ -88,6 +117,210 @@ document.addEventListener('DOMContentLoaded', () => {
       gsap.to(item, {rotationY: x * 6, rotationX: y * -6, transformPerspective:600, transformOrigin:'center', ease:'power1.out', duration:0.6});
     });
     item.addEventListener('mouseleave', () => gsap.to(item, {rotationY:0, rotationX:0, duration:0.6, ease:'power2.out'}));
+  });
+
+  // Portfolio Modal System
+  const projectModal = document.getElementById('projectModal');
+  const modalBackdrop = projectModal.querySelector('.modal-backdrop');
+  const modalClose = projectModal.querySelector('.modal-close');
+  const modalImage = document.getElementById('modalImage');
+  const modalCategory = document.getElementById('modalCategory');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDescription = document.getElementById('modalDescription');
+  const modalClient = document.getElementById('modalClient');
+  const modalYear = document.getElementById('modalYear');
+  const modalServices = document.getElementById('modalServices');
+
+  // Project data
+  const projectData = {
+    'Brand Identity System': {
+      category: 'Graphic Design & Branding',
+      description: 'A comprehensive visual identity system that captures the essence of modern branding. This project involved creating a complete brand ecosystem including logo design, color palettes, typography systems, and brand guidelines to ensure consistent application across all touchpoints.',
+      client: 'Tech Startup',
+      year: '2024',
+      services: 'Brand Strategy, Logo Design, Visual Identity'
+    },
+    'Logo Design': {
+      category: 'Graphic Design & Branding',
+      description: 'Crafted a distinctive and memorable logo that perfectly represents the brand\'s values and mission. The design process involved extensive research, conceptualization, and refinement to create a timeless mark that resonates with the target audience.',
+      client: 'Confidential',
+      year: '2024',
+      services: 'Logo Design, Brand Mark, Icon Design'
+    },
+    'Packaging Design': {
+      category: 'Graphic Design & Branding',
+      description: 'Eye-catching product packaging that stands out on shelves and creates a lasting impression. This project balanced aesthetic appeal with functional requirements, incorporating sustainable materials and innovative structural design.',
+      client: 'Consumer Brand',
+      year: '2023',
+      services: 'Packaging Design, Structural Design, Print Production'
+    },
+    'Corporate Branding': {
+      category: 'Graphic Design & Branding',
+      description: 'Professional corporate identity that elevates the business presence and builds trust with stakeholders. The comprehensive branding solution includes business cards, letterheads, presentations, and digital assets.',
+      client: 'Financial Services',
+      year: '2024',
+      services: 'Corporate Identity, Stationery Design, Brand Guidelines'
+    },
+    'Visual Identity': {
+      category: 'Graphic Design & Branding',
+      description: 'A cohesive visual identity system that tells a compelling brand story across all platforms. This project involved creating a flexible design system that maintains consistency while allowing creative expression.',
+      client: 'Creative Agency',
+      year: '2023',
+      services: 'Visual Identity, Design System, Brand Assets'
+    },
+    'Brand Guidelines': {
+      category: 'Graphic Design & Branding',
+      description: 'Comprehensive brand standards document that ensures consistent brand application across all media. The guidelines cover logo usage, color systems, typography, imagery style, and tone of voice.',
+      client: 'Enterprise Client',
+      year: '2024',
+      services: 'Brand Guidelines, Documentation, Training'
+    },
+    'Rebranding Project': {
+      category: 'Graphic Design & Branding',
+      description: 'Complete brand transformation that repositioned the company in the market. The project involved strategic analysis, creative development, and implementation across all brand touchpoints.',
+      client: 'Established Business',
+      year: '2023',
+      services: 'Brand Strategy, Rebranding, Implementation'
+    },
+    'Stationary Design': {
+      category: 'Graphic Design & Branding',
+      description: 'Professional business stationery including business cards, letterheads, envelopes, and more. Each piece was carefully designed to reinforce the brand identity and create a cohesive professional image.',
+      client: 'Professional Services',
+      year: '2024',
+      services: 'Stationery Design, Print Design, Brand Collateral'
+    },
+    'Marketing Brochure': {
+      category: 'Print Design',
+      description: 'Engaging promotional brochure that effectively communicates the brand message and drives action. The design combines compelling visuals with persuasive copy to create a powerful marketing tool.',
+      client: 'Marketing Agency',
+      year: '2024',
+      services: 'Brochure Design, Copywriting, Print Production'
+    },
+    'Corporate Brochure': {
+      category: 'Print Design',
+      description: 'Professional company profile that showcases capabilities and builds credibility. The brochure features sophisticated design, high-quality imagery, and strategic content organization.',
+      client: 'Corporate Client',
+      year: '2023',
+      services: 'Corporate Design, Editorial Design, Print'
+    },
+    'Poster Campaign': {
+      category: 'Print Design',
+      description: 'Bold and impactful poster series that captures attention and communicates key messages. The campaign utilized strong visual hierarchy and compelling imagery to maximize impact.',
+      client: 'Event Organizer',
+      year: '2024',
+      services: 'Poster Design, Campaign Creative, Large Format'
+    },
+    'Magazine Layout': {
+      category: 'Print Design',
+      description: 'Editorial design excellence with beautiful layouts that enhance readability and visual appeal. The project involved typographic refinement, image selection, and grid system development.',
+      client: 'Publishing House',
+      year: '2023',
+      services: 'Editorial Design, Layout, Typography'
+    },
+    'Instagram Campaign': {
+      category: 'Social Media',
+      description: 'Engaging social media content that builds community and drives engagement. The campaign included custom graphics, templates, and strategic content planning for consistent brand presence.',
+      client: 'E-commerce Brand',
+      year: '2024',
+      services: 'Social Media Design, Content Strategy, Templates'
+    },
+    'Social Media Graphics': {
+      category: 'Social Media',
+      description: 'Eye-catching posts and stories that stop the scroll and drive engagement. Created a library of templates and assets for consistent, high-quality social media presence.',
+      client: 'Lifestyle Brand',
+      year: '2024',
+      services: 'Social Graphics, Templates, Brand Content'
+    },
+    'Content Strategy': {
+      category: 'Social Media',
+      description: 'Consistent brand presence across social platforms with strategic content planning. Developed visual themes, posting schedules, and engagement strategies for maximum impact.',
+      client: 'Personal Brand',
+      year: '2023',
+      services: 'Strategy, Content Planning, Social Management'
+    },
+    'Ad Campaign': {
+      category: 'Digital Marketing',
+      description: 'High-converting ad creatives optimized for digital platforms. The campaign utilized A/B testing, data-driven insights, and compelling visuals to maximize ROI.',
+      client: 'SaaS Company',
+      year: '2024',
+      services: 'Ad Creative, Digital Marketing, Optimization'
+    },
+    'Email Templates': {
+      category: 'Digital Marketing',
+      description: 'Beautiful email campaigns that drive opens and clicks. Designed responsive templates that look great on all devices and align with brand guidelines.',
+      client: 'Retail Business',
+      year: '2024',
+      services: 'Email Design, HTML Templates, Marketing'
+    },
+    'Product Photography': {
+      category: 'Photography',
+      description: 'Professional product photography that showcases products in the best light. Utilized expert lighting, composition, and post-production to create compelling product imagery.',
+      client: 'Product Brand',
+      year: '2024',
+      services: 'Photography, Retouching, Product Styling'
+    }
+  };
+
+  // Open modal when clicking portfolio items
+  portfolioItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const title = item.querySelector('.port-info h4').textContent;
+      const category = item.querySelector('.port-category').textContent;
+      const description = item.querySelector('.port-desc').textContent;
+      const imgSrc = item.querySelector('img').src;
+      
+      // Get detailed project data
+      const projectDetails = projectData[title] || {
+        category: category,
+        description: description,
+        client: 'Confidential',
+        year: '2024',
+        services: 'Design & Creative Services'
+      };
+      
+      // Populate modal
+      modalImage.src = imgSrc;
+      modalImage.alt = title;
+      modalCategory.textContent = projectDetails.category;
+      modalTitle.textContent = title;
+      modalDescription.textContent = projectDetails.description;
+      modalClient.textContent = projectDetails.client;
+      modalYear.textContent = projectDetails.year;
+      modalServices.textContent = projectDetails.services;
+      
+      // Open modal with animation
+      projectModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      // Animate modal content
+      gsap.from(modalImage, {opacity: 0, scale: 1.1, duration: 0.6, ease: 'power3.out'});
+      gsap.from('.modal-info > *', {
+        opacity: 0,
+        y: 20,
+        duration: 0.5,
+        stagger: 0.08,
+        ease: 'power3.out',
+        delay: 0.2
+      });
+    });
+  });
+
+  // Close modal
+  function closeModal() {
+    projectModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  modalClose.addEventListener('click', closeModal);
+  modalBackdrop.addEventListener('click', closeModal);
+  
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && projectModal.classList.contains('active')) {
+      closeModal();
+    }
   });
 
   // Portfolio Filter System
@@ -154,14 +387,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Testimonial gentle float
   gsap.to('.testimonial-card', {y:6, repeat:-1, yoyo:true, ease:'sine.inOut', duration:6});
-
-  // Portfolio lazy reveal: subtle scale up on scroll
-  gsap.utils.toArray('.port-item img').forEach(img => {
-    gsap.from(img, {
-      scrollTrigger: {trigger: img, start: 'top 85%', once:true},
-      scale:1.06, duration:1.2, ease:'power3.out'
-    });
-  });
 
   // Contact form - small success animation when clicked (no backend)
   const form = document.querySelector('.contact-form');
