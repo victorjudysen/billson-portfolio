@@ -108,8 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Portfolio Items
+  const portfolioItems = document.querySelectorAll('.port-item');
+
   // Portfolio hover subtle tilt using mousemove (lightweight)
-  document.querySelectorAll('.port-item').forEach(item => {
+  portfolioItems.forEach(item => {
     item.addEventListener('mousemove', (e) => {
       const rect = item.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
@@ -325,7 +328,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Portfolio Filter System
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const portfolioItems = document.querySelectorAll('.port-item');
   const portfolioGrid = document.querySelector('.portfolio-grid');
 
   filterBtns.forEach(btn => {
