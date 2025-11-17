@@ -372,11 +372,12 @@ h1, h2, h3, h4, h5, h6{
   .section-title{font-size:1.75rem}
   .back-to-top{bottom:1rem;right:1rem;width:44px;height:44px}
   .whatsapp-btn{bottom:4.5rem;right:1rem;width:44px;height:44px}
-  .modal-body{grid-template-columns:1fr;max-height:none}
+  .modal-body{grid-template-columns:1fr;max-height:none;overflow-y:auto}
   .modal-image{min-height:250px;max-height:35vh}
-  .modal-info{padding:2rem 1.5rem}
+  .modal-info{padding:2rem 1.5rem;max-height:none;overflow-y:visible}
   .modal-info h2{font-size:1.6rem}
   .modal-close{top:1rem;right:1rem;width:36px;height:36px}
+  .modal-content{max-height:95vh;overflow-y:auto}
   .modal-content::before,.modal-content::after{width:40px;height:40px}
 }
 @media (max-width:420px){
