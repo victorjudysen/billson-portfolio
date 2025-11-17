@@ -263,8 +263,16 @@ h1, h2, h3, h4, h5, h6{
 .btn-submit:hover svg{transform:translateX(4px)}
 
 /* FOOTER */
-.site-footer{padding:2rem 0;border-top:1px solid rgba(255,255,255,0.03)}
-.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.site-footer{padding:2.5rem 0;border-top:1px solid rgba(255,255,255,0.06);background:rgba(0,0,0,0.2);position:relative}
+.site-footer::before{content:'';position:absolute;top:0;left:0;width:120px;height:2px;background:var(--accent)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.footer-left{display:flex;flex-direction:column;gap:.5rem}
+.footer-right{display:flex;align-items:center}
+.tagline{margin:0;font-size:.9rem;color:var(--text);font-weight:500}
+.copyright{margin:0;font-size:.85rem;color:var(--muted)}
+.designer-credit{margin:0;font-size:.85rem;color:var(--muted)}
+.designer-credit a{color:var(--accent);text-decoration:none;font-weight:600;transition:color .3s ease;border-bottom:1px solid transparent}
+.designer-credit a:hover{color:#4d7cff;border-bottom-color:var(--accent)}
 
 /* BACK TO TOP BUTTON */
 .back-to-top{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;border-radius:0;background:var(--accent);border:0;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:none;opacity:0;visibility:hidden;transition:opacity .4s ease,visibility .4s ease,background .3s ease;z-index:50}
