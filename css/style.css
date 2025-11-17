@@ -183,24 +183,23 @@ h1, h2, h3, h4, h5, h6{
 .filter-btn.active .filter-count{background:rgba(255,255,255,0.25)}
 
 /* Portfolio Grid */
-.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;position:relative;z-index:1}
-.port-item{position:relative;overflow:hidden;border-radius:20px;cursor:pointer;transition:all .4s cubic-bezier(.34,1.56,.64,1);aspect-ratio:4/3;box-shadow:0 8px 32px rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.08);opacity:1;transform:scale(1)}
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;position:relative;z-index:1}
+.port-item{position:relative;overflow:hidden;border-radius:24px;cursor:pointer;transition:all .4s cubic-bezier(.34,1.56,.64,1);aspect-ratio:16/11;box-shadow:0 8px 32px rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.08);opacity:1;transform:scale(1);display:flex;flex-direction:column}
 .port-item.hidden{opacity:0;transform:scale(0.9);pointer-events:none;position:absolute}
 .port-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1),filter .6s ease}
-.port-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 100%);opacity:0;transition:opacity .5s ease;display:flex;flex-direction:column;justify-content:space-between;padding:2rem;z-index:2}
+.port-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);opacity:1;transition:background .5s ease;display:flex;flex-direction:column;justify-content:flex-end;padding:2.5rem;z-index:2}
 .port-item:hover{transform:translateY(-12px) scale(1.03);box-shadow:0 24px 60px rgba(0,40,244,0.3);border-color:rgba(0,40,244,0.3)}
 .port-item:hover img{transform:scale(1.15);filter:brightness(0.7)}
-.port-item:hover .port-overlay{opacity:1}
-.port-info{transform:translateY(20px);opacity:0;transition:transform .5s cubic-bezier(.34,1.56,.64,1),opacity .5s ease;transition-delay:.1s}
-.port-item:hover .port-info{transform:translateY(0);opacity:1}
-.port-category{display:inline-block;padding:.4rem .95rem;background:linear-gradient(135deg, var(--accent), #4d7cff);border-radius:20px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.75rem;box-shadow:0 4px 12px rgba(0,40,244,0.4)}
-.port-info h4{margin:0 0 .5rem 0;font-size:1.4rem;color:#fff;font-weight:700;font-family:'Creato Display', 'Montserrat', sans-serif}
-.port-desc{margin:0;font-size:.9rem;color:rgba(255,255,255,0.8);line-height:1.5}
-.port-action{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;align-self:flex-end;transform:scale(0.8) rotate(-45deg);opacity:0;transition:all .5s cubic-bezier(.34,1.56,.64,1);transition-delay:.15s}
-.port-item:hover .port-action{transform:scale(1) rotate(0deg);opacity:1}
-.port-action:hover{background:linear-gradient(135deg, var(--accent), #4d7cff);border-color:var(--accent);transform:scale(1.15) rotate(0deg)!important}
-.port-action svg{color:#fff;transition:transform .3s ease}
-.port-action:hover svg{transform:scale(1.1)}
+.port-item:hover .port-overlay{background:linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.92) 100%)}
+.port-info{transform:translateY(0);opacity:1;transition:transform .4s ease;display:flex;flex-direction:column;gap:.75rem}
+.port-item:hover .port-info{transform:translateY(-5px)}
+.port-category{display:inline-block;padding:.5rem 1.1rem;background:linear-gradient(135deg, var(--accent), #4d7cff);border-radius:24px;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;box-shadow:0 4px 12px rgba(0,40,244,0.4);align-self:flex-start}
+.port-info h4{margin:0;font-size:1.6rem;color:#fff;font-weight:700;font-family:'Creato Display', 'Montserrat', sans-serif;line-height:1.2}
+.port-desc{margin:0;font-size:.95rem;color:rgba(255,255,255,0.85);line-height:1.6}
+.port-action{display:inline-flex;align-items:center;gap:.65rem;padding:.85rem 1.75rem;background:linear-gradient(135deg, var(--accent), #4d7cff);border-radius:50px;color:#fff;font-size:.9rem;font-weight:700;border:2px solid rgba(255,255,255,0.2);margin-top:1rem;align-self:flex-start;transition:all .4s cubic-bezier(.34,1.56,.64,1);box-shadow:0 6px 20px rgba(0,40,244,0.4);text-transform:uppercase;letter-spacing:.5px;cursor:pointer;user-select:none;font-family:'Montserrat', sans-serif}
+.port-item:hover .port-action{transform:translateX(8px);box-shadow:0 8px 28px rgba(0,40,244,0.6);border-color:rgba(255,255,255,0.4)}
+.port-action svg{width:18px;height:18px;transition:transform .3s ease}
+.port-action:hover svg{transform:translateX(4px)}
 
 /* TESTIMONIAL */
 .testimonials{padding:5rem 0;background:linear-gradient(180deg, transparent, rgba(0,40,244,0.02), transparent);position:relative;overflow:hidden}
@@ -319,7 +318,7 @@ h1, h2, h3, h4, h5, h6{
   .portfolio-filters{gap:.75rem}
   .filter-btn{padding:.75rem 1.25rem;font-size:.85rem;gap:.5rem}
   .filter-btn span:not(.filter-icon):not(.filter-count){display:none}
-  .portfolio-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}
+  .portfolio-grid{grid-template-columns:1fr;gap:2rem}
   .testimonials-wrapper{grid-template-columns:1fr;gap:1.5rem}
   .contact-wrapper{grid-template-columns:1fr;gap:2rem}
   .section-title{font-size:2rem}
