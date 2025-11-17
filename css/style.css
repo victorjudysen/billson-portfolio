@@ -236,46 +236,46 @@ h1, h2, h3, h4, h5, h6{
 .contact-wrapper{display:grid;grid-template-columns:480px 1fr;gap:3rem;align-items:start}
 .contact-left{display:flex;flex-direction:column;gap:2rem}
 .contact-cards{display:flex;flex-direction:column;gap:1.25rem}
-.contact-card{background:linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));backdrop-filter:blur(8px);padding:1.5rem;border-radius:16px;border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:1.25rem;transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .4s,background .4s;cursor:pointer;position:relative;overflow:hidden}
-.contact-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg, rgba(0,40,244,0.1), transparent);opacity:0;transition:opacity .4s ease}
-.contact-card:hover{transform:translateX(12px);box-shadow:0 12px 36px rgba(0,0,0,0.4);background:linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03))}
-.contact-card:hover::before{opacity:1}
-.contact-icon{width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg, var(--accent), #4d7cff);display:flex;align-items:center;justify-content:center;color:#fff;transition:transform .4s cubic-bezier(.34,1.56,.64,1);flex-shrink:0}
-.contact-card:hover .contact-icon{transform:scale(1.15) rotate(10deg)}
-.contact-details h4{margin:0 0 .25rem 0;font-size:1rem;font-weight:700}
+.contact-card{background:rgba(255,255,255,0.02);backdrop-filter:blur(8px);padding:1.5rem;border-radius:0;border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:1.25rem;transition:border-color .3s ease;cursor:pointer;position:relative;overflow:hidden}
+.contact-card::before{content:'';position:absolute;left:0;top:0;width:3px;height:0;background:var(--accent);transition:height .3s ease}
+.contact-card:hover{border-color:rgba(255,255,255,0.12)}
+.contact-card:hover::before{height:100%}
+.contact-icon{width:44px;height:44px;border-radius:0;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;transition:transform .3s ease;flex-shrink:0}
+.contact-card:hover .contact-icon{transform:scale(1.05)}
+.contact-details h4{margin:0 0 .25rem 0;font-size:.95rem;font-weight:600}
 .contact-details a{color:var(--muted);text-decoration:none;font-size:.95rem;transition:color .3s ease}
 .contact-card:hover .contact-details a{color:var(--text)}
-.contact-tagline{background:linear-gradient(135deg, rgba(0,40,244,0.08), rgba(0,40,244,0.02));padding:2rem;border-radius:16px;text-align:center;border:1px solid rgba(0,40,244,0.15)}
-.signature{font-family:'Creato Display', 'Montserrat', sans-serif;font-size:1.3rem;font-style:italic;color:var(--accent);margin:0;font-weight:600}
-.contact-form{display:flex;flex-direction:column;gap:1.5rem;background:linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));padding:2.5rem;border-radius:20px;border:1px solid rgba(255,255,255,0.06);backdrop-filter:blur(12px);box-shadow:0 8px 32px rgba(0,0,0,0.2)}
+.contact-tagline{background:rgba(0,40,244,0.05);padding:2rem;border-radius:0;text-align:center;border:1px solid rgba(0,40,244,0.1);position:relative}
+.contact-tagline::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent)}
+.signature{font-family:'Creato Display', 'Montserrat', sans-serif;font-size:1.2rem;font-style:normal;color:var(--accent);margin:0;font-weight:600}
+.contact-form{display:flex;flex-direction:column;gap:1.5rem;background:rgba(255,255,255,0.02);padding:2.5rem;border-radius:0;border:1px solid rgba(255,255,255,0.06);backdrop-filter:blur(8px);box-shadow:none;position:relative}
+.contact-form::before{content:'';position:absolute;top:-1px;right:-1px;width:50px;height:50px;border-top:2px solid var(--accent);border-right:2px solid var(--accent)}
 .form-group{display:flex;flex-direction:column;gap:.5rem}
-.form-group label{font-weight:600;font-size:.9rem;color:var(--text);letter-spacing:.5px}
-.contact-form input,.contact-form textarea{padding:1rem 1.25rem;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.02);color:var(--text);outline:none;font-family:'Inter', sans-serif;font-size:.95rem;transition:border .3s ease,background .3s ease,transform .3s ease}
-.contact-form input:focus,.contact-form textarea:focus{border:1px solid rgba(0,40,244,0.5);background:rgba(255,255,255,0.04);transform:translateY(-2px)}
+.form-group label{font-weight:600;font-size:.85rem;color:var(--text);letter-spacing:.3px}
+.contact-form input,.contact-form textarea{padding:.95rem 1.15rem;border-radius:0;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.02);color:var(--text);outline:none;font-family:'Inter', sans-serif;font-size:.9rem;transition:border .3s ease,background .3s ease}
+.contact-form input:focus,.contact-form textarea:focus{border:1px solid var(--accent);background:rgba(255,255,255,0.04)}
 .contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(255,255,255,0.3)}
 .contact-form textarea{resize:vertical;min-height:140px}
-.btn-submit{padding:1rem 2rem;border-radius:12px;background:linear-gradient(135deg, var(--accent), #4d7cff);color:#fff;border:0;font-weight:700;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.75rem;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s;position:relative;overflow:hidden}
-.btn-submit::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg, rgba(255,255,255,0.2), transparent);opacity:0;transition:opacity .3s ease}
-.btn-submit:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 16px 40px rgba(0,40,244,0.4)}
-.btn-submit:hover::before{opacity:1}
-.btn-submit:active{transform:translateY(-2px) scale(1)}
-.btn-submit svg{transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
-.btn-submit:hover svg{transform:translateX(4px) rotate(15deg)}
+.btn-submit{padding:.95rem 1.85rem;border-radius:0;background:var(--accent);color:#fff;border:0;font-weight:600;font-size:.95rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.65rem;transition:background .3s ease,transform .3s ease;position:relative;overflow:hidden}
+.btn-submit:hover{background:#0020d4;transform:translateX(4px)}
+.btn-submit:active{transform:translateX(2px)}
+.btn-submit svg{transition:transform .3s ease}
+.btn-submit:hover svg{transform:translateX(4px)}
 
 /* FOOTER */
 .site-footer{padding:2rem 0;border-top:1px solid rgba(255,255,255,0.03)}
 .footer-inner{display:flex;justify-content:space-between;align-items:center}
 
 /* BACK TO TOP BUTTON */
-.back-to-top{position:fixed;bottom:2rem;right:2rem;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg, var(--accent), #4d7cff);border:0;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,40,244,0.3);opacity:0;visibility:hidden;transition:opacity .4s ease,visibility .4s ease,transform .3s ease;z-index:50;transform:scale(0.9)}
-.back-to-top.visible{opacity:1;visibility:visible;transform:scale(1)}
-.back-to-top:hover{transform:scale(1.1) translateY(-4px);box-shadow:0 12px 32px rgba(0,40,244,0.45)}
+.back-to-top{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;border-radius:0;background:var(--accent);border:0;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:none;opacity:0;visibility:hidden;transition:opacity .4s ease,visibility .4s ease,background .3s ease;z-index:50}
+.back-to-top.visible{opacity:1;visibility:visible}
+.back-to-top:hover{background:#0020d4}
 .back-to-top:active{transform:scale(0.95)}
 .back-to-top svg{width:24px;height:24px}
 
 /* WHATSAPP BUTTON */
-.whatsapp-btn{position:fixed;bottom:6rem;right:2rem;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg, #25D366, #128C7E);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,0.3);transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);z-index:51;text-decoration:none}
-.whatsapp-btn:hover{transform:scale(1.1) translateY(-4px);box-shadow:0 12px 32px rgba(37,211,102,0.45)}
+.whatsapp-btn{position:fixed;bottom:6rem;right:2rem;width:48px;height:48px;border-radius:0;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:none;transition:background .3s ease;z-index:51;text-decoration:none}
+.whatsapp-btn:hover{background:#128C7E}
 .whatsapp-btn:active{transform:scale(0.95)}
 .whatsapp-btn svg{width:24px;height:24px}
 
