@@ -142,101 +142,166 @@ document.addEventListener('DOMContentLoaded', () => {
           title: 'Brand Identity System',
           desc: 'Complete visual identity for modern brands',
           category: 'Graphics Design',
-          description: 'A comprehensive visual identity system that captures the essence of modern branding. This project involved creating a complete brand ecosystem including logo design, color palettes, typography systems, and brand guidelines.',
-          client: 'Tech Startup',
+          client: 'ThisUncle Tech',
           year: '2024',
           services: 'Brand Strategy, Logo Design, Visual Identity',
           images: [
-            './images/branding/branding-1.png',
-            './images/branding/branding-14.png',
-            './images/branding/branding-7.png',
-            './images/branding/branding-9.png'
+            {
+              src: './images/branding/branding-1.png',
+              description: 'A comprehensive visual identity system that captures the essence of modern branding. This project involved creating a complete brand ecosystem including logo design, color palettes, typography systems, and brand guidelines.'
+            },
+            {
+              src: './images/branding/branding-14.png',
+              description: 'Developed a cohesive brand color palette with primary and secondary colors that work harmoniously across all touchpoints, ensuring brand consistency and recognition.'
+            },
+            {
+              src: './images/branding/branding-7.png',
+              description: 'Created comprehensive brand guidelines documenting logo usage, spacing rules, color specifications, and typography standards for consistent brand application.'
+            },
+            {
+              src: './images/branding/branding-9.png',
+              description: 'Designed a flexible visual system with modular components that maintain brand integrity while allowing creative expression across different media and formats.'
+            }
           ]
         },
         {
           title: 'Logo Design',
           desc: 'Modern and memorable brand marks',
           category: 'Graphics Design',
-          description: 'Crafted distinctive and memorable logos that perfectly represent brand values and mission. The design process involved extensive research, conceptualization, and refinement to create timeless marks.',
-          client: 'Various Clients',
+          client: 'RK Studios',
           year: '2024',
           services: 'Logo Design, Brand Mark, Icon Design',
           images: [
-            './images/branding/branding-3.png',
-            './images/branding/branding-4.png',
-            './images/branding/branding-11.png',
-            './images/branding/branding-13.png'
+            {
+              src: './images/branding/branding-3.png',
+              description: 'Crafted distinctive and memorable logos that perfectly represent brand values and mission. The design process involved extensive research, conceptualization, and refinement to create timeless marks.'
+            },
+            {
+              src: './images/branding/branding-4.png',
+              description: 'Explored multiple design directions, from minimalist to detailed, ensuring the final logo works effectively at any size and across all applications.'
+            },
+            {
+              src: './images/branding/branding-11.png',
+              description: 'Developed variations of the logo including horizontal, vertical, and icon-only versions to provide flexibility for different use cases and platforms.'
+            },
+            {
+              src: './images/branding/branding-13.png',
+              description: 'Created a complete logo system with clear usage guidelines, color variations, and minimum size requirements to maintain brand consistency.'
+            }
           ]
         },
         {
           title: 'Packaging Design',
           desc: 'Eye-catching product packaging',
           category: 'Graphics Design',
-          description: 'Eye-catching product packaging that stands out on shelves and creates lasting impressions. This project balanced aesthetic appeal with functional requirements and sustainable materials.',
-          client: 'Consumer Brand',
+          client: 'Apex Brands',
           year: '2023',
           services: 'Packaging Design, Structural Design, Print Production',
           images: [
-            './images/branding/branding-4.png',
-            './images/print-design/print-design-1.png',
-            './images/print-design/print-design-3.png'
+            {
+              src: './images/branding/branding-4.png',
+              description: 'Eye-catching product packaging that stands out on shelves and creates lasting impressions. This project balanced aesthetic appeal with functional requirements and sustainable materials.'
+            },
+            {
+              src: './images/print-design/print-design-1.png',
+              description: 'Developed innovative structural designs that enhance user experience while optimizing for manufacturing efficiency and cost-effectiveness.'
+            },
+            {
+              src: './images/print-design/print-design-3.png',
+              description: 'Incorporated sustainable materials and eco-friendly printing techniques without compromising on visual impact or durability.'
+            }
           ]
         },
         {
           title: 'Corporate Branding',
           desc: 'Professional business identity',
           category: 'Graphics Design',
-          description: 'Professional corporate identity that elevates business presence and builds trust with stakeholders. Comprehensive solution includes business cards, letterheads, and digital assets.',
-          client: 'Financial Services',
+          client: 'Zenith Finance',
           year: '2024',
           services: 'Corporate Identity, Stationery Design, Brand Guidelines',
           images: [
-            './images/branding/branding-7.png',
-            './images/branding/branding-6.png',
-            './images/print-design/print-design-2.png'
+            {
+              src: './images/branding/branding-7.png',
+              description: 'Professional corporate identity that elevates business presence and builds trust with stakeholders. Comprehensive solution includes business cards, letterheads, and digital assets.'
+            },
+            {
+              src: './images/branding/branding-6.png',
+              description: 'Designed sophisticated stationery suite including business cards, letterheads, envelopes, and presentation folders that reinforce brand professionalism.'
+            },
+            {
+              src: './images/print-design/print-design-2.png',
+              description: 'Created cohesive brand collateral with consistent visual language that communicates credibility and attention to detail.'
+            }
           ]
         },
         {
           title: 'Visual Identity',
           desc: 'Cohesive brand visual systems',
           category: 'Graphics Design',
-          description: 'A cohesive visual identity system that tells a compelling brand story across all platforms. Flexible design system that maintains consistency while allowing creative expression.',
-          client: 'Creative Agency',
+          client: 'Nova Creative',
           year: '2023',
           services: 'Visual Identity, Design System, Brand Assets',
           images: [
-            './images/branding/branding-9.png',
-            './images/branding/branding-10.png',
-            './images/branding/branding-12.png'
+            {
+              src: './images/branding/branding-9.png',
+              description: 'A cohesive visual identity system that tells a compelling brand story across all platforms. Flexible design system that maintains consistency while allowing creative expression.'
+            },
+            {
+              src: './images/branding/branding-10.png',
+              description: 'Established a comprehensive design system with reusable components, patterns, and guidelines for scalable brand implementation.'
+            },
+            {
+              src: './images/branding/branding-12.png',
+              description: 'Developed a library of brand assets including icons, illustrations, and graphic elements that support various communication needs.'
+            }
           ]
         },
         {
           title: 'Brand Guidelines',
           desc: 'Comprehensive brand standards',
           category: 'Graphics Design',
-          description: 'Comprehensive brand standards document that ensures consistent brand application across all media. Guidelines cover logo usage, color systems, typography, and imagery style.',
-          client: 'Enterprise Client',
+          client: 'Momentum Corp',
           year: '2024',
           services: 'Brand Guidelines, Documentation, Training',
           images: [
-            './images/branding/branding-10.png',
-            './images/branding/branding-8.png',
-            './images/print-design/print-design-4.png'
+            {
+              src: './images/branding/branding-10.png',
+              description: 'Comprehensive brand standards document that ensures consistent brand application across all media. Guidelines cover logo usage, color systems, typography, and imagery style.'
+            },
+            {
+              src: './images/branding/branding-8.png',
+              description: 'Created detailed documentation covering every aspect of brand implementation, from print materials to digital applications and environmental graphics.'
+            },
+            {
+              src: './images/print-design/print-design-4.png',
+              description: 'Developed training materials and workshops to ensure internal teams and external partners understand and correctly apply brand standards.'
+            }
           ]
         },
         {
           title: 'Print Design',
           desc: 'Professional print materials',
           category: 'Graphics Design',
-          description: 'Professional business stationery and print materials including business cards, letterheads, brochures, and promotional materials. Each piece reinforces the brand identity.',
-          client: 'Various Clients',
+          client: 'Summit Media',
           year: '2024',
           services: 'Print Design, Stationery, Marketing Collateral',
           images: [
-            './images/print-design/print-design-1.png',
-            './images/print-design/print-design-2.png',
-            './images/print-design/print-design-3.png',
-            './images/print-design/print-design-4.png'
+            {
+              src: './images/print-design/print-design-1.png',
+              description: 'Professional business stationery and print materials including business cards, letterheads, brochures, and promotional materials. Each piece reinforces the brand identity.'
+            },
+            {
+              src: './images/print-design/print-design-2.png',
+              description: 'Designed high-impact marketing brochures with strategic layouts that guide readers through key messages and calls to action.'
+            },
+            {
+              src: './images/print-design/print-design-3.png',
+              description: 'Created eye-catching promotional materials using advanced printing techniques including spot UV, embossing, and specialty finishes.'
+            },
+            {
+              src: './images/print-design/print-design-4.png',
+              description: 'Developed complete stationery systems that maintain brand consistency across all business communications and touchpoints.'
+            }
           ]
         }
       ]
@@ -249,54 +314,80 @@ document.addEventListener('DOMContentLoaded', () => {
           title: 'Instagram Campaign',
           desc: 'Engaging social media content',
           category: 'Digital Marketing',
-          description: 'Strategic Instagram campaign featuring curated content, engaging stories, and interactive posts that drove significant follower growth and engagement rates. Data-driven approach optimized for maximum reach.',
-          client: 'E-commerce Brand',
+          client: 'Vibe Commerce',
           year: '2024',
           services: 'Social Media Marketing, Content Creation, Analytics',
           images: [
-            './images/social-media-engagement/social-media-eng-1.png',
-            './images/social-media-engagement/social-media-eng-2.png',
-            './images/social-media-engagement/social-media-eng-3.png'
+            {
+              src: './images/social-media-engagement/social-media-eng-1.png',
+              description: 'Strategic Instagram campaign featuring curated content, engaging stories, and interactive posts that drove significant follower growth and engagement rates. Data-driven approach optimized for maximum reach.'
+            },
+            {
+              src: './images/social-media-engagement/social-media-eng-2.png',
+              description: 'Developed consistent visual themes and content pillars that resonate with target audience, resulting in 300% increase in engagement.'
+            },
+            {
+              src: './images/social-media-engagement/social-media-eng-3.png',
+              description: 'Created interactive story content with polls, quizzes, and Q&A sessions that boosted community engagement and brand loyalty.'
+            }
           ]
         },
         {
           title: 'Social Media Graphics',
           desc: 'Scroll-stopping visuals',
           category: 'Digital Marketing',
-          description: 'Attention-grabbing social media graphics designed to stop the scroll and drive engagement. Each graphic was optimized for platform specifications and audience preferences.',
-          client: 'Startup',
+          client: 'Pulse Startup',
           year: '2024',
           services: 'Graphic Design, Social Media Content, Brand Consistency',
           images: [
-            './images/social-media-engagement/social-media-eng-2.png',
-            './images/social-media-engagement/social-media-eng-1.png',
-            './images/branding/branding-3.png'
+            {
+              src: './images/social-media-engagement/social-media-eng-2.png',
+              description: 'Attention-grabbing social media graphics designed to stop the scroll and drive engagement. Each graphic was optimized for platform specifications and audience preferences.'
+            },
+            {
+              src: './images/social-media-engagement/social-media-eng-1.png',
+              description: 'Designed platform-specific content that performs optimally on Instagram, Facebook, LinkedIn, and Twitter with appropriate dimensions and formatting.'
+            },
+            {
+              src: './images/branding/branding-3.png',
+              description: 'Created a library of reusable templates and graphics that maintain brand consistency while allowing for quick content production.'
+            }
           ]
         },
         {
           title: 'Content Strategy',
           desc: 'Data-driven content planning',
           category: 'Digital Marketing',
-          description: 'Comprehensive content strategy that aligns with business goals and audience needs. Research-backed approach to content creation, distribution, and performance measurement.',
-          client: 'B2B Company',
+          client: 'TechFlow B2B',
           year: '2023',
           services: 'Content Strategy, Planning, Performance Analysis',
           images: [
-            './images/social-media-engagement/social-media-eng-3.png',
-            './images/branding/branding-14.png'
+            {
+              src: './images/social-media-engagement/social-media-eng-3.png',
+              description: 'Comprehensive content strategy that aligns with business goals and audience needs. Research-backed approach to content creation, distribution, and performance measurement.'
+            },
+            {
+              src: './images/branding/branding-14.png',
+              description: 'Developed content calendars, editorial guidelines, and distribution strategies that increased organic reach by 250%.'
+            }
           ]
         },
         {
           title: 'Ad Campaign',
           desc: 'High-converting advertising',
           category: 'Digital Marketing',
-          description: 'Multi-platform advertising campaign that delivered exceptional ROI. Strategic ad creative, precise targeting, and continuous optimization resulted in significant conversion increases.',
-          client: 'Retail Brand',
+          client: 'Metro Retail',
           year: '2024',
           services: 'Digital Advertising, Creative Development, Campaign Management',
           images: [
-            './images/branding/branding-13.png',
-            './images/social-media-engagement/social-media-eng-1.png'
+            {
+              src: './images/branding/branding-13.png',
+              description: 'Multi-platform advertising campaign that delivered exceptional ROI. Strategic ad creative, precise targeting, and continuous optimization resulted in significant conversion increases.'
+            },
+            {
+              src: './images/social-media-engagement/social-media-eng-1.png',
+              description: 'Implemented A/B testing across multiple ad variations, resulting in 180% improvement in click-through rates and 45% reduction in cost per acquisition.'
+            }
           ]
         }
       ]
@@ -309,53 +400,76 @@ document.addEventListener('DOMContentLoaded', () => {
           title: 'Product Photography',
           desc: 'Professional product shoots',
           category: 'Media Production',
-          description: 'High-quality product photography that showcases details and creates desire. Professional lighting, composition, and post-production deliver images that sell.',
-          client: 'E-commerce Brands',
+          client: 'Luxe Goods',
           year: '2024',
           services: 'Product Photography, Retouching, Studio Setup',
           images: [
-            './images/branding/branding-1.png',
-            './images/branding/branding-4.png',
-            './images/print-design/print-design-1.png'
+            {
+              src: './images/branding/branding-1.png',
+              description: 'High-quality product photography that showcases details and creates desire. Professional lighting, composition, and post-production deliver images that sell.'
+            },
+            {
+              src: './images/branding/branding-4.png',
+              description: 'Captured multiple angles and lifestyle shots that highlight product features and benefits in authentic settings.'
+            },
+            {
+              src: './images/print-design/print-design-1.png',
+              description: 'Delivered fully retouched, web-ready images optimized for e-commerce platforms with consistent color profiles and sizing.'
+            }
           ]
         },
         {
           title: 'Corporate Documentary',
           desc: 'Authentic brand storytelling',
           category: 'Media Production',
-          description: 'Compelling documentary-style video that tells the authentic story of the brand. Interviewed key stakeholders, captured behind-the-scenes footage, and crafted a narrative that resonates.',
-          client: 'Enterprise',
+          client: 'Pinnacle Enterprise',
           year: '2023',
           services: 'Documentary Filmmaking, Interviews, Storytelling',
           images: [
-            './images/branding/branding-7.png',
-            './images/branding/branding-14.png'
+            {
+              src: './images/branding/branding-7.png',
+              description: 'Compelling documentary-style video that tells the authentic story of the brand. Interviewed key stakeholders, captured behind-the-scenes footage, and crafted a narrative that resonates.'
+            },
+            {
+              src: './images/branding/branding-14.png',
+              description: 'Produced cinematic interviews with founders and team members, revealing the human side of the business and building emotional connections with viewers.'
+            }
           ]
         },
         {
           title: 'Event Coverage',
           desc: 'Dynamic event documentation',
           category: 'Media Production',
-          description: 'Professional photography and videography services for corporate events, conferences, and product launches. Captured key moments and created engaging content for marketing use.',
-          client: 'Various Clients',
+          client: 'Catalyst Events',
           year: '2024',
           services: 'Event Photography, Videography, Live Coverage',
           images: [
-            './images/branding/branding-9.png',
-            './images/branding/branding-10.png'
+            {
+              src: './images/branding/branding-9.png',
+              description: 'Professional photography and videography services for corporate events, conferences, and product launches. Captured key moments and created engaging content for marketing use.'
+            },
+            {
+              src: './images/branding/branding-10.png',
+              description: 'Delivered comprehensive event coverage including highlight reels, social media clips, and full-length recordings for future promotional materials.'
+            }
           ]
         },
         {
           title: 'Promotional Video',
           desc: 'Cinematic brand films',
           category: 'Media Production',
-          description: 'Cinematic brand films that captivate audiences and drive action. Combined stunning visuals, compelling narrative, and strategic messaging to create memorable promotional content.',
-          client: 'Startup',
+          client: 'Spark Innovations',
           year: '2023',
           services: 'Video Production, Cinematography, Motion Graphics',
           images: [
-            './images/branding/branding-3.png',
-            './images/social-media-engagement/social-media-eng-1.png'
+            {
+              src: './images/branding/branding-3.png',
+              description: 'Cinematic brand films that captivate audiences and drive action. Combined stunning visuals, compelling narrative, and strategic messaging to create memorable promotional content.'
+            },
+            {
+              src: './images/social-media-engagement/social-media-eng-1.png',
+              description: 'Integrated motion graphics, sound design, and color grading to create polished promotional videos that elevate brand perception and drive conversions.'
+            }
           ]
         }
       ]
@@ -385,9 +499,10 @@ document.addEventListener('DOMContentLoaded', () => {
         projectCard.className = 'project-list-item';
         projectCard.innerHTML = `
           <div class="project-item-image">
-            <img src="${project.images[0]}" alt="${project.title}">
+            <img src="${project.images[0].src}" alt="${project.title}">
           </div>
           <div class="project-item-info">
+            <p class="project-item-client">${project.client}</p>
             <h3 class="project-item-title">${project.title}</h3>
             <p class="project-item-desc">${project.desc}</p>
           </div>
@@ -430,38 +545,48 @@ document.addEventListener('DOMContentLoaded', () => {
     // Populate project modal
     document.getElementById('modalCategory').textContent = project.category;
     document.getElementById('modalTitle').textContent = project.title;
-    document.getElementById('modalDescription').textContent = project.description;
+    document.getElementById('modalDescription').textContent = project.images[0].description;
     document.getElementById('modalClient').textContent = project.client;
     document.getElementById('modalYear').textContent = project.year;
     document.getElementById('modalServices').textContent = project.services;
     
     // Set main image
     const modalImage = document.getElementById('modalImage');
-    modalImage.src = project.images[0];
+    const modalDescription = document.getElementById('modalDescription');
+    modalImage.src = project.images[0].src;
     modalImage.alt = project.title;
     
     // Generate gallery thumbnails
     const galleryThumbnails = document.getElementById('galleryThumbnails');
     galleryThumbnails.innerHTML = '';
     
-    project.images.forEach((imgSrc, index) => {
+    project.images.forEach((imageData, index) => {
       const thumbnail = document.createElement('div');
       thumbnail.className = `gallery-thumbnail ${index === 0 ? 'active' : ''}`;
-      thumbnail.innerHTML = `<img src="${imgSrc}" alt="${project.title} ${index + 1}">`;
+      thumbnail.innerHTML = `<img src="${imageData.src}" alt="${project.title} ${index + 1}">`;
       
       thumbnail.addEventListener('click', () => {
         // Update main image
-        modalImage.src = imgSrc;
+        modalImage.src = imageData.src;
+        
+        // Update description to match the clicked image
+        modalDescription.textContent = imageData.description;
         
         // Update active thumbnail
         galleryThumbnails.querySelectorAll('.gallery-thumbnail').forEach(t => t.classList.remove('active'));
         thumbnail.classList.add('active');
         
-        // Animate image change
+        // Animate image and description change
         gsap.from(modalImage, {
           opacity: 0,
           scale: 1.05,
           duration: 0.4,
+          ease: 'power2.out'
+        });
+        gsap.from(modalDescription, {
+          opacity: 0,
+          y: 10,
+          duration: 0.3,
           ease: 'power2.out'
         });
       });
@@ -526,6 +651,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  // Pricing button in project modal
+  const modalPricingBtn = document.getElementById('modalPricingBtn');
+  if (modalPricingBtn) {
+    modalPricingBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeProjectModal();
+      setTimeout(() => {
+        document.querySelector('#pricing').scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    });
+  }
 
   // Portfolio Filter System
   const filterBtns = document.querySelectorAll('.filter-btn');
