@@ -122,204 +122,364 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('mouseleave', () => gsap.to(item, {rotationY:0, rotationX:0, duration:0.6, ease:'power2.out'}));
   });
 
-  // Portfolio Modal System
+  // TWO-LEVEL MODAL SYSTEM
+  // Get modal elements
+  const categoryModal = document.getElementById('categoryModal');
   const projectModal = document.getElementById('projectModal');
+  const categoryModalBackdrop = categoryModal.querySelector('.category-modal-backdrop');
   const modalBackdrop = projectModal.querySelector('.modal-backdrop');
+  const categoryModalClose = categoryModal.querySelector('.category-modal-close');
   const modalClose = projectModal.querySelector('.modal-close');
-  const modalImage = document.getElementById('modalImage');
-  const modalCategory = document.getElementById('modalCategory');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalDescription = document.getElementById('modalDescription');
-  const modalClient = document.getElementById('modalClient');
-  const modalYear = document.getElementById('modalYear');
-  const modalServices = document.getElementById('modalServices');
-
-  // Project data
-  const projectData = {
-    'Brand Identity System': {
-      category: 'Graphics Design',
-      description: 'A comprehensive visual identity system that captures the essence of modern branding. This project involved creating a complete brand ecosystem including logo design, color palettes, typography systems, and brand guidelines to ensure consistent application across all touchpoints.',
-      client: 'Tech Startup',
-      year: '2024',
-      services: 'Brand Strategy, Logo Design, Visual Identity'
+  const modalBack = document.getElementById('modalBack');
+  
+  // Project database with multiple images per project
+  const projectDatabase = {
+    graphics: {
+      title: 'Graphics Design',
+      description: 'Creative visual solutions for modern brands',
+      projects: [
+        {
+          title: 'Brand Identity System',
+          desc: 'Complete visual identity for modern brands',
+          category: 'Graphics Design',
+          description: 'A comprehensive visual identity system that captures the essence of modern branding. This project involved creating a complete brand ecosystem including logo design, color palettes, typography systems, and brand guidelines.',
+          client: 'Tech Startup',
+          year: '2024',
+          services: 'Brand Strategy, Logo Design, Visual Identity',
+          images: [
+            './images/branding/branding-1.png',
+            './images/branding/branding-14.png',
+            './images/branding/branding-7.png',
+            './images/branding/branding-9.png'
+          ]
+        },
+        {
+          title: 'Logo Design',
+          desc: 'Modern and memorable brand marks',
+          category: 'Graphics Design',
+          description: 'Crafted distinctive and memorable logos that perfectly represent brand values and mission. The design process involved extensive research, conceptualization, and refinement to create timeless marks.',
+          client: 'Various Clients',
+          year: '2024',
+          services: 'Logo Design, Brand Mark, Icon Design',
+          images: [
+            './images/branding/branding-3.png',
+            './images/branding/branding-4.png',
+            './images/branding/branding-11.png',
+            './images/branding/branding-13.png'
+          ]
+        },
+        {
+          title: 'Packaging Design',
+          desc: 'Eye-catching product packaging',
+          category: 'Graphics Design',
+          description: 'Eye-catching product packaging that stands out on shelves and creates lasting impressions. This project balanced aesthetic appeal with functional requirements and sustainable materials.',
+          client: 'Consumer Brand',
+          year: '2023',
+          services: 'Packaging Design, Structural Design, Print Production',
+          images: [
+            './images/branding/branding-4.png',
+            './images/print-design/print-design-1.png',
+            './images/print-design/print-design-3.png'
+          ]
+        },
+        {
+          title: 'Corporate Branding',
+          desc: 'Professional business identity',
+          category: 'Graphics Design',
+          description: 'Professional corporate identity that elevates business presence and builds trust with stakeholders. Comprehensive solution includes business cards, letterheads, and digital assets.',
+          client: 'Financial Services',
+          year: '2024',
+          services: 'Corporate Identity, Stationery Design, Brand Guidelines',
+          images: [
+            './images/branding/branding-7.png',
+            './images/branding/branding-6.png',
+            './images/print-design/print-design-2.png'
+          ]
+        },
+        {
+          title: 'Visual Identity',
+          desc: 'Cohesive brand visual systems',
+          category: 'Graphics Design',
+          description: 'A cohesive visual identity system that tells a compelling brand story across all platforms. Flexible design system that maintains consistency while allowing creative expression.',
+          client: 'Creative Agency',
+          year: '2023',
+          services: 'Visual Identity, Design System, Brand Assets',
+          images: [
+            './images/branding/branding-9.png',
+            './images/branding/branding-10.png',
+            './images/branding/branding-12.png'
+          ]
+        },
+        {
+          title: 'Brand Guidelines',
+          desc: 'Comprehensive brand standards',
+          category: 'Graphics Design',
+          description: 'Comprehensive brand standards document that ensures consistent brand application across all media. Guidelines cover logo usage, color systems, typography, and imagery style.',
+          client: 'Enterprise Client',
+          year: '2024',
+          services: 'Brand Guidelines, Documentation, Training',
+          images: [
+            './images/branding/branding-10.png',
+            './images/branding/branding-8.png',
+            './images/print-design/print-design-4.png'
+          ]
+        },
+        {
+          title: 'Print Design',
+          desc: 'Professional print materials',
+          category: 'Graphics Design',
+          description: 'Professional business stationery and print materials including business cards, letterheads, brochures, and promotional materials. Each piece reinforces the brand identity.',
+          client: 'Various Clients',
+          year: '2024',
+          services: 'Print Design, Stationery, Marketing Collateral',
+          images: [
+            './images/print-design/print-design-1.png',
+            './images/print-design/print-design-2.png',
+            './images/print-design/print-design-3.png',
+            './images/print-design/print-design-4.png'
+          ]
+        }
+      ]
     },
-    'Logo Design': {
-      category: 'Graphics Design',
-      description: 'Crafted a distinctive and memorable logo that perfectly represents the brand\'s values and mission. The design process involved extensive research, conceptualization, and refinement to create a timeless mark that resonates with the target audience.',
-      client: 'Confidential',
-      year: '2024',
-      services: 'Logo Design, Brand Mark, Icon Design'
+    marketing: {
+      title: 'Digital Marketing',
+      description: 'Strategic campaigns that drive engagement and growth',
+      projects: [
+        {
+          title: 'Instagram Campaign',
+          desc: 'Engaging social media content',
+          category: 'Digital Marketing',
+          description: 'Strategic Instagram campaign featuring curated content, engaging stories, and interactive posts that drove significant follower growth and engagement rates. Data-driven approach optimized for maximum reach.',
+          client: 'E-commerce Brand',
+          year: '2024',
+          services: 'Social Media Marketing, Content Creation, Analytics',
+          images: [
+            './images/social-media-engagement/social-media-eng-1.png',
+            './images/social-media-engagement/social-media-eng-2.png',
+            './images/social-media-engagement/social-media-eng-3.png'
+          ]
+        },
+        {
+          title: 'Social Media Graphics',
+          desc: 'Scroll-stopping visuals',
+          category: 'Digital Marketing',
+          description: 'Attention-grabbing social media graphics designed to stop the scroll and drive engagement. Each graphic was optimized for platform specifications and audience preferences.',
+          client: 'Startup',
+          year: '2024',
+          services: 'Graphic Design, Social Media Content, Brand Consistency',
+          images: [
+            './images/social-media-engagement/social-media-eng-2.png',
+            './images/social-media-engagement/social-media-eng-1.png',
+            './images/branding/branding-3.png'
+          ]
+        },
+        {
+          title: 'Content Strategy',
+          desc: 'Data-driven content planning',
+          category: 'Digital Marketing',
+          description: 'Comprehensive content strategy that aligns with business goals and audience needs. Research-backed approach to content creation, distribution, and performance measurement.',
+          client: 'B2B Company',
+          year: '2023',
+          services: 'Content Strategy, Planning, Performance Analysis',
+          images: [
+            './images/social-media-engagement/social-media-eng-3.png',
+            './images/branding/branding-14.png'
+          ]
+        },
+        {
+          title: 'Ad Campaign',
+          desc: 'High-converting advertising',
+          category: 'Digital Marketing',
+          description: 'Multi-platform advertising campaign that delivered exceptional ROI. Strategic ad creative, precise targeting, and continuous optimization resulted in significant conversion increases.',
+          client: 'Retail Brand',
+          year: '2024',
+          services: 'Digital Advertising, Creative Development, Campaign Management',
+          images: [
+            './images/branding/branding-13.png',
+            './images/social-media-engagement/social-media-eng-1.png'
+          ]
+        }
+      ]
     },
-    'Packaging Design': {
-      category: 'Graphics Design',
-      description: 'Eye-catching product packaging that stands out on shelves and creates a lasting impression. This project balanced aesthetic appeal with functional requirements, incorporating sustainable materials and innovative structural design.',
-      client: 'Consumer Brand',
-      year: '2023',
-      services: 'Packaging Design, Structural Design, Print Production'
-    },
-    'Corporate Branding': {
-      category: 'Graphics Design',
-      description: 'Professional corporate identity that elevates the business presence and builds trust with stakeholders. The comprehensive branding solution includes business cards, letterheads, presentations, and digital assets.',
-      client: 'Financial Services',
-      year: '2024',
-      services: 'Corporate Identity, Stationery Design, Brand Guidelines'
-    },
-    'Visual Identity': {
-      category: 'Graphics Design',
-      description: 'A cohesive visual identity system that tells a compelling brand story across all platforms. This project involved creating a flexible design system that maintains consistency while allowing creative expression.',
-      client: 'Creative Agency',
-      year: '2023',
-      services: 'Visual Identity, Design System, Brand Assets'
-    },
-    'Brand Guidelines': {
-      category: 'Graphics Design',
-      description: 'Comprehensive brand standards document that ensures consistent brand application across all media. The guidelines cover logo usage, color systems, typography, imagery style, and tone of voice.',
-      client: 'Enterprise Client',
-      year: '2024',
-      services: 'Brand Guidelines, Documentation, Training'
-    },
-    'Rebranding Project': {
-      category: 'Graphics Design',
-      description: 'Complete brand transformation that repositioned the company in the market. The project involved strategic analysis, creative development, and implementation across all brand touchpoints.',
-      client: 'Established Business',
-      year: '2023',
-      services: 'Brand Strategy, Rebranding, Implementation'
-    },
-    'Stationary Design': {
-      category: 'Graphics Design',
-      description: 'Professional business stationery including business cards, letterheads, envelopes, and more. Each piece was carefully designed to reinforce the brand identity and create a cohesive professional image.',
-      client: 'Professional Services',
-      year: '2024',
-      services: 'Stationery Design, Print Design, Brand Collateral'
-    },
-    'Marketing Brochure': {
-      category: 'Graphics Design',
-      description: 'Engaging promotional brochure that effectively communicates the brand message and drives action. The design combines compelling visuals with persuasive copy to create a powerful marketing tool.',
-      client: 'Marketing Agency',
-      year: '2024',
-      services: 'Brochure Design, Copywriting, Print Production'
-    },
-    'Corporate Brochure': {
-      category: 'Graphics Design',
-      description: 'Professional company profile that showcases capabilities and builds credibility. The brochure features sophisticated design, high-quality imagery, and strategic content organization.',
-      client: 'Corporate Client',
-      year: '2023',
-      services: 'Corporate Design, Editorial Design, Print'
-    },
-    'Poster Campaign': {
-      category: 'Graphics Design',
-      description: 'Bold and impactful poster series that captures attention and communicates key messages. The campaign utilized strong visual hierarchy and compelling imagery to maximize impact.',
-      client: 'Event Organizer',
-      year: '2024',
-      services: 'Poster Design, Campaign Creative, Large Format'
-    },
-    'Magazine Layout': {
-      category: 'Graphics Design',
-      description: 'Editorial design excellence with beautiful layouts that enhance readability and visual appeal. The project involved typographic refinement, image selection, and grid system development.',
-      client: 'Publishing House',
-      year: '2023',
-      services: 'Editorial Design, Layout, Typography'
-    },
-    'Instagram Campaign': {
-      category: 'Digital Marketing',
-      description: 'Engaging social media content that builds community and drives engagement. The campaign included custom graphics, templates, and strategic content planning for consistent brand presence.',
-      client: 'E-commerce Brand',
-      year: '2024',
-      services: 'Social Media Design, Content Strategy, Templates'
-    },
-    'Social Media Graphics': {
-      category: 'Digital Marketing',
-      description: 'Eye-catching posts and stories that stop the scroll and drive engagement. Created a library of templates and assets for consistent, high-quality social media presence.',
-      client: 'Lifestyle Brand',
-      year: '2024',
-      services: 'Social Graphics, Templates, Brand Content'
-    },
-    'Content Strategy': {
-      category: 'Digital Marketing',
-      description: 'Consistent brand presence across social platforms with strategic content planning. Developed visual themes, posting schedules, and engagement strategies for maximum impact.',
-      client: 'Personal Brand',
-      year: '2023',
-      services: 'Strategy, Content Planning, Social Management'
-    },
-    'Ad Campaign': {
-      category: 'Digital Marketing',
-      description: 'High-converting ad creatives optimized for digital platforms. The campaign utilized A/B testing, data-driven insights, and compelling visuals to maximize ROI.',
-      client: 'SaaS Company',
-      year: '2024',
-      services: 'Ad Creative, Digital Marketing, Optimization'
-    },
-    'Email Templates': {
-      category: 'Digital Marketing',
-      description: 'Beautiful email campaigns that drive opens and clicks. Designed responsive templates that look great on all devices and align with brand guidelines.',
-      client: 'Retail Business',
-      year: '2024',
-      services: 'Email Design, HTML Templates, Marketing'
-    },
-    'Product Photography': {
-      category: 'Media Production',
-      description: 'Professional product photography that showcases products in the best light. Utilized expert lighting, composition, and post-production to create compelling product imagery.',
-      client: 'Product Brand',
-      year: '2024',
-      services: 'Photography, Retouching, Product Styling'
-    },
-    'Corporate Documentary': {
-      category: 'Media Production',
-      description: 'Compelling brand storytelling through documentary-style video production. This project captured the authentic story of the company, featuring interviews, behind-the-scenes footage, and cinematic visuals.',
-      client: 'Corporate Client',
-      year: '2024',
-      services: 'Video Production, Documentary, Storytelling'
-    },
-    'Event Coverage': {
-      category: 'Media Production',
-      description: 'Professional video documentation of live events with multi-camera coverage. Captured key moments, speeches, and atmosphere to create engaging highlight reels and full-length event videos.',
-      client: 'Event Company',
-      year: '2024',
-      services: 'Event Videography, Multi-cam Production, Editing'
-    },
-    'Promotional Video': {
-      category: 'Media Production',
-      description: 'Cinematic brand films that captivate audiences and drive action. Combined stunning visuals, compelling narrative, and strategic messaging to create memorable promotional content.',
-      client: 'Startup',
-      year: '2023',
-      services: 'Video Production, Cinematography, Motion Graphics'
+    media: {
+      title: 'Media Production',
+      description: 'Captivating visual storytelling through photography and video',
+      projects: [
+        {
+          title: 'Product Photography',
+          desc: 'Professional product shoots',
+          category: 'Media Production',
+          description: 'High-quality product photography that showcases details and creates desire. Professional lighting, composition, and post-production deliver images that sell.',
+          client: 'E-commerce Brands',
+          year: '2024',
+          services: 'Product Photography, Retouching, Studio Setup',
+          images: [
+            './images/branding/branding-1.png',
+            './images/branding/branding-4.png',
+            './images/print-design/print-design-1.png'
+          ]
+        },
+        {
+          title: 'Corporate Documentary',
+          desc: 'Authentic brand storytelling',
+          category: 'Media Production',
+          description: 'Compelling documentary-style video that tells the authentic story of the brand. Interviewed key stakeholders, captured behind-the-scenes footage, and crafted a narrative that resonates.',
+          client: 'Enterprise',
+          year: '2023',
+          services: 'Documentary Filmmaking, Interviews, Storytelling',
+          images: [
+            './images/branding/branding-7.png',
+            './images/branding/branding-14.png'
+          ]
+        },
+        {
+          title: 'Event Coverage',
+          desc: 'Dynamic event documentation',
+          category: 'Media Production',
+          description: 'Professional photography and videography services for corporate events, conferences, and product launches. Captured key moments and created engaging content for marketing use.',
+          client: 'Various Clients',
+          year: '2024',
+          services: 'Event Photography, Videography, Live Coverage',
+          images: [
+            './images/branding/branding-9.png',
+            './images/branding/branding-10.png'
+          ]
+        },
+        {
+          title: 'Promotional Video',
+          desc: 'Cinematic brand films',
+          category: 'Media Production',
+          description: 'Cinematic brand films that captivate audiences and drive action. Combined stunning visuals, compelling narrative, and strategic messaging to create memorable promotional content.',
+          client: 'Startup',
+          year: '2023',
+          services: 'Video Production, Cinematography, Motion Graphics',
+          images: [
+            './images/branding/branding-3.png',
+            './images/social-media-engagement/social-media-eng-1.png'
+          ]
+        }
+      ]
     }
   };
 
-  // Open modal when clicking portfolio items
+  // Open Category Modal (Level 1) - Shows project list for clicked category
   portfolioItems.forEach(item => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
       
-      const title = item.querySelector('.port-info h4').textContent;
-      const category = item.querySelector('.port-category').textContent;
-      const description = item.querySelector('.port-desc').textContent;
-      const imgSrc = item.querySelector('img').src;
+      const category = item.dataset.category;
+      const categoryData = projectDatabase[category];
       
-      // Get detailed project data
-      const projectDetails = projectData[title] || {
-        category: category,
-        description: description,
-        client: 'Confidential',
-        year: '2024',
-        services: 'Design & Creative Services'
-      };
+      if (!categoryData) return;
       
-      // Populate modal
-      modalImage.src = imgSrc;
-      modalImage.alt = title;
-      modalCategory.textContent = projectDetails.category;
-      modalTitle.textContent = title;
-      modalDescription.textContent = projectDetails.description;
-      modalClient.textContent = projectDetails.client;
-      modalYear.textContent = projectDetails.year;
-      modalServices.textContent = projectDetails.services;
+      // Populate category modal header
+      document.getElementById('categoryTitle').textContent = categoryData.title;
+      document.getElementById('categoryDescription').textContent = categoryData.description;
       
-      // Open modal with animation
-      projectModal.classList.add('active');
+      // Generate projects list
+      const projectsList = document.getElementById('projectsList');
+      projectsList.innerHTML = '';
+      
+      categoryData.projects.forEach((project, index) => {
+        const projectCard = document.createElement('div');
+        projectCard.className = 'project-list-item';
+        projectCard.innerHTML = `
+          <div class="project-item-image">
+            <img src="${project.images[0]}" alt="${project.title}">
+          </div>
+          <div class="project-item-info">
+            <h3 class="project-item-title">${project.title}</h3>
+            <p class="project-item-desc">${project.desc}</p>
+          </div>
+        `;
+        
+        // Add click handler to open project detail modal
+        projectCard.addEventListener('click', () => openProjectModal(project));
+        
+        projectsList.appendChild(projectCard);
+        
+        // Animate project cards
+        gsap.from(projectCard, {
+          opacity: 0,
+          y: 30,
+          duration: 0.5,
+          delay: index * 0.08,
+          ease: 'power3.out'
+        });
+      });
+      
+      // Open category modal
+      categoryModal.classList.add('active');
       document.body.style.overflow = 'hidden';
       
+      // Animate modal
+      gsap.from('.category-modal-header', {
+        opacity: 0,
+        y: -20,
+        duration: 0.5,
+        ease: 'power3.out'
+      });
+    });
+  });
+
+  // Open Project Detail Modal (Level 2) - Shows project gallery and details
+  function openProjectModal(project) {
+    // Close category modal
+    categoryModal.classList.remove('active');
+    
+    // Populate project modal
+    document.getElementById('modalCategory').textContent = project.category;
+    document.getElementById('modalTitle').textContent = project.title;
+    document.getElementById('modalDescription').textContent = project.description;
+    document.getElementById('modalClient').textContent = project.client;
+    document.getElementById('modalYear').textContent = project.year;
+    document.getElementById('modalServices').textContent = project.services;
+    
+    // Set main image
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = project.images[0];
+    modalImage.alt = project.title;
+    
+    // Generate gallery thumbnails
+    const galleryThumbnails = document.getElementById('galleryThumbnails');
+    galleryThumbnails.innerHTML = '';
+    
+    project.images.forEach((imgSrc, index) => {
+      const thumbnail = document.createElement('div');
+      thumbnail.className = `gallery-thumbnail ${index === 0 ? 'active' : ''}`;
+      thumbnail.innerHTML = `<img src="${imgSrc}" alt="${project.title} ${index + 1}">`;
+      
+      thumbnail.addEventListener('click', () => {
+        // Update main image
+        modalImage.src = imgSrc;
+        
+        // Update active thumbnail
+        galleryThumbnails.querySelectorAll('.gallery-thumbnail').forEach(t => t.classList.remove('active'));
+        thumbnail.classList.add('active');
+        
+        // Animate image change
+        gsap.from(modalImage, {
+          opacity: 0,
+          scale: 1.05,
+          duration: 0.4,
+          ease: 'power2.out'
+        });
+      });
+      
+      galleryThumbnails.appendChild(thumbnail);
+    });
+    
+    // Open project modal
+    setTimeout(() => {
+      projectModal.classList.add('active');
+      
       // Animate modal content
-      gsap.from(modalImage, {opacity: 0, scale: 1.1, duration: 0.6, ease: 'power3.out'});
+      gsap.from('.gallery-main', {
+        opacity: 0,
+        scale: 1.1,
+        duration: 0.6,
+        ease: 'power3.out'
+      });
       gsap.from('.modal-info > *', {
         opacity: 0,
         y: 20,
@@ -328,28 +488,47 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power3.out',
         delay: 0.2
       });
-    });
+    }, 200);
+  }
+
+  // Back button - Return to category modal
+  modalBack.addEventListener('click', () => {
+    projectModal.classList.remove('active');
+    setTimeout(() => {
+      categoryModal.classList.add('active');
+    }, 200);
   });
 
-  // Close modal
-  function closeModal() {
+  // Close modals
+  function closeCategoryModal() {
+    categoryModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function closeProjectModal() {
     projectModal.classList.remove('active');
     document.body.style.overflow = '';
   }
 
-  modalClose.addEventListener('click', closeModal);
-  modalBackdrop.addEventListener('click', closeModal);
+  categoryModalClose.addEventListener('click', closeCategoryModal);
+  categoryModalBackdrop.addEventListener('click', closeCategoryModal);
+  
+  modalClose.addEventListener('click', closeProjectModal);
+  modalBackdrop.addEventListener('click', closeProjectModal);
   
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && projectModal.classList.contains('active')) {
-      closeModal();
+    if (e.key === 'Escape') {
+      if (projectModal.classList.contains('active')) {
+        closeProjectModal();
+      } else if (categoryModal.classList.contains('active')) {
+        closeCategoryModal();
+      }
     }
   });
 
   // Portfolio Filter System
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const portfolioGrid = document.querySelector('.portfolio-grid');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
