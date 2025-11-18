@@ -137,105 +137,105 @@ document.addEventListener('DOMContentLoaded', () => {
   // Project data
   const projectData = {
     'Brand Identity System': {
-      category: 'Graphic Design & Branding',
+      category: 'Graphics Design',
       description: 'A comprehensive visual identity system that captures the essence of modern branding. This project involved creating a complete brand ecosystem including logo design, color palettes, typography systems, and brand guidelines to ensure consistent application across all touchpoints.',
       client: 'Tech Startup',
       year: '2024',
       services: 'Brand Strategy, Logo Design, Visual Identity'
     },
     'Logo Design': {
-      category: 'Graphic Design & Branding',
+      category: 'Graphics Design',
       description: 'Crafted a distinctive and memorable logo that perfectly represents the brand\'s values and mission. The design process involved extensive research, conceptualization, and refinement to create a timeless mark that resonates with the target audience.',
       client: 'Confidential',
       year: '2024',
       services: 'Logo Design, Brand Mark, Icon Design'
     },
     'Packaging Design': {
-      category: 'Graphic Design & Branding',
+      category: 'Graphics Design',
       description: 'Eye-catching product packaging that stands out on shelves and creates a lasting impression. This project balanced aesthetic appeal with functional requirements, incorporating sustainable materials and innovative structural design.',
       client: 'Consumer Brand',
       year: '2023',
       services: 'Packaging Design, Structural Design, Print Production'
     },
     'Corporate Branding': {
-      category: 'Graphic Design & Branding',
+      category: 'Graphics Design',
       description: 'Professional corporate identity that elevates the business presence and builds trust with stakeholders. The comprehensive branding solution includes business cards, letterheads, presentations, and digital assets.',
       client: 'Financial Services',
       year: '2024',
       services: 'Corporate Identity, Stationery Design, Brand Guidelines'
     },
     'Visual Identity': {
-      category: 'Graphic Design & Branding',
+      category: 'Graphics Design',
       description: 'A cohesive visual identity system that tells a compelling brand story across all platforms. This project involved creating a flexible design system that maintains consistency while allowing creative expression.',
       client: 'Creative Agency',
       year: '2023',
       services: 'Visual Identity, Design System, Brand Assets'
     },
     'Brand Guidelines': {
-      category: 'Graphic Design & Branding',
+      category: 'Graphics Design',
       description: 'Comprehensive brand standards document that ensures consistent brand application across all media. The guidelines cover logo usage, color systems, typography, imagery style, and tone of voice.',
       client: 'Enterprise Client',
       year: '2024',
       services: 'Brand Guidelines, Documentation, Training'
     },
     'Rebranding Project': {
-      category: 'Graphic Design & Branding',
+      category: 'Graphics Design',
       description: 'Complete brand transformation that repositioned the company in the market. The project involved strategic analysis, creative development, and implementation across all brand touchpoints.',
       client: 'Established Business',
       year: '2023',
       services: 'Brand Strategy, Rebranding, Implementation'
     },
     'Stationary Design': {
-      category: 'Graphic Design & Branding',
+      category: 'Graphics Design',
       description: 'Professional business stationery including business cards, letterheads, envelopes, and more. Each piece was carefully designed to reinforce the brand identity and create a cohesive professional image.',
       client: 'Professional Services',
       year: '2024',
       services: 'Stationery Design, Print Design, Brand Collateral'
     },
     'Marketing Brochure': {
-      category: 'Print Design',
+      category: 'Graphics Design',
       description: 'Engaging promotional brochure that effectively communicates the brand message and drives action. The design combines compelling visuals with persuasive copy to create a powerful marketing tool.',
       client: 'Marketing Agency',
       year: '2024',
       services: 'Brochure Design, Copywriting, Print Production'
     },
     'Corporate Brochure': {
-      category: 'Print Design',
+      category: 'Graphics Design',
       description: 'Professional company profile that showcases capabilities and builds credibility. The brochure features sophisticated design, high-quality imagery, and strategic content organization.',
       client: 'Corporate Client',
       year: '2023',
       services: 'Corporate Design, Editorial Design, Print'
     },
     'Poster Campaign': {
-      category: 'Print Design',
+      category: 'Graphics Design',
       description: 'Bold and impactful poster series that captures attention and communicates key messages. The campaign utilized strong visual hierarchy and compelling imagery to maximize impact.',
       client: 'Event Organizer',
       year: '2024',
       services: 'Poster Design, Campaign Creative, Large Format'
     },
     'Magazine Layout': {
-      category: 'Print Design',
+      category: 'Graphics Design',
       description: 'Editorial design excellence with beautiful layouts that enhance readability and visual appeal. The project involved typographic refinement, image selection, and grid system development.',
       client: 'Publishing House',
       year: '2023',
       services: 'Editorial Design, Layout, Typography'
     },
     'Instagram Campaign': {
-      category: 'Social Media',
+      category: 'Digital Marketing',
       description: 'Engaging social media content that builds community and drives engagement. The campaign included custom graphics, templates, and strategic content planning for consistent brand presence.',
       client: 'E-commerce Brand',
       year: '2024',
       services: 'Social Media Design, Content Strategy, Templates'
     },
     'Social Media Graphics': {
-      category: 'Social Media',
+      category: 'Digital Marketing',
       description: 'Eye-catching posts and stories that stop the scroll and drive engagement. Created a library of templates and assets for consistent, high-quality social media presence.',
       client: 'Lifestyle Brand',
       year: '2024',
       services: 'Social Graphics, Templates, Brand Content'
     },
     'Content Strategy': {
-      category: 'Social Media',
+      category: 'Digital Marketing',
       description: 'Consistent brand presence across social platforms with strategic content planning. Developed visual themes, posting schedules, and engagement strategies for maximum impact.',
       client: 'Personal Brand',
       year: '2023',
@@ -256,11 +256,32 @@ document.addEventListener('DOMContentLoaded', () => {
       services: 'Email Design, HTML Templates, Marketing'
     },
     'Product Photography': {
-      category: 'Photography',
+      category: 'Media Production',
       description: 'Professional product photography that showcases products in the best light. Utilized expert lighting, composition, and post-production to create compelling product imagery.',
       client: 'Product Brand',
       year: '2024',
       services: 'Photography, Retouching, Product Styling'
+    },
+    'Corporate Documentary': {
+      category: 'Media Production',
+      description: 'Compelling brand storytelling through documentary-style video production. This project captured the authentic story of the company, featuring interviews, behind-the-scenes footage, and cinematic visuals.',
+      client: 'Corporate Client',
+      year: '2024',
+      services: 'Video Production, Documentary, Storytelling'
+    },
+    'Event Coverage': {
+      category: 'Media Production',
+      description: 'Professional video documentation of live events with multi-camera coverage. Captured key moments, speeches, and atmosphere to create engaging highlight reels and full-length event videos.',
+      client: 'Event Company',
+      year: '2024',
+      services: 'Event Videography, Multi-cam Production, Editing'
+    },
+    'Promotional Video': {
+      category: 'Media Production',
+      description: 'Cinematic brand films that captivate audiences and drive action. Combined stunning visuals, compelling narrative, and strategic messaging to create memorable promotional content.',
+      client: 'Startup',
+      year: '2023',
+      services: 'Video Production, Cinematography, Motion Graphics'
     }
   };
 

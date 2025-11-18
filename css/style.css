@@ -9,7 +9,7 @@
   --bg:#0a0a0a;
   --surface:#0f0f0f;
   --muted:#9aa0a6;
-  --accent:#0028f4; /* primary accent */
+  --accent:#0055ff; /* primary accent */
   --text:#ffffff;
   --container:1200px;
   --radius:12px;
@@ -234,6 +234,32 @@ h1, h2, h3, h4, h5, h6{
 .stat-number{font-size:2.5rem;font-weight:800;background:linear-gradient(135deg, var(--accent), #4d7cff);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:'Creato Display', 'Montserrat', sans-serif}
 .stat-label{color:var(--muted);font-size:.9rem;margin-top:.5rem;font-weight:600}
 
+/* PRICING */
+.pricing{padding:5rem 0;position:relative;z-index:1}
+.pricing-header{text-align:center;margin-bottom:3rem}
+.pricing-subtitle{font-size:1.15rem;color:var(--muted);margin-top:.5rem}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:var(--container);margin:0 auto}
+.pricing-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:0;padding:2.5rem 2rem;position:relative;transition:all .3s ease;display:flex;flex-direction:column}
+.pricing-card::before{content:'';position:absolute;top:-1px;left:-1px;width:60px;height:60px;border-top:2px solid var(--accent);border-left:2px solid var(--accent);opacity:0;transition:opacity .3s ease}
+.pricing-card::after{content:'';position:absolute;bottom:-1px;right:-1px;width:60px;height:60px;border-bottom:2px solid var(--accent);border-right:2px solid var(--accent);opacity:0;transition:opacity .3s ease}
+.pricing-card:hover::before,.pricing-card:hover::after{opacity:1}
+.pricing-card.featured{border-color:var(--accent);background:rgba(0,85,255,0.05)}
+.pricing-card.featured::before,.pricing-card.featured::after{opacity:1}
+.featured-badge{position:absolute;top:1rem;right:1rem;background:var(--accent);color:#fff;padding:.4rem .8rem;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-radius:0}
+.pricing-card-header{margin-bottom:2rem}
+.plan-name{font-size:1.5rem;font-weight:700;color:var(--text);margin:0 0 1rem 0;font-family:'Creato Display','Montserrat',sans-serif}
+.plan-price{display:flex;align-items:flex-start;margin-bottom:1rem}
+.currency{font-size:1.5rem;color:var(--accent);margin-top:.5rem}
+.amount{font-size:3.5rem;font-weight:800;color:var(--text);line-height:1;font-family:'Creato Display','Montserrat',sans-serif}
+.plan-desc{color:var(--muted);font-size:.95rem}
+.plan-features{list-style:none;padding:0;margin:0 0 2rem 0;flex-grow:1}
+.plan-features li{display:flex;align-items:center;gap:.75rem;padding:.75rem 0;color:var(--text);font-size:.95rem}
+.plan-features svg{color:var(--accent);flex-shrink:0}
+.plan-btn{width:100%;padding:1rem;background:var(--accent);color:#fff;border:none;border-radius:0;font-size:1rem;font-weight:600;cursor:pointer;transition:all .3s ease;text-transform:uppercase;letter-spacing:.5px;margin-top:auto}
+.plan-btn:hover{background:#0066ff;transform:translateY(-2px)}
+.pricing-card.featured .plan-btn{background:#fff;color:var(--accent)}
+.pricing-card.featured .plan-btn:hover{background:var(--accent);color:#fff}
+
 /* CONTACT */
 .contact{padding:5rem 0}
 .contact-header{text-align:center;margin-bottom:3rem}
@@ -363,6 +389,8 @@ h1, h2, h3, h4, h5, h6{
   .filter-btn{justify-content:space-between;padding:1rem 1.5rem}
   .filter-btn span:not(.filter-icon):not(.filter-count){display:inline}
   .portfolio-grid{grid-template-columns:1fr;gap:1.5rem}
+  .pricing-grid{grid-template-columns:1fr;gap:1.5rem}
+  .pricing-card{padding:2rem 1.5rem}
   .testimonials-wrapper{grid-template-columns:1fr}
   .testimonial-card{padding:2rem 1.5rem}
   .contact-wrapper{grid-template-columns:1fr}
