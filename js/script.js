@@ -509,7 +509,10 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         
         // Add click handler to open project detail modal
-        projectCard.addEventListener('click', () => openProjectModal(project));
+        projectCard.addEventListener('click', (e) => {
+          e.stopPropagation(); // Prevent backdrop click
+          openProjectModal(project);
+        });
         
         projectsList.appendChild(projectCard);
         
@@ -542,21 +545,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Open Project Detail Modal (Level 2) - Shows all sub-projects with their own galleries
   function openProjectModal(project) {
-    // Close category modal
-    categoryModal.classList.remove('active');
-    
-    // Populate client header
-    document.getElementById('modalCategory').textContent = project.category;
-    document.getElementById('modalClientName').textContent = project.client;
-    document.getElementById('modalClientTagline').textContent = `${project.title} and more creative solutions`;
-    
-    // Get all projects from the same client in this category
-    const categoryData = projectDatabase[project.category.toLowerCase().replace(' ', '')];
-    const clientProjects = categoryData.projects.filter(p => p.client === project.client);
-    
-    // Populate projects grid with sub-projects
-    const projectsGrid = document.getElementById('modalProjectsGrid');
-    projectsGrid.innerHTML = '';
+    try {
+      console.log('Opening project modal for:', project);
+      
+      // Close category modal
+      categoryModal.classList.remove('active');
+      
+      // Populate client header
+      document.getElementById('modalCategory').textContent = project.category;
+      document.getElementById('modalClientName').textContent = project.client;
+      document.getElementById('modalClientTagline').textContent = `${project.title} and more creative solutions`;
+      
+      // Get all projects from the same client in this category
+      // Convert category name: "Graphics Design" -> "graphics", "Media Production" -> "media"
+      let categoryKey = project.category.toLowerCase().split(' ')[0];
+      console.log('Category key:', categoryKey);
+      
+      const categoryData = projectDatabase[categoryKey];
+      if (!categoryData) {
+        console.error('Category not found:', categoryKey);
+        return;
+      }
+      
+      const clientProjects = categoryData.projects.filter(p => p.client === project.client);
+      console.log('Client projects found:', clientProjects.length);
+      
+      // Populate projects grid with sub-projects
+      const projectsGrid = document.getElementById('modalProjectsGrid');
+      if (!projectsGrid) {
+        console.error('modalProjectsGrid not found');
+        return;
+      }
+      projectsGrid.innerHTML = '';
     
     clientProjects.forEach((subProject, projectIndex) => {
       const subProjectDiv = document.createElement('div');
@@ -649,6 +669,9 @@ document.addEventListener('DOMContentLoaded', () => {
         delay: 0.2
       });
     }, 200);
+    } catch (error) {
+      console.error('Error opening project modal:', error);
+    }
   }
 
   // Back button - Return to category modal
