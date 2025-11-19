@@ -514,9 +514,12 @@ document.addEventListener('DOMContentLoaded', () => {
         projectsList.appendChild(projectCard);
         
         // Animate project cards
-        gsap.from(projectCard, {
+        gsap.fromTo(projectCard, {
           opacity: 0,
-          y: 30,
+          y: 30
+        }, {
+          opacity: 1,
+          y: 0,
           duration: 0.5,
           delay: index * 0.08,
           ease: 'power3.out'
