@@ -540,61 +540,84 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Open Project Detail Modal (Level 2) - Shows project gallery and details
+  // Open Project Detail Modal (Level 2) - Shows all sub-projects with their own galleries
   function openProjectModal(project) {
     // Close category modal
     categoryModal.classList.remove('active');
     
-    // Populate project modal
+    // Populate client header
     document.getElementById('modalCategory').textContent = project.category;
-    document.getElementById('modalTitle').textContent = project.title;
-    document.getElementById('modalDescription').textContent = project.images[0].description;
-    document.getElementById('modalClient').textContent = project.client;
-    document.getElementById('modalYear').textContent = project.year;
-    document.getElementById('modalServices').textContent = project.services;
+    document.getElementById('modalClientName').textContent = project.client;
+    document.getElementById('modalClientTagline').textContent = `${project.title} and more creative solutions`;
     
-    // Set main image
-    const modalImage = document.getElementById('modalImage');
-    const modalDescription = document.getElementById('modalDescription');
-    modalImage.src = project.images[0].src;
-    modalImage.alt = project.title;
+    // Get all projects from the same client in this category
+    const categoryData = projectDatabase[project.category.toLowerCase().replace(' ', '')];
+    const clientProjects = categoryData.projects.filter(p => p.client === project.client);
     
-    // Generate gallery thumbnails
-    const galleryThumbnails = document.getElementById('galleryThumbnails');
-    galleryThumbnails.innerHTML = '';
+    // Populate projects grid with sub-projects
+    const projectsGrid = document.getElementById('modalProjectsGrid');
+    projectsGrid.innerHTML = '';
     
-    project.images.forEach((imageData, index) => {
-      const thumbnail = document.createElement('div');
-      thumbnail.className = `gallery-thumbnail ${index === 0 ? 'active' : ''}`;
-      thumbnail.innerHTML = `<img src="${imageData.src}" alt="${project.title} ${index + 1}">`;
+    clientProjects.forEach((subProject, projectIndex) => {
+      const subProjectDiv = document.createElement('div');
+      subProjectDiv.className = 'sub-project-item';
       
-      thumbnail.addEventListener('click', () => {
-        // Update main image
-        modalImage.src = imageData.src;
-        
-        // Update description to match the clicked image
-        modalDescription.textContent = imageData.description;
-        
-        // Update active thumbnail
-        galleryThumbnails.querySelectorAll('.gallery-thumbnail').forEach(t => t.classList.remove('active'));
-        thumbnail.classList.add('active');
-        
-        // Animate image and description change
-        gsap.from(modalImage, {
-          opacity: 0,
-          scale: 1.05,
-          duration: 0.4,
-          ease: 'power2.out'
-        });
-        gsap.from(modalDescription, {
-          opacity: 0,
-          y: 10,
-          duration: 0.3,
-          ease: 'power2.out'
+      // Create gallery HTML
+      const galleryHTML = `
+        <div class="sub-project-gallery" data-project-index="${projectIndex}">
+          <div class="sub-gallery-main" id="subGalleryMain-${projectIndex}">
+            <img src="${subProject.images[0].src}" alt="${subProject.title}">
+          </div>
+          <div class="sub-gallery-thumbnails" id="subGalleryThumbs-${projectIndex}">
+            ${subProject.images.map((img, imgIndex) => `
+              <div class="sub-gallery-thumb ${imgIndex === 0 ? 'active' : ''}" data-image-index="${imgIndex}">
+                <img src="${img.src}" alt="${subProject.title} ${imgIndex + 1}">
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+      
+      subProjectDiv.innerHTML = `
+        <div class="sub-project-header">
+          <h3 class="sub-project-title">${subProject.title}</h3>
+          <div class="sub-project-meta">
+            <span><strong>Year:</strong> ${subProject.year}</span>
+            <span><strong>Services:</strong> ${subProject.services}</span>
+          </div>
+          <p class="sub-project-description">${subProject.desc}</p>
+        </div>
+        ${galleryHTML}
+      `;
+      
+      projectsGrid.appendChild(subProjectDiv);
+      
+      // Add thumbnail click handlers for this sub-project
+      const thumbnailsContainer = document.getElementById(`subGalleryThumbs-${projectIndex}`);
+      const mainImage = document.getElementById(`subGalleryMain-${projectIndex}`);
+      
+      thumbnailsContainer.querySelectorAll('.sub-gallery-thumb').forEach((thumb) => {
+        thumb.addEventListener('click', () => {
+          const imageIndex = parseInt(thumb.dataset.imageIndex);
+          const imageData = subProject.images[imageIndex];
+          
+          // Update main image
+          mainImage.querySelector('img').src = imageData.src;
+          mainImage.querySelector('img').alt = `${subProject.title} ${imageIndex + 1}`;
+          
+          // Update active thumbnail
+          thumbnailsContainer.querySelectorAll('.sub-gallery-thumb').forEach(t => t.classList.remove('active'));
+          thumb.classList.add('active');
+          
+          // Animate image change
+          gsap.from(mainImage.querySelector('img'), {
+            opacity: 0,
+            scale: 1.05,
+            duration: 0.4,
+            ease: 'power2.out'
+          });
         });
       });
-      
-      galleryThumbnails.appendChild(thumbnail);
     });
     
     // Open project modal
@@ -602,10 +625,18 @@ document.addEventListener('DOMContentLoaded', () => {
       projectModal.classList.add('active');
       
       // Animate modal content
-      gsap.from('.gallery-main', {
+      gsap.from('.modal-client-header', {
         opacity: 0,
-        scale: 1.1,
+        y: -20,
+        duration: 0.5,
+        ease: 'power3.out'
+      });
+      
+      gsap.from('.sub-project-item', {
+        opacity: 0,
+        y: 30,
         duration: 0.6,
+        stagger: 0.15,
         ease: 'power3.out'
       });
       gsap.from('.modal-info > *', {

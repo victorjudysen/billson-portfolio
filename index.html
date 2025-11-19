@@ -1046,31 +1046,12 @@
         </svg>
       </button>
       <div class="modal-body">
-        <div class="modal-gallery">
-          <div class="gallery-main">
-            <img id="modalImage" src="" alt="">
-          </div>
-          <div class="gallery-thumbnails" id="galleryThumbnails">
-            <!-- Thumbnails will be dynamically inserted -->
-          </div>
-        </div>
-        <div class="modal-info">
-          <span class="modal-category" id="modalCategory"></span>
-          <h2 id="modalTitle"></h2>
-          <p class="modal-description" id="modalDescription"></p>
-          <div class="modal-details">
-            <div class="detail-item">
-              <strong>Client:</strong>
-              <span id="modalClient">Confidential</span>
-            </div>
-            <div class="detail-item">
-              <strong>Year:</strong>
-              <span id="modalYear">2024</span>
-            </div>
-            <div class="detail-item">
-              <strong>Services:</strong>
-              <span id="modalServices">Brand Identity, Design</span>
-            </div>
+        <!-- Client Header Section -->
+        <div class="modal-client-header">
+          <div class="client-header-content">
+            <span class="modal-category" id="modalCategory"></span>
+            <h2 id="modalClientName"></h2>
+            <p class="client-tagline" id="modalClientTagline">Explore our creative work</p>
           </div>
           <div class="modal-actions">
             <a href="https://wa.link/szi1ly" target="_blank" class="modal-cta">
@@ -1087,6 +1068,11 @@
               </svg>
             </a>
           </div>
+        </div>
+
+        <!-- Projects Grid Section -->
+        <div class="modal-projects-grid" id="modalProjectsGrid">
+          <!-- Sub-projects will be dynamically inserted here -->
         </div>
       </div>
     </div>
