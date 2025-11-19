@@ -623,6 +623,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Open project modal
     setTimeout(() => {
       projectModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
       
       // Animate modal content
       gsap.from('.modal-client-header', {
@@ -666,14 +667,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeProjectModal() {
     projectModal.classList.remove('active');
-    document.body.style.overflow = '';
+    // Don't reset body overflow here - category modal might reopen
   }
 
   categoryModalClose.addEventListener('click', closeCategoryModal);
   categoryModalBackdrop.addEventListener('click', closeCategoryModal);
   
-  modalClose.addEventListener('click', closeProjectModal);
-  modalBackdrop.addEventListener('click', closeProjectModal);
+  modalClose.addEventListener('click', () => {
+    closeProjectModal();
+    closeCategoryModal();
+    document.body.style.overflow = '';
+  });
+  
+  modalBackdrop.addEventListener('click', () => {
+    closeProjectModal();
+    closeCategoryModal();
+    document.body.style.overflow = '';
+  });
   
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
