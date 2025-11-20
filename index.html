@@ -1,185 +1,250 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BS Studio — Creative Services</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BS Studio — Creative Services</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Favicon and Touch Icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-  <link rel="manifest" href="./images/site.webmanifest">  
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
+    <link rel="manifest" href="./images/site.webmanifest" />
 
-  <!-- GSAP & ScrollTrigger CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-  <script src="js/script.js" defer></script>
-</head>
-<body>
-  <header class="site-header">
-    <nav class="nav container">
-      <a class="logo" href="#">
-        <img src="./images/logo_version_2.png" alt="BS Studio Logo" class="logo-image">
-        <span class="logo-text">BS STUDIO</span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="#about" class="nav-link"><span>About</span></a></li>
-        <li><a href="#services" class="nav-link"><span>Services</span></a></li>
-        <li><a href="#pricing" class="nav-link"><span>Pricing</span></a></li>
-        <li><a href="#testimonials" class="nav-link"><span>Testimonials</span></a></li>
-        <li><a href="#contact" class="nav-link nav-link-cta"><span>Contact</span></a></li>
+    <!-- GSAP & ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="logo" href="#">
+          <img src="./images/logo_version_2.png" alt="BS Studio Logo" class="logo-image" />
+          <span class="logo-text">BS STUDIO</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+          <li>
+            <a href="#about" class="nav-link"><span>About</span></a>
+          </li>
+          <li>
+            <a href="#services" class="nav-link"><span>Services</span></a>
+          </li>
+          <li>
+            <a href="#pricing" class="nav-link"><span>Pricing</span></a>
+          </li>
+          <li>
+            <a href="#testimonials" class="nav-link"><span>Testimonials</span></a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link nav-link-cta"><span>Contact</span></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Mobile Nav Sheet -->
+    <div class="mobile-nav-sheet">
+      <ul class="mobile-nav-links">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#pricing" class="mobile-nav-link">Pricing</a></li>
+        <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
       </ul>
-    </nav>
-  </header>
-
-  <!-- Mobile Nav Sheet -->
-  <div class="mobile-nav-sheet">
-    <ul class="mobile-nav-links">
-      <li><a href="#about" class="mobile-nav-link">About</a></li>
-      <li><a href="#services" class="mobile-nav-link">Services</a></li>
-      <li><a href="#pricing" class="mobile-nav-link">Pricing</a></li>
-      <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
-      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-    </ul>
-  </div>
-
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero-bg" aria-hidden="true">
-      <div class="hero-gradient"></div>
-      <div class="hero-particles"></div>
     </div>
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <div class="hero-badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <circle cx="12" cy="12" r="10"></circle>
-          </svg>
-          <span>Available for freelance</span>
-        </div>
-        <h1 class="intro-line">Hi, My name is <span class="name">Billson</span></h1>
-        <h2 class="tagline">I'm a <span class="typing-text">Creative Graphic Designer</span></h2>
-        <p class="lead">With a passion for crafting visual narratives that captivate and inspire, I transform ideas into stunning visual experiences that leave a lasting impression.</p>
-        <div class="hero-actions">
-          <a class="cta cta-primary" href="#contact">
-            <span>Let's Work Together</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-gradient"></div>
+        <div class="hero-particles"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="10"></circle>
             </svg>
-          </a>
-          <a class="cta cta-secondary" href="#portfolio">
-            <span>View Portfolio</span>
-          </a>
+            <span>Available for freelance</span>
+          </div>
+          <h1 class="intro-line">Hi, My name is <span class="name">Billson</span></h1>
+          <h2 class="tagline">I'm a <span class="typing-text">Creative Graphic Designer</span></h2>
+          <p class="lead">
+            With a passion for crafting visual narratives that captivate and inspire, I transform ideas into stunning
+            visual experiences that leave a lasting impression.
+          </p>
+          <div class="hero-actions">
+            <a class="cta cta-primary" href="#contact">
+              <span>Let's Work Together</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a class="cta cta-secondary" href="#portfolio">
+              <span>View Portfolio</span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>2+</strong>
+              <span>Years Experience</span>
+            </div>
+            <div class="hero-stat">
+              <strong>50+</strong>
+              <span>Projects Done</span>
+            </div>
+            <div class="hero-stat">
+              <strong>10+</strong>
+              <span>Happy Clients</span>
+            </div>
+          </div>
         </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <strong>2+</strong>
-            <span>Years Experience</span>
-          </div>
-          <div class="hero-stat">
-            <strong>50+</strong>
-            <span>Projects Done</span>
-          </div>
-          <div class="hero-stat">
-            <strong>10+</strong>
-            <span>Happy Clients</span>
+        <div class="hero-showcase" aria-hidden="true">
+          <div class="showcase-decoration"></div>
+          <div class="showcase-stack">
+            <div class="showcase-frame showcase-frame-main">
+              <img src="./images/branding/branding-14.png" alt="Hero artwork" />
+            </div>
+            <div class="showcase-frame showcase-frame-secondary">
+              <img src="./images/branding/branding-7.png" alt="Secondary artwork" />
+            </div>
+            <div class="showcase-frame showcase-frame-tertiary">
+              <img src="./images/social-media-engagement/social-media-eng-2.png" alt="Tertiary artwork" />
+            </div>
           </div>
         </div>
       </div>
-      <div class="hero-showcase" aria-hidden="true">
-        <div class="showcase-decoration"></div>
-        <div class="showcase-stack">
-          <div class="showcase-frame showcase-frame-main">
-            <img src="./images/branding/branding-14.png" alt="Hero artwork"/>
-          </div>
-          <div class="showcase-frame showcase-frame-secondary">
-            <img src="./images/branding/branding-7.png" alt="Secondary artwork"/>
-          </div>
-          <div class="showcase-frame showcase-frame-tertiary">
-            <img src="./images/social-media-engagement/social-media-eng-2.png" alt="Tertiary artwork"/>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="12" y1="5" x2="12" y2="19"></line>
-        <polyline points="19 12 12 19 5 12"></polyline>
-      </svg>
-    </div>
-  </section>
-
-  <main>
-    <!-- ABOUT -->
-    <section id="about" class="about container">
-      <div class="about-content">
-        <div class="about-left">
-          <h3 class="section-title">About Me</h3>
-          <h4 class="about-heading">Creative Graphic Designer</h4>
-          <p class="about-tagline">Create Awesome Projects As You Need</p>
-          <p class="about-description">Over the past 3 years I have been helping brands and businesses make a lasting impression through thoughtful design and compelling storytelling. Every project is an opportunity to create something meaningful that resonates with audiences and drives results.</p>
-          <div class="stats-grid">
-            <div class="stat-item">
-              <div class="stat-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
-              </div>
-              <div class="stat-content">
-                <strong>10+</strong>
-                <span>Projects Completed</span>
-              </div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-              </div>
-              <div class="stat-content">
-                <strong>2+</strong>
-                <span>Years Experience</span>
-              </div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <div class="stat-content">
-                <strong>50+</strong>
-                <span>Happy Clients</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="about-right">
-          <div class="about-image-wrapper">
-            <div class="image-decoration"></div>
-            <img src="./images/branding/branding-3.png" alt="About Billson"/>
-          </div>
-        </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <!-- 
+    <main>
+      <!-- ABOUT -->
+      <section id="about" class="about container">
+        <div class="about-content">
+          <div class="about-left">
+            <h3 class="section-title">About Me</h3>
+            <h4 class="about-heading">Creative Graphic Designer</h4>
+            <p class="about-tagline">Create Awesome Projects As You Need</p>
+            <p class="about-description">
+              Over the past 3 years I have been helping brands and businesses make a lasting impression through
+              thoughtful design and compelling storytelling. Every project is an opportunity to create something
+              meaningful that resonates with audiences and drives results.
+            </p>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                </div>
+                <div class="stat-content">
+                  <strong>10+</strong>
+                  <span>Projects Completed</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="stat-content">
+                  <strong>2+</strong>
+                  <span>Years Experience</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <div class="stat-content">
+                  <strong>50+</strong>
+                  <span>Happy Clients</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-right">
+            <div class="about-image-wrapper">
+              <div class="image-decoration"></div>
+              <img src="./images/branding/branding-3.png" alt="About Billson" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <!-- 
       Interactive Services with Category Filtering:
       - Click on filter buttons to show specific categories
       - "All Works" displays all projects
@@ -187,896 +252,1437 @@
       - Smooth animations on filter transitions
       - Hover effects with 3D tilt on service items
     -->
-    <section id="services" class="portfolio container">
-      <div class="portfolio-header">
-        <h3 class="section-title">Our Services</h3>
-        <p class="portfolio-subtitle">Transforming ideas into captivating visual experiences across multiple disciplines</p>
-      </div>
-      
-      <!-- Category Filter -->
-      <div class="portfolio-filters">
-        <button class="filter-btn active" data-filter="all">
-          <span class="filter-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="7" height="7"></rect>
-              <rect x="14" y="3" width="7" height="7"></rect>
-              <rect x="14" y="14" width="7" height="7"></rect>
-              <rect x="3" y="14" width="7" height="7"></rect>
-            </svg>
-          </span>
-          <span>All Works</span>
-        </button>
-        <button class="filter-btn" data-filter="graphics">
-          <span class="filter-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M12 1v6m0 6v6m5.3-13.3l-4.2 4.2m0 6l-4.2 4.2m11.3-5.3h-6m-6 0H1m16.8 5.3l-4.2-4.2m0-6l-4.2-4.2"></path>
-            </svg>
-          </span>
-          <span>Graphics Design</span>
-        </button>
-        <button class="filter-btn" data-filter="marketing">
-          <span class="filter-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="1" x2="12" y2="23"></line>
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-            </svg>
-          </span>
-          <span>Digital Marketing</span>
-        </button>
-        <button class="filter-btn" data-filter="media">
-          <span class="filter-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-              <circle cx="12" cy="13" r="4"></circle>
-            </svg>
-          </span>
-          <span>Media Production</span>
-        </button>
-      </div>
-
-      <!-- Portfolio Grid -->
-      <div class="portfolio-grid">
-        <!-- Graphics Design Projects (Branding + Print) -->
-        <figure class="port-item" data-category="graphics">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Graphics Design</span>
-              <h4>Brand Identity System</h4>
-              <p class="port-desc">Complete visual identity for modern brands</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-1.png" alt="Brand Identity Project">
-        </figure>
-        
-        <figure class="port-item" data-category="graphics">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Graphics Design</span>
-              <h4>Logo Design</h4>
-              <p class="port-desc">Modern and memorable brand marks</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-3.png" alt="Logo Design">
-        </figure>
-
-        <figure class="port-item" data-category="graphics">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Graphics Design</span>
-              <h4>Packaging Design</h4>
-              <p class="port-desc">Eye-catching product packaging</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-4.png" alt="Packaging Design">
-        </figure>
-
-        <figure class="port-item" data-category="graphics">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Graphics Design</span>
-              <h4>Corporate Branding</h4>
-              <p class="port-desc">Professional business identity</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-7.png" alt="Corporate Branding">
-        </figure>
-
-        <figure class="port-item" data-category="graphics">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Graphics Design</span>
-              <h4>Visual Identity</h4>
-              <p class="port-desc">Cohesive brand visual systems</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-9.png" alt="Visual Identity">
-        </figure>
-
-        <figure class="port-item" data-category="graphics">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Graphics Design</span>
-              <h4>Brand Guidelines</h4>
-              <p class="port-desc">Comprehensive brand standards</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-14.png" alt="Brand Guidelines">
-        </figure>
-
-        <figure class="port-item" data-category="graphics">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Graphics Design</span>
-              <h4>Rebranding Project</h4>
-              <p class="port-desc">Complete brand transformation</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-1.png" alt="Rebranding">
-        </figure>
-
-        <figure class="port-item" data-category="graphics">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Graphics Design</span>
-              <h4>Stationary Design</h4>
-              <p class="port-desc">Business cards, letterheads & more</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-3.png" alt="Stationary Design">
-        </figure>
-
-        <!-- Print Design Projects -->
-        <figure class="port-item" data-category="graphics">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Graphics Design</span>
-              <h4>Marketing Brochure</h4>
-              <p class="port-desc">Engaging promotional materials</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/print-design/print-design-1.png" alt="Marketing Brochure">
-        </figure>
-
-        <figure class="port-item" data-category="graphics">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Graphics Design</span>
-              <h4>Corporate Brochure</h4>
-              <p class="port-desc">Professional company profiles</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/print-design/print-design-2.png" alt="Corporate Brochure">
-        </figure>
-
-        <figure class="port-item" data-category="graphics">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Graphics Design</span>
-              <h4>Poster Campaign</h4>
-              <p class="port-desc">Bold and impactful designs</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/print-design/print-design-1.png" alt="Poster Campaign">
-        </figure>
-
-        <figure class="port-item" data-category="graphics">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Graphics Design</span>
-              <h4>Magazine Layout</h4>
-              <p class="port-desc">Editorial design excellence</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/print-design/print-design-2.png" alt="Magazine Layout">
-        </figure>
-
-        <!-- Digital Marketing Projects (includes Social Media) -->
-        <figure class="port-item" data-category="marketing">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Digital Marketing</span>
-              <h4>Instagram Campaign</h4>
-              <p class="port-desc">Engaging social content</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/social-media-engagement/social-media-eng-1.png" alt="Instagram Campaign">
-        </figure>
-
-        <figure class="port-item" data-category="marketing">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Digital Marketing</span>
-              <h4>Social Media Graphics</h4>
-              <p class="port-desc">Eye-catching posts & stories</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/social-media-engagement/social-media-eng-2.png" alt="Social Media Graphics">
-        </figure>
-
-        <figure class="port-item" data-category="marketing">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Digital Marketing</span>
-              <h4>Content Strategy</h4>
-              <p class="port-desc">Consistent brand presence</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/social-media-engagement/social-media-eng-1.png" alt="Content Strategy">
-        </figure>
-
-        <!-- Digital Marketing Projects -->
-        <figure class="port-item" data-category="marketing">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Digital Marketing</span>
-              <h4>Ad Campaign</h4>
-              <p class="port-desc">High-converting ad creatives</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-7.png" alt="Ad Campaign">
-        </figure>
-
-        <figure class="port-item" data-category="marketing">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Digital Marketing</span>
-              <h4>Email Templates</h4>
-              <p class="port-desc">Beautiful email campaigns</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-14.png" alt="Email Templates">
-        </figure>
-
-        <!-- Media Production Projects (Photography + Documentaries) -->
-        <figure class="port-item" data-category="media">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Media Production</span>
-              <h4>Product Photography</h4>
-              <p class="port-desc">Professional product shoots</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-4.png" alt="Product Photography">
-        </figure>
-
-        <!-- Documentary Projects -->
-        <figure class="port-item" data-category="media">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Media Production</span>
-              <h4>Corporate Documentary</h4>
-              <p class="port-desc">Compelling brand storytelling</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-9.png" alt="Corporate Documentary">
-        </figure>
-
-        <figure class="port-item" data-category="media">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Media Production</span>
-              <h4>Event Coverage</h4>
-              <p class="port-desc">Professional video documentation</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-7.png" alt="Event Coverage">
-        </figure>
-
-        <figure class="port-item" data-category="media">
-          <div class="port-overlay">
-            <div class="port-info">
-              <span class="port-category">Media Production</span>
-              <h4>Promotional Video</h4>
-              <p class="port-desc">Cinematic brand films</p>
-              <button class="port-action">
-                <span>Learn More</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <img src="./images/branding/branding-14.png" alt="Promotional Video">
-        </figure>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section id="pricing" class="pricing container">
-      <div class="pricing-header">
-        <h3 class="section-title">Our Pricing</h3>
-        <p class="pricing-subtitle">Choose the plan that fits your needs</p>
-      </div>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <div class="pricing-card-header">
-            <h4 class="plan-name">Basic</h4>
-            <div class="plan-price">
-              <span class="currency">$</span>
-              <span class="amount">150</span>
-            </div>
-            <p class="plan-desc">Perfect for small projects and startups</p>
-          </div>
-          <ul class="plan-features">
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Logo Design</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>3 Revisions</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Basic Brand Colors</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>File Formats (PNG, JPG)</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>7-Day Delivery</span>
-            </li>
-          </ul>
-          <button class="plan-btn">Get Started</button>
+      <section id="services" class="portfolio container">
+        <div class="portfolio-header">
+          <h3 class="section-title">Our Services</h3>
+          <p class="portfolio-subtitle">
+            Transforming ideas into captivating visual experiences across multiple disciplines
+          </p>
         </div>
 
-        <div class="pricing-card featured">
-          <div class="featured-badge">Most Popular</div>
-          <div class="pricing-card-header">
-            <h4 class="plan-name">Standard</h4>
-            <div class="plan-price">
-              <span class="currency">$</span>
-              <span class="amount">500</span>
-            </div>
-            <p class="plan-desc">Ideal for growing businesses</p>
-          </div>
-          <ul class="plan-features">
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
+        <!-- Category Filter -->
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">
+            <span class="filter-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
               </svg>
-              <span>Complete Brand Identity</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
+            </span>
+            <span>All Works</span>
+          </button>
+          <button class="filter-btn" data-filter="graphics">
+            <span class="filter-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M12 1v6m0 6v6m5.3-13.3l-4.2 4.2m0 6l-4.2 4.2m11.3-5.3h-6m-6 0H1m16.8 5.3l-4.2-4.2m0-6l-4.2-4.2"
+                ></path>
               </svg>
-              <span>Unlimited Revisions</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Brand Guidelines</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Social Media Templates</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>All File Formats</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>14-Day Delivery</span>
-            </li>
-          </ul>
-          <button class="plan-btn">Get Started</button>
-        </div>
-
-        <div class="pricing-card">
-          <div class="pricing-card-header">
-            <h4 class="plan-name">Premium</h4>
-            <div class="plan-price">
-              <span class="currency">$</span>
-              <span class="amount">1,200</span>
-            </div>
-            <p class="plan-desc">Complete solution for enterprises</p>
-          </div>
-          <ul class="plan-features">
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Full Brand Package</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Unlimited Revisions</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Marketing Materials</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Video Production</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Website Design</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Priority Support</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>30-Day Delivery</span>
-            </li>
-          </ul>
-          <button class="plan-btn">Get Started</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="testimonials container">
-      <div class="testimonials-header">
-        <h3 class="section-title">What Clients Say</h3>
-        <p class="testimonials-subtitle">Real feedback from satisfied clients who trusted their vision with me</p>
-      </div>
-      <div class="testimonials-wrapper">
-        <div class="testimonial-card">
-          <div class="quote-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
-            </svg>
-          </div>
-          <blockquote>
-            "Working with BHS DESIGNS was an absolute treat! They took our vague ideas and turned them into designs beyond our expectations — timely, creative, and highly professional. If you're looking for a designer who really cares about your brand, look no further – BHS DESIGNS is the way to go!"
-          </blockquote>
-          <div class="testimonial-footer">
-            <div class="client-info">
-              <div class="client-avatar">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <div class="client-details">
-                <cite>Sarah Mitchell</cite>
-                <span class="client-role">Business Owner</span>
-              </div>
-            </div>
-            <div class="rating">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="quote-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
-            </svg>
-          </div>
-          <blockquote>
-            "Billson brought our brand to life with stunning visuals that perfectly captured our essence. The attention to detail and creative approach exceeded all expectations. Highly recommend for anyone seeking top-tier design work!"
-          </blockquote>
-          <div class="testimonial-footer">
-            <div class="client-info">
-              <div class="client-avatar">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <div class="client-details">
-                <cite>Marcus Johnson</cite>
-                <span class="client-role">Marketing Director</span>
-              </div>
-            </div>
-            <div class="rating">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="quote-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
-            </svg>
-          </div>
-          <blockquote>
-            "Exceptional creativity and professionalism! Billson transformed our social media presence with eye-catching designs that significantly boosted our engagement. A true design wizard who delivers results!"
-          </blockquote>
-          <div class="testimonial-footer">
-            <div class="client-info">
-              <div class="client-avatar">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <div class="client-details">
-                <cite>Elena Rodriguez</cite>
-                <span class="client-role">Startup Founder</span>
-              </div>
-            </div>
-            <div class="rating">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact container">
-      <div class="contact-header">
-        <h3 class="section-title">Let's Work Together</h3>
-        <p class="contact-subtitle">Have a project in mind? Let's bring your vision to life.</p>
-      </div>
-      <div class="contact-wrapper">
-        <div class="contact-left">
-          <div class="contact-cards">
-            <div class="contact-card">
-              <div class="contact-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-              </div>
-              <div class="contact-details">
-                <h4>Phone</h4>
-                <a href="tel:+25562040241">+255 620 40241</a>
-              </div>
-            </div>
-            <div class="contact-card">
-              <div class="contact-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                </svg>
-              </div>
-              <div class="contact-details">
-                <h4>WhatsApp</h4>
-                <a href="https://wa.link/szi1ly" target="_blank" rel="noopener noreferrer">Chat with me</a>
-              </div>
-            </div>
-            <div class="contact-card">
-              <div class="contact-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-              </div>
-              <div class="contact-details">
-                <h4>Instagram</h4>
-                <a href="https://instagram.com/bsbilly510" target="_blank">@bsbilly510</a>
-              </div>
-            </div>
-            <div class="contact-card">
-              <div class="contact-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-              </div>
-              <div class="contact-details">
-                <h4>Email</h4>
-                <a href="mailto:bsbilly510@gmail.com">bsbilly510@gmail.com</a>
-              </div>
-            </div>
-          </div>
-          <div class="contact-tagline">
-            <p class="signature">"I Listen, I Design, I Deliver"</p>
-          </div>
-        </div>
-        <div class="contact-right">
-          <form class="contact-form" action="#" method="post" onsubmit="return false;">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input id="name" name="name" type="text" placeholder="John Doe" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Your Email</label>
-              <input id="email" name="email" type="email" placeholder="john@example.com" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-            </div>
-            <button class="btn btn-submit" type="submit">
-              <span>Send Message</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <p class="tagline">"I Listen, I Design, I Deliver"</p>
-        <p class="copyright">© <span id="year"></span> Billson — All rights reserved.</p>
-      </div>
-      <div class="footer-right">
-        <p class="designer-credit">Designed by <a href="https://thisuncle.netlify.app/" target="_blank" rel="noopener noreferrer">ThisUncle Technologies</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Back to Top Button -->
-  <button class="back-to-top" aria-label="Back to top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  </button>
-
-  <!-- WhatsApp Button -->
-  <a href="https://wa.link/szi1ly" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Chat on WhatsApp">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-    </svg>
-  </a>
-
-  <!-- Category Modal (Level 1 - Shows project list) -->
-  <div class="category-modal" id="categoryModal">
-    <div class="category-modal-backdrop"></div>
-    <div class="category-modal-content">
-      <button class="category-modal-close" aria-label="Close">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-      <div class="category-modal-header">
-        <h2 id="categoryTitle">Graphics Design Projects</h2>
-        <p id="categoryDescription">Explore our creative solutions</p>
-      </div>
-      <div class="projects-list" id="projectsList">
-        <!-- Projects will be dynamically inserted here -->
-      </div>
-    </div>
-  </div>
-
-  <!-- Project Modal/Lightbox (Level 2 - Shows project details with gallery) -->
-  <div class="project-modal" id="projectModal">
-    <div class="modal-backdrop"></div>
-    <div class="modal-content">
-      <button class="modal-back" id="modalBack" aria-label="Back to projects">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M19 12H5M12 19l-7-7 7-7"></path>
-        </svg>
-        <span>Back to Projects</span>
-      </button>
-      <button class="modal-close" aria-label="Close modal">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-      <div class="modal-body">
-        <!-- Client Header Section -->
-        <div class="modal-client-header">
-          <div class="client-header-content">
-            <span class="modal-category" id="modalCategory"></span>
-            <h2 id="modalClientName"></h2>
-            <p class="client-tagline" id="modalClientTagline">Explore our creative work</p>
-          </div>
-          <div class="modal-actions">
-            <a href="https://wa.link/szi1ly" target="_blank" class="modal-cta">
-              <span>Discuss Your Project</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-              </svg>
-            </a>
-            <a href="#pricing" class="modal-cta-secondary" id="modalPricingBtn">
-              <span>View Pricing</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </span>
+            <span>Graphics Design</span>
+          </button>
+          <button class="filter-btn" data-filter="marketing">
+            <span class="filter-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
                 <line x1="12" y1="1" x2="12" y2="23"></line>
                 <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
               </svg>
-            </a>
-          </div>
+            </span>
+            <span>Digital Marketing</span>
+          </button>
+          <button class="filter-btn" data-filter="media">
+            <span class="filter-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                <circle cx="12" cy="13" r="4"></circle>
+              </svg>
+            </span>
+            <span>Media Production</span>
+          </button>
         </div>
 
-        <!-- Projects Grid Section -->
-        <div class="modal-projects-grid" id="modalProjectsGrid">
-          <!-- Sub-projects will be dynamically inserted here -->
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+          <!-- Graphics Design Projects (Branding + Print) -->
+          <figure class="port-item" data-category="graphics">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Graphics Design</span>
+                <h4>Brand Identity System</h4>
+                <p class="port-desc">Complete visual identity for modern brands</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-1.png" alt="Brand Identity Project" />
+          </figure>
+
+          <figure class="port-item" data-category="graphics">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Graphics Design</span>
+                <h4>Logo Design</h4>
+                <p class="port-desc">Modern and memorable brand marks</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-3.png" alt="Logo Design" />
+          </figure>
+
+          <figure class="port-item" data-category="graphics">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Graphics Design</span>
+                <h4>Packaging Design</h4>
+                <p class="port-desc">Eye-catching product packaging</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-4.png" alt="Packaging Design" />
+          </figure>
+
+          <figure class="port-item" data-category="graphics">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Graphics Design</span>
+                <h4>Corporate Branding</h4>
+                <p class="port-desc">Professional business identity</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-7.png" alt="Corporate Branding" />
+          </figure>
+
+          <figure class="port-item" data-category="graphics">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Graphics Design</span>
+                <h4>Visual Identity</h4>
+                <p class="port-desc">Cohesive brand visual systems</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-9.png" alt="Visual Identity" />
+          </figure>
+
+          <figure class="port-item" data-category="graphics">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Graphics Design</span>
+                <h4>Brand Guidelines</h4>
+                <p class="port-desc">Comprehensive brand standards</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-14.png" alt="Brand Guidelines" />
+          </figure>
+
+          <figure class="port-item" data-category="graphics">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Graphics Design</span>
+                <h4>Rebranding Project</h4>
+                <p class="port-desc">Complete brand transformation</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-1.png" alt="Rebranding" />
+          </figure>
+
+          <figure class="port-item" data-category="graphics">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Graphics Design</span>
+                <h4>Stationary Design</h4>
+                <p class="port-desc">Business cards, letterheads & more</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-3.png" alt="Stationary Design" />
+          </figure>
+
+          <!-- Print Design Projects -->
+          <figure class="port-item" data-category="graphics">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Graphics Design</span>
+                <h4>Marketing Brochure</h4>
+                <p class="port-desc">Engaging promotional materials</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/print-design/print-design-1.png" alt="Marketing Brochure" />
+          </figure>
+
+          <figure class="port-item" data-category="graphics">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Graphics Design</span>
+                <h4>Corporate Brochure</h4>
+                <p class="port-desc">Professional company profiles</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/print-design/print-design-2.png" alt="Corporate Brochure" />
+          </figure>
+
+          <figure class="port-item" data-category="graphics">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Graphics Design</span>
+                <h4>Poster Campaign</h4>
+                <p class="port-desc">Bold and impactful designs</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/print-design/print-design-1.png" alt="Poster Campaign" />
+          </figure>
+
+          <figure class="port-item" data-category="graphics">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Graphics Design</span>
+                <h4>Magazine Layout</h4>
+                <p class="port-desc">Editorial design excellence</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/print-design/print-design-2.png" alt="Magazine Layout" />
+          </figure>
+
+          <!-- Digital Marketing Projects (includes Social Media) -->
+          <figure class="port-item" data-category="marketing">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Digital Marketing</span>
+                <h4>Instagram Campaign</h4>
+                <p class="port-desc">Engaging social content</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/social-media-engagement/social-media-eng-1.png" alt="Instagram Campaign" />
+          </figure>
+
+          <figure class="port-item" data-category="marketing">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Digital Marketing</span>
+                <h4>Social Media Graphics</h4>
+                <p class="port-desc">Eye-catching posts & stories</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/social-media-engagement/social-media-eng-2.png" alt="Social Media Graphics" />
+          </figure>
+
+          <figure class="port-item" data-category="marketing">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Digital Marketing</span>
+                <h4>Content Strategy</h4>
+                <p class="port-desc">Consistent brand presence</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/social-media-engagement/social-media-eng-1.png" alt="Content Strategy" />
+          </figure>
+
+          <!-- Digital Marketing Projects -->
+          <figure class="port-item" data-category="marketing">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Digital Marketing</span>
+                <h4>Ad Campaign</h4>
+                <p class="port-desc">High-converting ad creatives</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-7.png" alt="Ad Campaign" />
+          </figure>
+
+          <figure class="port-item" data-category="marketing">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Digital Marketing</span>
+                <h4>Email Templates</h4>
+                <p class="port-desc">Beautiful email campaigns</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-14.png" alt="Email Templates" />
+          </figure>
+
+          <!-- Media Production Projects (Photography + Documentaries) -->
+          <figure class="port-item" data-category="media">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Media Production</span>
+                <h4>Product Photography</h4>
+                <p class="port-desc">Professional product shoots</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-4.png" alt="Product Photography" />
+          </figure>
+
+          <!-- Documentary Projects -->
+          <figure class="port-item" data-category="media">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Media Production</span>
+                <h4>Corporate Documentary</h4>
+                <p class="port-desc">Compelling brand storytelling</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-9.png" alt="Corporate Documentary" />
+          </figure>
+
+          <figure class="port-item" data-category="media">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Media Production</span>
+                <h4>Event Coverage</h4>
+                <p class="port-desc">Professional video documentation</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-7.png" alt="Event Coverage" />
+          </figure>
+
+          <figure class="port-item" data-category="media">
+            <div class="port-overlay">
+              <div class="port-info">
+                <span class="port-category">Media Production</span>
+                <h4>Promotional Video</h4>
+                <p class="port-desc">Cinematic brand films</p>
+                <button class="port-action">
+                  <span>Learn More</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <img src="./images/branding/branding-14.png" alt="Promotional Video" />
+          </figure>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing" class="pricing container">
+        <div class="pricing-header">
+          <h3 class="section-title">Our Pricing</h3>
+          <p class="pricing-subtitle">Choose the plan that fits your needs</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h4 class="plan-name">Basic</h4>
+              <div class="plan-price">
+                <span class="currency">$</span>
+                <span class="amount">150</span>
+              </div>
+              <p class="plan-desc">Perfect for small projects and startups</p>
+            </div>
+            <ul class="plan-features">
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Logo Design</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>3 Revisions</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Basic Brand Colors</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>File Formats (PNG, JPG)</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>7-Day Delivery</span>
+              </li>
+            </ul>
+            <button class="plan-btn">Get Started</button>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="featured-badge">Most Popular</div>
+            <div class="pricing-card-header">
+              <h4 class="plan-name">Standard</h4>
+              <div class="plan-price">
+                <span class="currency">$</span>
+                <span class="amount">500</span>
+              </div>
+              <p class="plan-desc">Ideal for growing businesses</p>
+            </div>
+            <ul class="plan-features">
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Complete Brand Identity</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Unlimited Revisions</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Brand Guidelines</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Social Media Templates</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>All File Formats</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>14-Day Delivery</span>
+              </li>
+            </ul>
+            <button class="plan-btn">Get Started</button>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h4 class="plan-name">Premium</h4>
+              <div class="plan-price">
+                <span class="currency">$</span>
+                <span class="amount">1,200</span>
+              </div>
+              <p class="plan-desc">Complete solution for enterprises</p>
+            </div>
+            <ul class="plan-features">
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Full Brand Package</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Unlimited Revisions</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Marketing Materials</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Video Production</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Website Design</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Priority Support</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>30-Day Delivery</span>
+              </li>
+            </ul>
+            <button class="plan-btn">Get Started</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials" class="testimonials container">
+        <div class="testimonials-header">
+          <h3 class="section-title">What Clients Say</h3>
+          <p class="testimonials-subtitle">Real feedback from satisfied clients who trusted their vision with me</p>
+        </div>
+        <div class="testimonials-wrapper">
+          <div class="testimonial-card">
+            <div class="quote-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+              </svg>
+            </div>
+            <blockquote>
+              "Working with BHS DESIGNS was an absolute treat! They took our vague ideas and turned them into designs
+              beyond our expectations — timely, creative, and highly professional. If you're looking for a designer who
+              really cares about your brand, look no further – BHS DESIGNS is the way to go!"
+            </blockquote>
+            <div class="testimonial-footer">
+              <div class="client-info">
+                <div class="client-avatar">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="client-details">
+                  <cite>Sarah Mitchell</cite>
+                  <span class="client-role">Business Owner</span>
+                </div>
+              </div>
+              <div class="rating">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+              </svg>
+            </div>
+            <blockquote>
+              "Billson brought our brand to life with stunning visuals that perfectly captured our essence. The
+              attention to detail and creative approach exceeded all expectations. Highly recommend for anyone seeking
+              top-tier design work!"
+            </blockquote>
+            <div class="testimonial-footer">
+              <div class="client-info">
+                <div class="client-avatar">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="client-details">
+                  <cite>Marcus Johnson</cite>
+                  <span class="client-role">Marketing Director</span>
+                </div>
+              </div>
+              <div class="rating">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+              </svg>
+            </div>
+            <blockquote>
+              "Exceptional creativity and professionalism! Billson transformed our social media presence with
+              eye-catching designs that significantly boosted our engagement. A true design wizard who delivers
+              results!"
+            </blockquote>
+            <div class="testimonial-footer">
+              <div class="client-info">
+                <div class="client-avatar">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="client-details">
+                  <cite>Elena Rodriguez</cite>
+                  <span class="client-role">Startup Founder</span>
+                </div>
+              </div>
+              <div class="rating">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact container">
+        <div class="contact-header">
+          <h3 class="section-title">Let's Work Together</h3>
+          <p class="contact-subtitle">Have a project in mind? Let's bring your vision to life.</p>
+        </div>
+        <div class="contact-wrapper">
+          <div class="contact-left">
+            <div class="contact-cards">
+              <div class="contact-card">
+                <div class="contact-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h4>Phone</h4>
+                  <a href="tel:+25562040241">+255 620 40241</a>
+                </div>
+              </div>
+              <div class="contact-card">
+                <div class="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                    />
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h4>WhatsApp</h4>
+                  <a href="https://wa.link/szi1ly" target="_blank" rel="noopener noreferrer">Chat with me</a>
+                </div>
+              </div>
+              <div class="contact-card">
+                <div class="contact-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h4>Instagram</h4>
+                  <a href="https://instagram.com/bsbilly510" target="_blank">@bsbilly510</a>
+                </div>
+              </div>
+              <div class="contact-card">
+                <div class="contact-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <a href="mailto:bsbilly510@gmail.com">bsbilly510@gmail.com</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-tagline">
+              <p class="signature">"I Listen, I Design, I Deliver"</p>
+            </div>
+          </div>
+          <div class="contact-right">
+            <form class="contact-form" action="#" method="post" onsubmit="return false;">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input id="name" name="name" type="text" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input id="email" name="email" type="email" placeholder="john@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+              <button class="btn btn-submit" type="submit">
+                <span>Send Message</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p class="tagline">"I Listen, I Design, I Deliver"</p>
+          <p class="copyright">© <span id="year"></span> Billson — All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+          <p class="designer-credit">
+            Designed by
+            <a href="https://thisuncle.netlify.app/" target="_blank" rel="noopener noreferrer"
+              >ThisUncle Technologies</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <!-- WhatsApp Button -->
+    <a
+      href="https://wa.link/szi1ly"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-btn"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+        />
+      </svg>
+    </a>
+
+    <!-- Category Modal (Level 1 - Shows project list) -->
+    <div class="category-modal" id="categoryModal">
+      <div class="category-modal-backdrop"></div>
+      <div class="category-modal-content">
+        <button class="category-modal-close" aria-label="Close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="category-modal-header">
+          <h2 id="categoryTitle">Graphics Design Projects</h2>
+          <p id="categoryDescription">Explore our creative solutions</p>
+        </div>
+        <div class="projects-list" id="projectsList">
+          <!-- Projects will be dynamically inserted here -->
         </div>
       </div>
     </div>
-  </div>
 
-</body>
+    <!-- Project Modal/Lightbox (Level 2 - Shows project details with gallery) -->
+    <div class="project-modal" id="projectModal">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content">
+        <button class="modal-back" id="modalBack" aria-label="Back to projects">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"></path>
+          </svg>
+          <span>Back to Projects</span>
+        </button>
+        <button class="modal-close" aria-label="Close modal">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="modal-body">
+          <!-- Client Header Section -->
+          <div class="modal-client-header">
+            <div class="client-header-content">
+              <span class="modal-category" id="modalCategory"></span>
+              <h2 id="modalClientName"></h2>
+              <p class="client-tagline" id="modalClientTagline">Explore our creative work</p>
+            </div>
+            <div class="modal-actions">
+              <a href="https://wa.link/szi1ly" target="_blank" class="modal-cta">
+                <span>Discuss Your Project</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                  />
+                </svg>
+              </a>
+              <a href="#pricing" class="modal-cta-secondary" id="modalPricingBtn">
+                <span>View Pricing</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Projects Grid Section -->
+          <div class="modal-projects-grid" id="modalProjectsGrid">
+            <!-- Sub-projects will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
