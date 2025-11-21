@@ -219,6 +219,7 @@ h6 {
   background: linear-gradient(180deg, rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.85));
   backdrop-filter: blur(16px);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .site-header.solid .nav {
   padding: 1.25rem 2rem;
@@ -1920,12 +1921,12 @@ h6 {
 
 /* Level 2: Project Details Page Styles */
 .project-details-page {
-  padding-top: 100px;
+  padding-top: 80px;
   min-height: 100vh;
   background: #0a0a0a;
 }
 .page-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .back-btn {
   display: inline-flex;
@@ -1951,11 +1952,11 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 .project-header-content {
   flex: 1;
@@ -1971,13 +1972,24 @@ h6 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .project-header-content h1 {
-  font-size: 3rem;
-  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  margin: 0;
   color: var(--text);
   font-weight: 700;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.project-type {
+  font-size: 1.2rem;
+  color: var(--muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .project-tagline {
   font-size: 1.2rem;

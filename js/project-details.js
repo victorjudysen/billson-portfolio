@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const category = urlParams.get("category");
   const projectTitle = decodeURIComponent(urlParams.get("title"));
+  const clientName = decodeURIComponent(urlParams.get("client") || "Client");
 
   const categoryData = projectDatabase[category];
   if (!categoryData) {
@@ -114,9 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Populate Header
-  document.getElementById("projectTitle").textContent = project.title;
-  document.getElementById("projectDescription").textContent = project.description;
-  document.title = `${project.title} — BS Studio`;
+  document.getElementById("projectTitle").innerHTML = `${clientName} <span class="project-type">${project.title}</span>`;
+  document.getElementById("projectDescription").style.display = "none"; // Hide description to save space as requested
+  document.title = `${clientName} - ${project.title}`;
 
   // Populate Gallery
   const galleryGrid = document.getElementById("projectGalleryGrid");
@@ -138,18 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
     galleryGrid.appendChild(galleryItem);
   });
 
-  // Navbar scroll effect
-  const header = document.querySelector(".site-header");
-  function checkNav() {
-    if (window.scrollY > 50) {
-      header.classList.add("solid");
-    } else {
-      header.classList.remove("solid");
-    }
-  }
-  window.addEventListener("scroll", checkNav, { passive: true });
-  checkNav(); // Check on load
-
   // Lightbox Functionality
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
@@ -157,13 +146,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.querySelector('.lightbox-close');
 
   function openLightbox(images, index) {
-    lightbox.style.display = 'flex';
+    lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
     updateLightboxImage(images, index);
   }
 
   function closeLightbox() {
-    lightbox.style.display = 'none';
+    lightbox.classList.remove('active');
     document.body.style.overflow = '';
   }
 
