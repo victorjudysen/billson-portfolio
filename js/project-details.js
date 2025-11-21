@@ -2,6 +2,18 @@
 // Loads project data from URL parameters and displays a creative collage gallery.
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Navbar scroll effect
+  const header = document.querySelector(".site-header");
+  function checkNav() {
+    if (window.scrollY > 50) {
+      header.classList.add("solid");
+    } else {
+      header.classList.remove("solid");
+    }
+  }
+  window.addEventListener("scroll", checkNav, { passive: true });
+  checkNav();
+
   // Simplified Project Database (only what's needed for this page)
   const projectDatabase = {
     graphics: {

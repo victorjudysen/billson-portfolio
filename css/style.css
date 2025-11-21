@@ -216,10 +216,9 @@ h6 {
 }
 
 .site-header.solid {
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.85));
-  backdrop-filter: blur(16px);
+  background: #0a0a0a;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .site-header.solid .nav {
   padding: 1.25rem 2rem;
