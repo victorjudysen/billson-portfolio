@@ -943,7 +943,7 @@ h6 {
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.2rem;
+  gap: 1px;
   position: relative;
   z-index: 1;
 }
@@ -974,12 +974,14 @@ h6 {
   object-fit: cover;
   display: block;
   transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  z-index: 1;
 }
 .port-item:hover {
   transform: translateY(-4px);
   border-color: var(--accent);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  z-index: 20;
 }
 .port-item:hover img {
   transform: scale(1.1);
@@ -988,20 +990,24 @@ h6 {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   padding: 1.5rem;
+  z-index: 10;
 }
 .port-item:hover .port-overlay {
   opacity: 1;
 }
 .port-info {
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  gap: 1rem;
 }
 .port-category {
   display: none;
@@ -1012,6 +1018,7 @@ h6 {
   color: #fff;
   font-weight: 600;
   font-family: "Creato Display", "Montserrat", sans-serif;
+  max-width: 80%;
 }
 .port-desc {
   display: none;
@@ -1029,6 +1036,7 @@ h6 {
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0;
+  flex-shrink: 0;
 }
 .port-action span {
   display: none;
