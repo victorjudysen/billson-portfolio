@@ -2143,6 +2143,14 @@ h6 {
   color: var(--accent);
 }
 
+.projects-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+  align-items: stretch; /* Ensures all items in a row have the same height */
+}
+
 @media (max-width: 768px) {
   .category-profile-header {
     flex-direction: column;
