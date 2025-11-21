@@ -125,7 +125,12 @@ document.addEventListener("DOMContentLoaded", () => {
   project.images.forEach((imgSrc, index) => {
     const galleryItem = document.createElement("div");
     galleryItem.className = "gallery-item";
-    galleryItem.innerHTML = `<img src="${imgSrc}" alt="${project.title} - Image ${index + 1}" loading="lazy">`;
+    galleryItem.innerHTML = `
+      <img src="${imgSrc}" alt="${project.title} - Image ${index + 1}" loading="lazy">
+      <div class="gallery-overlay">
+        <span>View Image</span>
+      </div>
+    `;
     
     // Add click listener for lightbox
     galleryItem.addEventListener('click', () => openLightbox(project.images, index));
