@@ -138,6 +138,18 @@ document.addEventListener("DOMContentLoaded", () => {
     galleryGrid.appendChild(galleryItem);
   });
 
+  // Navbar scroll effect
+  const header = document.querySelector(".site-header");
+  function checkNav() {
+    if (window.scrollY > 50) {
+      header.classList.add("solid");
+    } else {
+      header.classList.remove("solid");
+    }
+  }
+  window.addEventListener("scroll", checkNav, { passive: true });
+  checkNav(); // Check on load
+
   // Lightbox Functionality
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
