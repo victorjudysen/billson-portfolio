@@ -132,457 +132,154 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  // TWO-LEVEL MODAL SYSTEM
-  // Get modal elements
+  // LEVEL 1 MODAL - CATEGORY PROFILE & PROJECT GRID
   const categoryModal = document.getElementById("categoryModal");
-  const projectModal = document.getElementById("projectModal");
   const categoryModalBackdrop = categoryModal.querySelector(".category-modal-backdrop");
-  const modalBackdrop = projectModal.querySelector(".modal-backdrop");
   const categoryModalClose = categoryModal.querySelector(".category-modal-close");
-  const modalClose = projectModal.querySelector(".modal-close");
-  const modalBack = document.getElementById("modalBack");
 
-  // Project database with multiple images per project
+  // Project database
   const projectDatabase = {
     graphics: {
       title: "Graphics Design",
-      description: "Creative visual solutions for modern brands",
+      description: "Creative visual solutions for modern brands.",
+      profileImage: "./images/branding/branding-1.png",
+      clientCount: 8,
       projects: [
         {
           title: "Brand Identity System",
-          desc: "Complete visual identity for modern brands",
-          category: "Graphics Design",
           client: "ThisUncle Tech",
-          year: "2024",
-          services: "Brand Strategy, Logo Design, Visual Identity",
-          images: [
-            {
-              src: "./images/branding/branding-1.png",
-              description:
-                "A comprehensive visual identity system that captures the essence of modern branding. This project involved creating a complete brand ecosystem including logo design, color palettes, typography systems, and brand guidelines.",
-            },
-            {
-              src: "./images/branding/branding-14.png",
-              description:
-                "Developed a cohesive brand color palette with primary and secondary colors that work harmoniously across all touchpoints, ensuring brand consistency and recognition.",
-            },
-            {
-              src: "./images/branding/branding-7.png",
-              description:
-                "Created comprehensive brand guidelines documenting logo usage, spacing rules, color specifications, and typography standards for consistent brand application.",
-            },
-            {
-              src: "./images/branding/branding-9.png",
-              description:
-                "Designed a flexible visual system with modular components that maintain brand integrity while allowing creative expression across different media and formats.",
-            },
-          ],
+          images: ["./images/branding/branding-1.png", "./images/branding/branding-14.png", "./images/branding/branding-7.png", "./images/branding/branding-9.png"],
         },
         {
           title: "Logo Design",
-          desc: "Modern and memorable brand marks",
-          category: "Graphics Design",
           client: "RK Studios",
-          year: "2024",
-          services: "Logo Design, Brand Mark, Icon Design",
-          images: [
-            {
-              src: "./images/branding/branding-3.png",
-              description:
-                "Crafted distinctive and memorable logos that perfectly represent brand values and mission. The design process involved extensive research, conceptualization, and refinement to create timeless marks.",
-            },
-            {
-              src: "./images/branding/branding-4.png",
-              description:
-                "Explored multiple design directions, from minimalist to detailed, ensuring the final logo works effectively at any size and across all applications.",
-            },
-            {
-              src: "./images/branding/branding-11.png",
-              description:
-                "Developed variations of the logo including horizontal, vertical, and icon-only versions to provide flexibility for different use cases and platforms.",
-            },
-            {
-              src: "./images/branding/branding-13.png",
-              description:
-                "Created a complete logo system with clear usage guidelines, color variations, and minimum size requirements to maintain brand consistency.",
-            },
-          ],
+          images: ["./images/branding/branding-3.png", "./images/branding/branding-4.png", "./images/branding/branding-11.png", "./images/branding/branding-13.png"],
         },
         {
           title: "Packaging Design",
-          desc: "Eye-catching product packaging",
-          category: "Graphics Design",
           client: "Apex Brands",
-          year: "2023",
-          services: "Packaging Design, Structural Design, Print Production",
-          images: [
-            {
-              src: "./images/branding/branding-4.png",
-              description:
-                "Eye-catching product packaging that stands out on shelves and creates lasting impressions. This project balanced aesthetic appeal with functional requirements and sustainable materials.",
-            },
-            {
-              src: "./images/print-design/print-design-1.png",
-              description:
-                "Developed innovative structural designs that enhance user experience while optimizing for manufacturing efficiency and cost-effectiveness.",
-            },
-            {
-              src: "./images/print-design/print-design-3.png",
-              description:
-                "Incorporated sustainable materials and eco-friendly printing techniques without compromising on visual impact or durability.",
-            },
-          ],
+          images: ["./images/branding/branding-4.png", "./images/print-design/print-design-1.png", "./images/print-design/print-design-3.png"],
         },
         {
           title: "Corporate Branding",
-          desc: "Professional business identity",
-          category: "Graphics Design",
           client: "Zenith Finance",
-          year: "2024",
-          services: "Corporate Identity, Stationery Design, Brand Guidelines",
-          images: [
-            {
-              src: "./images/branding/branding-7.png",
-              description:
-                "Professional corporate identity that elevates business presence and builds trust with stakeholders. Comprehensive solution includes business cards, letterheads, and digital assets.",
-            },
-            {
-              src: "./images/branding/branding-6.png",
-              description:
-                "Designed sophisticated stationery suite including business cards, letterheads, envelopes, and presentation folders that reinforce brand professionalism.",
-            },
-            {
-              src: "./images/print-design/print-design-2.png",
-              description:
-                "Created cohesive brand collateral with consistent visual language that communicates credibility and attention to detail.",
-            },
-          ],
+          images: ["./images/branding/branding-7.png", "./images/branding/branding-6.png", "./images/print-design/print-design-2.png"],
         },
         {
           title: "Visual Identity",
-          desc: "Cohesive brand visual systems",
-          category: "Graphics Design",
           client: "Nova Creative",
-          year: "2023",
-          services: "Visual Identity, Design System, Brand Assets",
-          images: [
-            {
-              src: "./images/branding/branding-9.png",
-              description:
-                "A cohesive visual identity system that tells a compelling brand story across all platforms. Flexible design system that maintains consistency while allowing creative expression.",
-            },
-            {
-              src: "./images/branding/branding-10.png",
-              description:
-                "Established a comprehensive design system with reusable components, patterns, and guidelines for scalable brand implementation.",
-            },
-            {
-              src: "./images/branding/branding-12.png",
-              description:
-                "Developed a library of brand assets including icons, illustrations, and graphic elements that support various communication needs.",
-            },
-          ],
+          images: ["./images/branding/branding-9.png", "./images/branding/branding-10.png", "./images/branding/branding-12.png"],
         },
         {
           title: "Brand Guidelines",
-          desc: "Comprehensive brand standards",
-          category: "Graphics Design",
           client: "Momentum Corp",
-          year: "2024",
-          services: "Brand Guidelines, Documentation, Training",
-          images: [
-            {
-              src: "./images/branding/branding-10.png",
-              description:
-                "Comprehensive brand standards document that ensures consistent brand application across all media. Guidelines cover logo usage, color systems, typography, and imagery style.",
-            },
-            {
-              src: "./images/branding/branding-8.png",
-              description:
-                "Created detailed documentation covering every aspect of brand implementation, from print materials to digital applications and environmental graphics.",
-            },
-            {
-              src: "./images/print-design/print-design-4.png",
-              description:
-                "Developed training materials and workshops to ensure internal teams and external partners understand and correctly apply brand standards.",
-            },
-          ],
+          images: ["./images/branding/branding-10.png", "./images/branding/branding-8.png", "./images/print-design/print-design-4.png"],
         },
         {
           title: "Print Design",
-          desc: "Professional print materials",
-          category: "Graphics Design",
           client: "Summit Media",
-          year: "2024",
-          services: "Print Design, Stationery, Marketing Collateral",
-          images: [
-            {
-              src: "./images/print-design/print-design-1.png",
-              description:
-                "Professional business stationery and print materials including business cards, letterheads, brochures, and promotional materials. Each piece reinforces the brand identity.",
-            },
-            {
-              src: "./images/print-design/print-design-2.png",
-              description:
-                "Designed high-impact marketing brochures with strategic layouts that guide readers through key messages and calls to action.",
-            },
-            {
-              src: "./images/print-design/print-design-3.png",
-              description:
-                "Created eye-catching promotional materials using advanced printing techniques including spot UV, embossing, and specialty finishes.",
-            },
-            {
-              src: "./images/print-design/print-design-4.png",
-              description:
-                "Developed complete stationery systems that maintain brand consistency across all business communications and touchpoints.",
-            },
-          ],
+          images: ["./images/print-design/print-design-1.png", "./images/print-design/print-design-2.png", "./images/print-design/print-design-3.png", "./images/print-design/print-design-4.png"],
         },
       ],
     },
     marketing: {
       title: "Digital Marketing",
-      description: "Strategic campaigns that drive engagement and growth",
+      description: "Strategic campaigns that drive engagement and growth.",
+      profileImage: "./images/social-media-engagement/social-media-eng-1.png",
+      clientCount: 4,
       projects: [
         {
           title: "Instagram Campaign",
-          desc: "Engaging social media content",
-          category: "Digital Marketing",
           client: "Vibe Commerce",
-          year: "2024",
-          services: "Social Media Marketing, Content Creation, Analytics",
-          images: [
-            {
-              src: "./images/social-media-engagement/social-media-eng-1.png",
-              description:
-                "Strategic Instagram campaign featuring curated content, engaging stories, and interactive posts that drove significant follower growth and engagement rates. Data-driven approach optimized for maximum reach.",
-            },
-            {
-              src: "./images/social-media-engagement/social-media-eng-2.png",
-              description:
-                "Developed consistent visual themes and content pillars that resonate with target audience, resulting in 300% increase in engagement.",
-            },
-            {
-              src: "./images/social-media-engagement/social-media-eng-3.png",
-              description:
-                "Created interactive story content with polls, quizzes, and Q&A sessions that boosted community engagement and brand loyalty.",
-            },
-          ],
+          images: ["./images/social-media-engagement/social-media-eng-1.png", "./images/social-media-engagement/social-media-eng-2.png", "./images/social-media-engagement/social-media-eng-3.png"],
         },
         {
           title: "Social Media Graphics",
-          desc: "Scroll-stopping visuals",
-          category: "Digital Marketing",
           client: "Pulse Startup",
-          year: "2024",
-          services: "Graphic Design, Social Media Content, Brand Consistency",
-          images: [
-            {
-              src: "./images/social-media-engagement/social-media-eng-2.png",
-              description:
-                "Attention-grabbing social media graphics designed to stop the scroll and drive engagement. Each graphic was optimized for platform specifications and audience preferences.",
-            },
-            {
-              src: "./images/social-media-engagement/social-media-eng-1.png",
-              description:
-                "Designed platform-specific content that performs optimally on Instagram, Facebook, LinkedIn, and Twitter with appropriate dimensions and formatting.",
-            },
-            {
-              src: "./images/branding/branding-3.png",
-              description:
-                "Created a library of reusable templates and graphics that maintain brand consistency while allowing for quick content production.",
-            },
-          ],
+          images: ["./images/social-media-engagement/social-media-eng-2.png", "./images/social-media-engagement/social-media-eng-1.png", "./images/branding/branding-3.png"],
         },
         {
           title: "Content Strategy",
-          desc: "Data-driven content planning",
-          category: "Digital Marketing",
           client: "TechFlow B2B",
-          year: "2023",
-          services: "Content Strategy, Planning, Performance Analysis",
-          images: [
-            {
-              src: "./images/social-media-engagement/social-media-eng-3.png",
-              description:
-                "Comprehensive content strategy that aligns with business goals and audience needs. Research-backed approach to content creation, distribution, and performance measurement.",
-            },
-            {
-              src: "./images/branding/branding-14.png",
-              description:
-                "Developed content calendars, editorial guidelines, and distribution strategies that increased organic reach by 250%.",
-            },
-          ],
+          images: ["./images/social-media-engagement/social-media-eng-3.png", "./images/branding/branding-14.png"],
         },
         {
           title: "Ad Campaign",
-          desc: "High-converting advertising",
-          category: "Digital Marketing",
           client: "Metro Retail",
-          year: "2024",
-          services: "Digital Advertising, Creative Development, Campaign Management",
-          images: [
-            {
-              src: "./images/branding/branding-13.png",
-              description:
-                "Multi-platform advertising campaign that delivered exceptional ROI. Strategic ad creative, precise targeting, and continuous optimization resulted in significant conversion increases.",
-            },
-            {
-              src: "./images/social-media-engagement/social-media-eng-1.png",
-              description:
-                "Implemented A/B testing across multiple ad variations, resulting in 180% improvement in click-through rates and 45% reduction in cost per acquisition.",
-            },
-          ],
+          images: ["./images/branding/branding-13.png", "./images/social-media-engagement/social-media-eng-1.png"],
         },
       ],
     },
     media: {
       title: "Media Production",
-      description: "Captivating visual storytelling through photography and video",
+      description: "Captivating visual storytelling through photography and video.",
+      profileImage: "./images/branding/branding-9.png",
+      clientCount: 4,
       projects: [
         {
           title: "Product Photography",
-          desc: "Professional product shoots",
-          category: "Media Production",
           client: "Luxe Goods",
-          year: "2024",
-          services: "Product Photography, Retouching, Studio Setup",
-          images: [
-            {
-              src: "./images/branding/branding-1.png",
-              description:
-                "High-quality product photography that showcases details and creates desire. Professional lighting, composition, and post-production deliver images that sell.",
-            },
-            {
-              src: "./images/branding/branding-4.png",
-              description:
-                "Captured multiple angles and lifestyle shots that highlight product features and benefits in authentic settings.",
-            },
-            {
-              src: "./images/print-design/print-design-1.png",
-              description:
-                "Delivered fully retouched, web-ready images optimized for e-commerce platforms with consistent color profiles and sizing.",
-            },
-          ],
+          images: ["./images/branding/branding-1.png", "./images/branding/branding-4.png", "./images/print-design/print-design-1.png"],
         },
         {
           title: "Corporate Documentary",
-          desc: "Authentic brand storytelling",
-          category: "Media Production",
           client: "Pinnacle Enterprise",
-          year: "2023",
-          services: "Documentary Filmmaking, Interviews, Storytelling",
-          images: [
-            {
-              src: "./images/branding/branding-7.png",
-              description:
-                "Compelling documentary-style video that tells the authentic story of the brand. Interviewed key stakeholders, captured behind-the-scenes footage, and crafted a narrative that resonates.",
-            },
-            {
-              src: "./images/branding/branding-14.png",
-              description:
-                "Produced cinematic interviews with founders and team members, revealing the human side of the business and building emotional connections with viewers.",
-            },
-          ],
+          images: ["./images/branding/branding-7.png", "./images/branding/branding-14.png"],
         },
         {
           title: "Event Coverage",
-          desc: "Dynamic event documentation",
-          category: "Media Production",
           client: "Catalyst Events",
-          year: "2024",
-          services: "Event Photography, Videography, Live Coverage",
-          images: [
-            {
-              src: "./images/branding/branding-9.png",
-              description:
-                "Professional photography and videography services for corporate events, conferences, and product launches. Captured key moments and created engaging content for marketing use.",
-            },
-            {
-              src: "./images/branding/branding-10.png",
-              description:
-                "Delivered comprehensive event coverage including highlight reels, social media clips, and full-length recordings for future promotional materials.",
-            },
-          ],
+          images: ["./images/branding/branding-9.png", "./images/branding/branding-10.png"],
         },
         {
           title: "Promotional Video",
-          desc: "Cinematic brand films",
-          category: "Media Production",
           client: "Spark Innovations",
-          year: "2023",
-          services: "Video Production, Cinematography, Motion Graphics",
-          images: [
-            {
-              src: "./images/branding/branding-3.png",
-              description:
-                "Cinematic brand films that captivate audiences and drive action. Combined stunning visuals, compelling narrative, and strategic messaging to create memorable promotional content.",
-            },
-            {
-              src: "./images/social-media-engagement/social-media-eng-1.png",
-              description:
-                "Integrated motion graphics, sound design, and color grading to create polished promotional videos that elevate brand perception and drive conversions.",
-            },
-          ],
+          images: ["./images/branding/branding-3.png", "./images/social-media-engagement/social-media-eng-1.png"],
         },
       ],
     },
   };
 
-  // Open Category Modal (Level 1) - Shows project list for clicked category
+  // Open Category Modal (Level 1)
   portfolioItems.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
-
       const category = item.dataset.category;
       const categoryData = projectDatabase[category];
-
       if (!categoryData) return;
 
-      // Populate category modal header
-      document.getElementById("categoryTitle").textContent = categoryData.title;
-      document.getElementById("categoryDescription").textContent = categoryData.description;
+      // Populate Profile Header
+      document.getElementById("categoryProfileImage").src = categoryData.profileImage;
+      document.getElementById("categoryProfileTitle").textContent = categoryData.title;
+      document.getElementById("categoryProfileDescription").textContent = categoryData.description;
+      document.getElementById("projectCount").textContent = categoryData.projects.length;
+      document.getElementById("clientCount").textContent = categoryData.clientCount;
 
-      // Generate projects list
+      // Generate projects grid
       const projectsList = document.getElementById("projectsList");
       projectsList.innerHTML = "";
 
       categoryData.projects.forEach((project, index) => {
-        const projectCard = document.createElement("div");
-        projectCard.className = "project-list-item";
+        const projectCard = document.createElement("a");
+        projectCard.className = "project-grid-item";
+        // Encode the project title to be URL-safe
+        const encodedTitle = encodeURIComponent(project.title);
+        projectCard.href = `project-details.html?category=${category}&title=${encodedTitle}`;
+        
         projectCard.innerHTML = `
-          <div class="project-item-image">
-            <img src="${project.images[0].src}" alt="${project.title}">
-          </div>
-          <div class="project-item-info">
-            <p class="project-item-client">${project.client}</p>
-            <h3 class="project-item-title">${project.title}</h3>
-            <p class="project-item-desc">${project.desc}</p>
+          <img src="${project.images[0]}" alt="${project.title}">
+          <div class="project-grid-overlay">
+            <h3>${project.title}</h3>
+            <p>${project.client}</p>
           </div>
         `;
-
-        // Add click handler to open project detail modal
-        projectCard.addEventListener("click", (e) => {
-          e.stopPropagation(); // Prevent backdrop click
-          openProjectModal(project);
-        });
-
         projectsList.appendChild(projectCard);
 
         // Animate project cards
         gsap.fromTo(
           projectCard,
-          {
-            opacity: 0,
-            y: 30,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.5,
-            delay: index * 0.08,
-            ease: "power3.out",
-          },
+          { opacity: 0, y: 30, scale: 0.95 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.5, delay: index * 0.08, ease: "power3.out" }
         );
       });
 
@@ -591,206 +288,25 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.style.overflow = "hidden";
 
       // Animate modal
-      gsap.from(".category-modal-header", {
-        opacity: 0,
-        y: -20,
-        duration: 0.5,
-        ease: "power3.out",
-      });
+      gsap.from(".category-profile-header", { opacity: 0, y: -20, duration: 0.5, ease: "power3.out" });
     });
   });
 
-  // Open Project Detail Modal (Level 2) - Shows all sub-projects with their own galleries
-  function openProjectModal(project) {
-    try {
-      console.log("Opening project modal for:", project);
-
-      // Close category modal
-      categoryModal.classList.remove("active");
-
-      // Populate client header
-      document.getElementById("modalCategory").textContent = project.category;
-      document.getElementById("modalClientName").textContent = project.client;
-      document.getElementById("modalClientTagline").textContent = `${project.title} and more creative solutions`;
-
-      // Get all projects from the same client in this category
-      // Convert category name: "Graphics Design" -> "graphics", "Media Production" -> "media"
-      let categoryKey = project.category.toLowerCase().split(" ")[0];
-      console.log("Category key:", categoryKey);
-
-      const categoryData = projectDatabase[categoryKey];
-      if (!categoryData) {
-        console.error("Category not found:", categoryKey);
-        return;
-      }
-
-      const clientProjects = categoryData.projects.filter((p) => p.client === project.client);
-      console.log("Client projects found:", clientProjects.length);
-
-      // Populate projects grid with sub-projects
-      const projectsGrid = document.getElementById("modalProjectsGrid");
-      if (!projectsGrid) {
-        console.error("modalProjectsGrid not found");
-        return;
-      }
-      projectsGrid.innerHTML = "";
-
-      clientProjects.forEach((subProject, projectIndex) => {
-        const subProjectDiv = document.createElement("div");
-        subProjectDiv.className = "sub-project-item";
-
-        // Create gallery HTML
-        const galleryHTML = `
-        <div class="sub-project-gallery" data-project-index="${projectIndex}">
-          <div class="sub-gallery-main" id="subGalleryMain-${projectIndex}">
-            <img src="${subProject.images[0].src}" alt="${subProject.title}">
-          </div>
-          <div class="sub-gallery-thumbnails" id="subGalleryThumbs-${projectIndex}">
-            ${subProject.images
-              .map(
-                (img, imgIndex) => `
-              <div class="sub-gallery-thumb ${imgIndex === 0 ? "active" : ""}" data-image-index="${imgIndex}">
-                <img src="${img.src}" alt="${subProject.title} ${imgIndex + 1}">
-              </div>
-            `,
-              )
-              .join("")}
-          </div>
-        </div>
-      `;
-
-        subProjectDiv.innerHTML = `
-        <div class="sub-project-header">
-          <h3 class="sub-project-title">${subProject.title}</h3>
-          <div class="sub-project-meta">
-            <span><strong>Year:</strong> ${subProject.year}</span>
-            <span><strong>Services:</strong> ${subProject.services}</span>
-          </div>
-          <p class="sub-project-description">${subProject.desc}</p>
-        </div>
-        ${galleryHTML}
-      `;
-
-        projectsGrid.appendChild(subProjectDiv);
-
-        // Add thumbnail click handlers for this sub-project
-        const thumbnailsContainer = document.getElementById(`subGalleryThumbs-${projectIndex}`);
-        const mainImage = document.getElementById(`subGalleryMain-${projectIndex}`);
-
-        thumbnailsContainer.querySelectorAll(".sub-gallery-thumb").forEach((thumb) => {
-          thumb.addEventListener("click", () => {
-            const imageIndex = parseInt(thumb.dataset.imageIndex);
-            const imageData = subProject.images[imageIndex];
-
-            // Update main image
-            mainImage.querySelector("img").src = imageData.src;
-            mainImage.querySelector("img").alt = `${subProject.title} ${imageIndex + 1}`;
-
-            // Update active thumbnail
-            thumbnailsContainer.querySelectorAll(".sub-gallery-thumb").forEach((t) => t.classList.remove("active"));
-            thumb.classList.add("active");
-
-            // Animate image change
-            gsap.from(mainImage.querySelector("img"), {
-              opacity: 0,
-              scale: 1.05,
-              duration: 0.4,
-              ease: "power2.out",
-            });
-          });
-        });
-      });
-
-      // Open project modal
-      setTimeout(() => {
-        projectModal.classList.add("active");
-        document.body.style.overflow = "hidden";
-
-        // Animate modal content
-        gsap.from(".modal-client-header", {
-          opacity: 0,
-          y: -20,
-          duration: 0.5,
-          ease: "power3.out",
-        });
-
-        gsap.from(".sub-project-item", {
-          opacity: 0,
-          y: 30,
-          duration: 0.6,
-          stagger: 0.15,
-          ease: "power3.out",
-        });
-        gsap.from(".modal-info > *", {
-          opacity: 0,
-          y: 20,
-          duration: 0.5,
-          stagger: 0.08,
-          ease: "power3.out",
-          delay: 0.2,
-        });
-      }, 200);
-    } catch (error) {
-      console.error("Error opening project modal:", error);
-    }
-  }
-
-  // Back button - Return to category modal
-  modalBack.addEventListener("click", () => {
-    projectModal.classList.remove("active");
-    setTimeout(() => {
-      categoryModal.classList.add("active");
-    }, 200);
-  });
-
-  // Close modals
+  // Close Category Modal
   function closeCategoryModal() {
     categoryModal.classList.remove("active");
     document.body.style.overflow = "";
   }
 
-  function closeProjectModal() {
-    projectModal.classList.remove("active");
-    // Don't reset body overflow here - category modal might reopen
-  }
-
   categoryModalClose.addEventListener("click", closeCategoryModal);
   categoryModalBackdrop.addEventListener("click", closeCategoryModal);
 
-  modalClose.addEventListener("click", () => {
-    closeProjectModal();
-    closeCategoryModal();
-    document.body.style.overflow = "";
-  });
-
-  modalBackdrop.addEventListener("click", () => {
-    closeProjectModal();
-    closeCategoryModal();
-    document.body.style.overflow = "";
-  });
-
-  // Close on Escape key
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      if (projectModal.classList.contains("active")) {
-        closeProjectModal();
-      } else if (categoryModal.classList.contains("active")) {
-        closeCategoryModal();
-      }
+    if (e.key === "Escape" && categoryModal.classList.contains("active")) {
+      closeCategoryModal();
     }
   });
 
-  // Pricing button in project modal
-  const modalPricingBtn = document.getElementById("modalPricingBtn");
-  if (modalPricingBtn) {
-    modalPricingBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      closeProjectModal();
-      setTimeout(() => {
-        document.querySelector("#pricing").scrollIntoView({ behavior: "smooth" });
-      }, 300);
-    });
-  }
 
   // Portfolio Filter System
   const filterBtns = document.querySelectorAll(".filter-btn");

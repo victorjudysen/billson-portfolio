@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Project Details — BS Studio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
+    <link rel="manifest" href="./images/site.webmanifest" />
+
+    <script src="js/project-details.js" defer></script>
+</head>
+<body class="project-details-page">
+
+    <header class="site-header">
+        <nav class="nav container">
+            <a class="logo" href="index.html">
+                <img src="./images/logo_version_2.png" alt="BS Studio Logo" class="logo-image" />
+                <span class="logo-text">BS STUDIO</span>
+            </a>
+            <a href="index.html#services" class="nav-link nav-link-cta"><span>Back to Services</span></a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="project-header">
+            <h1 id="projectTitle">Project Name</h1>
+            <p id="projectDescription">A brief description of the project.</p>
+        </div>
+
+        <div class="project-gallery-grid" id="projectGalleryGrid">
+            <!-- Gallery items will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <p class="copyright">© <span id="year"></span> Billson — All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <p class="designer-credit">
+                    Designed by
+                    <a href="https://thisuncle.netlify.app/" target="_blank" rel="noopener noreferrer">ThisUncle Technologies</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+        <div id="lightboxCaption"></div>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
