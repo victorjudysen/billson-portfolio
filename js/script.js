@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Encode the project title to be URL-safe
         const encodedTitle = encodeURIComponent(project.title);
         const encodedClient = encodeURIComponent(project.client);
-        projectCard.href = `project-details.html?category=${category}&title=${encodedTitle}&client=${encodedClient}`;
+        projectCard.href = `pages/project-details.html?category=${category}&title=${encodedTitle}&client=${encodedClient}`;
         
         projectCard.innerHTML = `
           <img src="${project.images[0]}" alt="${project.title}">

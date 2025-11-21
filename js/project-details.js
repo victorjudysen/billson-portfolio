@@ -22,37 +22,37 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "Brand Identity System",
           description: "A comprehensive visual identity system that captures the essence of modern branding.",
-          images: ["./images/branding/branding-1.png", "./images/branding/branding-14.png", "./images/branding/branding-7.png", "./images/branding/branding-9.png"],
+          images: ["../images/branding/branding-1.png", "../images/branding/branding-14.png", "../images/branding/branding-7.png", "../images/branding/branding-9.png"],
         },
         {
           title: "Logo Design",
           description: "Crafted distinctive and memorable logos that perfectly represent brand values and mission.",
-          images: ["./images/branding/branding-3.png", "./images/branding/branding-4.png", "./images/branding/branding-11.png", "./images/branding/branding-13.png"],
+          images: ["../images/branding/branding-3.png", "../images/branding/branding-4.png", "../images/branding/branding-11.png", "../images/branding/branding-13.png"],
         },
         {
           title: "Packaging Design",
           description: "Eye-catching product packaging that stands out on shelves and creates lasting impressions.",
-          images: ["./images/branding/branding-4.png", "./images/print-design/print-design-1.png", "./images/print-design/print-design-3.png"],
+          images: ["../images/branding/branding-4.png", "../images/print-design/print-design-1.png", "../images/print-design/print-design-3.png"],
         },
         {
           title: "Corporate Branding",
           description: "Professional corporate identity that elevates business presence and builds trust with stakeholders.",
-          images: ["./images/branding/branding-7.png", "./images/branding/branding-6.png", "./images/print-design/print-design-2.png"],
+          images: ["../images/branding/branding-7.png", "../images/branding/branding-6.png", "../images/print-design/print-design-2.png"],
         },
         {
           title: "Visual Identity",
           description: "A cohesive visual identity system that tells a compelling brand story across all platforms.",
-          images: ["./images/branding/branding-9.png", "./images/branding/branding-10.png", "./images/branding/branding-12.png"],
+          images: ["../images/branding/branding-9.png", "../images/branding/branding-10.png", "../images/branding/branding-12.png"],
         },
         {
           title: "Brand Guidelines",
           description: "Comprehensive brand standards document that ensures consistent brand application across all media.",
-          images: ["./images/branding/branding-10.png", "./images/branding/branding-8.png", "./images/print-design/print-design-4.png"],
+          images: ["../images/branding/branding-10.png", "../images/branding/branding-8.png", "../images/print-design/print-design-4.png"],
         },
         {
           title: "Print Design",
           description: "Professional business stationery and print materials including business cards, letterheads, and brochures.",
-          images: ["./images/print-design/print-design-1.png", "./images/print-design/print-design-2.png", "./images/print-design/print-design-3.png", "./images/print-design/print-design-4.png"],
+          images: ["../images/print-design/print-design-1.png", "../images/print-design/print-design-2.png", "../images/print-design/print-design-3.png", "../images/print-design/print-design-4.png"],
         },
       ],
     },
@@ -62,22 +62,22 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "Instagram Campaign",
           description: "Strategic Instagram campaign featuring curated content, engaging stories, and interactive posts.",
-          images: ["./images/social-media-engagement/social-media-eng-1.png", "./images/social-media-engagement/social-media-eng-2.png", "./images/social-media-engagement/social-media-eng-3.png"],
+          images: ["../images/social-media-engagement/social-media-eng-1.png", "../images/social-media-engagement/social-media-eng-2.png", "../images/social-media-engagement/social-media-eng-3.png"],
         },
         {
           title: "Social Media Graphics",
           description: "Attention-grabbing social media graphics designed to stop the scroll and drive engagement.",
-          images: ["./images/social-media-engagement/social-media-eng-2.png", "./images/social-media-engagement/social-media-eng-1.png", "./images/branding/branding-3.png"],
+          images: ["../images/social-media-engagement/social-media-eng-2.png", "../images/social-media-engagement/social-media-eng-1.png", "../images/branding/branding-3.png"],
         },
         {
           title: "Content Strategy",
           description: "Comprehensive content strategy that aligns with business goals and audience needs.",
-          images: ["./images/social-media-engagement/social-media-eng-3.png", "./images/branding/branding-14.png"],
+          images: ["../images/social-media-engagement/social-media-eng-3.png", "../images/branding/branding-14.png"],
         },
         {
           title: "Ad Campaign",
           description: "Multi-platform advertising campaign that delivered exceptional ROI.",
-          images: ["./images/branding/branding-13.png", "./images/social-media-engagement/social-media-eng-1.png"],
+          images: ["../images/branding/branding-13.png", "../images/social-media-engagement/social-media-eng-1.png"],
         },
       ],
     },
@@ -87,22 +87,22 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "Product Photography",
           description: "High-quality product photography that showcases details and creates desire.",
-          images: ["./images/branding/branding-1.png", "./images/branding/branding-4.png", "./images/print-design/print-design-1.png"],
+          images: ["../images/branding/branding-1.png", "../images/branding/branding-4.png", "../images/print-design/print-design-1.png"],
         },
         {
           title: "Corporate Documentary",
           description: "Compelling documentary-style video that tells the authentic story of the brand.",
-          images: ["./images/branding/branding-7.png", "./images/branding/branding-14.png"],
+          images: ["../images/branding/branding-7.png", "../images/branding/branding-14.png"],
         },
         {
           title: "Event Coverage",
           description: "Professional photography and videography services for corporate events, conferences, and product launches.",
-          images: ["./images/branding/branding-9.png", "./images/branding/branding-10.png"],
+          images: ["../images/branding/branding-9.png", "../images/branding/branding-10.png"],
         },
         {
           title: "Promotional Video",
           description: "Cinematic brand films that captivate audiences and drive action.",
-          images: ["./images/branding/branding-3.png", "./images/social-media-engagement/social-media-eng-1.png"],
+          images: ["../images/branding/branding-3.png", "../images/social-media-engagement/social-media-eng-1.png"],
         },
       ],
     },
@@ -189,6 +189,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function handleError(message) {
     console.error(message);
     const galleryGrid = document.getElementById("projectGalleryGrid");
-    galleryGrid.innerHTML = `<p class="error-message">Could not load project. Please <a href="index.html#services">return to the portfolio</a>.</p>`;
+    galleryGrid.innerHTML = `<p class="error-message">Could not load project. Please <a href="../index.html#services">return to the portfolio</a>.</p>`;
   }
 });
