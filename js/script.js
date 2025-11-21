@@ -52,7 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .from(".intro-line", { y: 40, opacity: 0, duration: 0.8, ease: "power3.out" })
     .from(".tagline", { y: 28, opacity: 0, duration: 0.7, ease: "power3.out" }, "-=0.45")
     .from(".lead", { y: 18, opacity: 0, duration: 0.7, ease: "power3.out" }, "-=0.45")
-    .from(".cta", { scale: 0.95, opacity: 0, duration: 0.6, ease: "back.out(1.4)" }, "-=0.35");
+    .fromTo(".cta", 
+      { opacity: 0, scale: 0.95 }, 
+      { opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.4)", clearProps: "all" }, 
+      "-=0.35"
+    );
 
   // Hero background subtle parallax
   gsap.to(".hero-bg", {
