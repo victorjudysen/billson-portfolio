@@ -216,9 +216,11 @@ h6 {
 }
 
 .site-header.solid {
-  background: #0a0a0a;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .site-header.solid .nav {
   padding: 1.25rem 2rem;
@@ -335,9 +337,10 @@ h6 {
   align-items: center;
   gap: 0.5rem;
   padding: 0.45rem 1rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 0;
   font-size: 0.8rem;
   font-weight: 600;
@@ -563,11 +566,20 @@ h6 {
   font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  padding: 0.8rem 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
 }
 .scroll-indicator:hover {
   opacity: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateX(-50%) translateY(-4px);
 }
 .scroll-indicator svg {
   color: var(--accent);
@@ -615,11 +627,12 @@ h6 {
   margin-top: 2rem;
 }
 .stat-item {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 1.75rem 1.25rem;
   border-radius: 0;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -908,9 +921,10 @@ h6 {
   align-items: center;
   gap: 0.65rem;
   padding: 0.75rem 1.25rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   color: var(--text);
   font-size: 0.85rem;
@@ -920,8 +934,8 @@ h6 {
   font-family: "Montserrat", sans-serif;
 }
 .filter-btn:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 .filter-btn.active {
   background: var(--accent);
@@ -1091,11 +1105,12 @@ h6 {
   margin: 0 auto;
 }
 .testimonial-card {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 2rem;
   border-radius: 0;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: none;
   position: relative;
   transition: border-color 0.3s ease;
@@ -1207,11 +1222,12 @@ h6 {
   gap: 1.5rem;
 }
 .stat-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-  backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 2rem 1.5rem;
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
@@ -1258,8 +1274,10 @@ h6 {
   margin: 0 auto;
 }
 .pricing-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0;
   padding: 2.5rem 2rem;
   position: relative;
@@ -1423,11 +1441,12 @@ h6 {
   gap: 1.25rem;
 }
 .contact-card {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 1.5rem;
   border-radius: 0;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   gap: 1.25rem;
@@ -1510,11 +1529,12 @@ h6 {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.03);
   padding: 2.5rem;
   border-radius: 0;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: none;
   position: relative;
 }
@@ -1666,21 +1686,24 @@ h6 {
   right: 2rem;
   width: 48px;
   height: 48px;
-  border-radius: 0;
-  background: var(--accent);
-  border: 0;
-  color: #fff;
+  border-radius: 50%;
+  background: rgba(0, 85, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 85, 255, 0.4);
+  color: var(--accent);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
   transition:
     opacity 0.4s ease,
     visibility 0.4s ease,
-    background 0.3s ease;
+    background 0.3s ease,
+    transform 0.3s ease;
   z-index: 50;
 }
 .back-to-top.visible {
@@ -1688,7 +1711,9 @@ h6 {
   visibility: visible;
 }
 .back-to-top:hover {
-  background: #0020d4;
+  background: rgba(0, 85, 255, 0.4);
+  transform: translateY(-4px);
+  color: #fff;
 }
 .back-to-top:active {
   transform: scale(0.95);
@@ -1755,7 +1780,9 @@ h6 {
 .category-modal-content {
   position: relative;
   z-index: 1;
-  background: rgba(10, 10, 10, 0.98);
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   max-width: 1200px;
   width: 90%;
@@ -1891,7 +1918,9 @@ h6 {
   gap: 0.6rem;
   padding: 0.75rem 1.25rem;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   color: var(--text);
   font-size: 0.9rem;
