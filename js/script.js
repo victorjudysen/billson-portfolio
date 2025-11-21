@@ -412,7 +412,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const backToTop = document.querySelector(".back-to-top");
 
   function toggleBackToTop() {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 100) {
       backToTop.classList.add("visible");
     } else {
       backToTop.classList.remove("visible");
