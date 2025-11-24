@@ -150,99 +150,99 @@ document.addEventListener("DOMContentLoaded", () => {
     graphics: {
       title: "Graphics Design",
       description: "Creative visual solutions for modern brands.",
-      profileImage: "./images/branding/branding-1.png",
+      profileImage: "https://picsum.photos/200/200?random=1",
       clientCount: 8,
       projects: [
         {
           title: "Brand Identity System",
           client: "ThisUncle Tech",
-          images: ["./images/branding/branding-1.png", "./images/branding/branding-14.png", "./images/branding/branding-7.png", "./images/branding/branding-9.png"],
+          images: ["https://picsum.photos/800/600?random=2", "https://picsum.photos/800/600?random=3", "https://picsum.photos/800/600?random=4", "https://picsum.photos/800/600?random=5"],
         },
         {
           title: "Logo Design",
           client: "RK Studios",
-          images: ["./images/branding/branding-3.png", "./images/branding/branding-4.png", "./images/branding/branding-11.png", "./images/branding/branding-13.png"],
+          images: ["https://picsum.photos/800/600?random=6", "https://picsum.photos/800/600?random=7", "https://picsum.photos/800/600?random=8", "https://picsum.photos/800/600?random=9"],
         },
         {
           title: "Packaging Design",
           client: "Apex Brands",
-          images: ["./images/branding/branding-4.png", "./images/print-design/print-design-1.png", "./images/print-design/print-design-3.png"],
+          images: ["https://picsum.photos/800/600?random=10", "https://picsum.photos/800/600?random=11", "https://picsum.photos/800/600?random=12"],
         },
         {
           title: "Corporate Branding",
           client: "Zenith Finance",
-          images: ["./images/branding/branding-7.png", "./images/branding/branding-6.png", "./images/print-design/print-design-2.png"],
+          images: ["https://picsum.photos/800/600?random=13", "https://picsum.photos/800/600?random=14", "https://picsum.photos/800/600?random=15"],
         },
         {
           title: "Visual Identity",
           client: "Nova Creative",
-          images: ["./images/branding/branding-9.png", "./images/branding/branding-10.png", "./images/branding/branding-12.png"],
+          images: ["https://picsum.photos/800/600?random=16", "https://picsum.photos/800/600?random=17", "https://picsum.photos/800/600?random=18"],
         },
         {
           title: "Brand Guidelines",
           client: "Momentum Corp",
-          images: ["./images/branding/branding-10.png", "./images/branding/branding-8.png", "./images/print-design/print-design-4.png"],
+          images: ["https://picsum.photos/800/600?random=19", "https://picsum.photos/800/600?random=20", "https://picsum.photos/800/600?random=21"],
         },
         {
           title: "Print Design",
           client: "Summit Media",
-          images: ["./images/print-design/print-design-1.png", "./images/print-design/print-design-2.png", "./images/print-design/print-design-3.png", "./images/print-design/print-design-4.png"],
+          images: ["https://picsum.photos/800/600?random=22", "https://picsum.photos/800/600?random=23", "https://picsum.photos/800/600?random=24", "https://picsum.photos/800/600?random=25"],
         },
       ],
     },
     marketing: {
       title: "Digital Marketing",
       description: "Strategic campaigns that drive engagement and growth.",
-      profileImage: "./images/social-media-engagement/social-media-eng-1.png",
+      profileImage: "https://picsum.photos/200/200?random=26",
       clientCount: 4,
       projects: [
         {
           title: "Instagram Campaign",
           client: "Vibe Commerce",
-          images: ["./images/social-media-engagement/social-media-eng-1.png", "./images/social-media-engagement/social-media-eng-2.png", "./images/social-media-engagement/social-media-eng-3.png"],
+          images: ["https://picsum.photos/800/600?random=27", "https://picsum.photos/800/600?random=28", "https://picsum.photos/800/600?random=29"],
         },
         {
           title: "Social Media Graphics",
           client: "Pulse Startup",
-          images: ["./images/social-media-engagement/social-media-eng-2.png", "./images/social-media-engagement/social-media-eng-1.png", "./images/branding/branding-3.png"],
+          images: ["https://picsum.photos/800/600?random=30", "https://picsum.photos/800/600?random=31", "https://picsum.photos/800/600?random=32"],
         },
         {
           title: "Content Strategy",
           client: "TechFlow B2B",
-          images: ["./images/social-media-engagement/social-media-eng-3.png", "./images/branding/branding-14.png"],
+          images: ["https://picsum.photos/800/600?random=33", "https://picsum.photos/800/600?random=34"],
         },
         {
           title: "Ad Campaign",
           client: "Metro Retail",
-          images: ["./images/branding/branding-13.png", "./images/social-media-engagement/social-media-eng-1.png"],
+          images: ["https://picsum.photos/800/600?random=35", "https://picsum.photos/800/600?random=36"],
         },
       ],
     },
     media: {
       title: "Media Production",
       description: "Captivating visual storytelling through photography and video.",
-      profileImage: "./images/branding/branding-9.png",
+      profileImage: "https://picsum.photos/200/200?random=37",
       clientCount: 4,
       projects: [
         {
           title: "Product Photography",
           client: "Luxe Goods",
-          images: ["./images/branding/branding-1.png", "./images/branding/branding-4.png", "./images/print-design/print-design-1.png"],
+          images: ["https://picsum.photos/800/600?random=38", "https://picsum.photos/800/600?random=39", "https://picsum.photos/800/600?random=40"],
         },
         {
           title: "Corporate Documentary",
           client: "Pinnacle Enterprise",
-          images: ["./images/branding/branding-7.png", "./images/branding/branding-14.png"],
+          images: ["https://picsum.photos/800/600?random=41", "https://picsum.photos/800/600?random=42"],
         },
         {
           title: "Event Coverage",
           client: "Catalyst Events",
-          images: ["./images/branding/branding-9.png", "./images/branding/branding-10.png"],
+          images: ["https://picsum.photos/800/600?random=43", "https://picsum.photos/800/600?random=44"],
         },
         {
           title: "Promotional Video",
           client: "Spark Innovations",
-          images: ["./images/branding/branding-3.png", "./images/social-media-engagement/social-media-eng-1.png"],
+          images: ["https://picsum.photos/800/600?random=45", "https://picsum.photos/800/600?random=46"],
         },
       ],
     },
@@ -437,15 +437,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Hero image alternating rotation
   const imagePool = [
-    "./images/branding/branding-14.png",
-    "./images/branding/branding-7.png",
-    "./images/branding/branding-1.png",
-    "./images/branding/branding-4.png",
-    "./images/branding/branding-9.png",
-    "./images/print-design/print-design-1.png",
-    "./images/social-media-engagement/social-media-eng-1.png",
-    "./images/social-media-engagement/social-media-eng-2.png",
-    "./images/branding/branding-3.png",
+    "https://picsum.photos/800/600?random=47",
+    "https://picsum.photos/800/600?random=48",
+    "https://picsum.photos/800/600?random=49",
+    "https://picsum.photos/800/600?random=50",
+    "https://picsum.photos/800/600?random=51",
+    "https://picsum.photos/800/600?random=52",
+    "https://picsum.photos/800/600?random=53",
+    "https://picsum.photos/800/600?random=54",
+    "https://picsum.photos/800/600?random=55",
   ];
 
   const showcaseFrames = [
