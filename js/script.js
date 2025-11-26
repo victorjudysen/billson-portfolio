@@ -150,99 +150,99 @@ document.addEventListener("DOMContentLoaded", () => {
     graphics: {
       title: "Graphics Design",
       description: "Creative visual solutions for modern brands.",
-      profileImage: "https://picsum.photos/200/200?random=1",
+      profileImage: "https://picsum.photos/seed/graphics_profile/200/200",
       clientCount: 8,
       projects: [
         {
           title: "Brand Identity System",
           client: "ThisUncle Tech",
-          images: ["https://picsum.photos/400/300?random=2", "https://picsum.photos/400/300?random=3", "https://picsum.photos/400/300?random=4", "https://picsum.photos/400/300?random=5"],
+          images: ["https://picsum.photos/seed/graphics_p1_1/400/300", "https://picsum.photos/seed/graphics_p1_2/400/300", "https://picsum.photos/seed/graphics_p1_3/400/300", "https://picsum.photos/seed/graphics_p1_4/400/300"],
         },
         {
           title: "Logo Design",
           client: "RK Studios",
-          images: ["https://picsum.photos/400/300?random=6", "https://picsum.photos/400/300?random=7", "https://picsum.photos/400/300?random=8", "https://picsum.photos/400/300?random=9"],
+          images: ["https://picsum.photos/seed/graphics_p2_1/400/300", "https://picsum.photos/seed/graphics_p2_2/400/300", "https://picsum.photos/seed/graphics_p2_3/400/300", "https://picsum.photos/seed/graphics_p2_4/400/300"],
         },
         {
           title: "Packaging Design",
           client: "Apex Brands",
-          images: ["https://picsum.photos/400/300?random=10", "https://picsum.photos/400/300?random=11", "https://picsum.photos/400/300?random=12"],
+          images: ["https://picsum.photos/seed/graphics_p3_1/400/300", "https://picsum.photos/seed/graphics_p3_2/400/300", "https://picsum.photos/seed/graphics_p3_3/400/300"],
         },
         {
           title: "Corporate Branding",
           client: "Zenith Finance",
-          images: ["https://picsum.photos/400/300?random=13", "https://picsum.photos/400/300?random=14", "https://picsum.photos/400/300?random=15"],
+          images: ["https://picsum.photos/seed/graphics_p4_1/400/300", "https://picsum.photos/seed/graphics_p4_2/400/300", "https://picsum.photos/seed/graphics_p4_3/400/300"],
         },
         {
           title: "Visual Identity",
           client: "Nova Creative",
-          images: ["https://picsum.photos/400/300?random=16", "https://picsum.photos/400/300?random=17", "https://picsum.photos/400/300?random=18"],
+          images: ["https://picsum.photos/seed/graphics_p5_1/400/300", "https://picsum.photos/seed/graphics_p5_2/400/300", "https://picsum.photos/seed/graphics_p5_3/400/300"],
         },
         {
           title: "Brand Guidelines",
           client: "Momentum Corp",
-          images: ["https://picsum.photos/400/300?random=19", "https://picsum.photos/400/300?random=20", "https://picsum.photos/400/300?random=21"],
+          images: ["https://picsum.photos/seed/graphics_p6_1/400/300", "https://picsum.photos/seed/graphics_p6_2/400/300", "https://picsum.photos/seed/graphics_p6_3/400/300"],
         },
         {
           title: "Print Design",
           client: "Summit Media",
-          images: ["https://picsum.photos/400/300?random=22", "https://picsum.photos/400/300?random=23", "https://picsum.photos/400/300?random=24", "https://picsum.photos/400/300?random=25"],
+          images: ["https://picsum.photos/seed/graphics_p7_1/400/300", "https://picsum.photos/seed/graphics_p7_2/400/300", "https://picsum.photos/seed/graphics_p7_3/400/300", "https://picsum.photos/seed/graphics_p7_4/400/300"],
         },
       ],
     },
     marketing: {
       title: "Digital Marketing",
       description: "Strategic campaigns that drive engagement and growth.",
-      profileImage: "https://picsum.photos/200/200?random=26",
+      profileImage: "https://picsum.photos/seed/marketing_profile/200/200",
       clientCount: 4,
       projects: [
         {
           title: "Instagram Campaign",
           client: "Vibe Commerce",
-          images: ["https://picsum.photos/400/300?random=27", "https://picsum.photos/400/300?random=28", "https://picsum.photos/400/300?random=29"],
+          images: ["https://picsum.photos/seed/marketing_p1_1/400/300", "https://picsum.photos/seed/marketing_p1_2/400/300", "https://picsum.photos/seed/marketing_p1_3/400/300"],
         },
         {
           title: "Social Media Graphics",
           client: "Pulse Startup",
-          images: ["https://picsum.photos/400/300?random=30", "https://picsum.photos/400/300?random=31", "https://picsum.photos/400/300?random=32"],
+          images: ["https://picsum.photos/seed/marketing_p2_1/400/300", "https://picsum.photos/seed/marketing_p2_2/400/300", "https://picsum.photos/seed/marketing_p2_3/400/300"],
         },
         {
           title: "Content Strategy",
           client: "TechFlow B2B",
-          images: ["https://picsum.photos/400/300?random=33", "https://picsum.photos/400/300?random=34"],
+          images: ["https://picsum.photos/seed/marketing_p3_1/400/300", "https://picsum.photos/seed/marketing_p3_2/400/300"],
         },
         {
           title: "Ad Campaign",
           client: "Metro Retail",
-          images: ["https://picsum.photos/400/300?random=35", "https://picsum.photos/400/300?random=36"],
+          images: ["https://picsum.photos/seed/marketing_p4_1/400/300", "https://picsum.photos/seed/marketing_p4_2/400/300"],
         },
       ],
     },
     media: {
       title: "Media Production",
       description: "Captivating visual storytelling through photography and video.",
-      profileImage: "https://picsum.photos/200/200?random=37",
+      profileImage: "https://picsum.photos/seed/media_profile/200/200",
       clientCount: 4,
       projects: [
         {
           title: "Product Photography",
           client: "Luxe Goods",
-          images: ["https://picsum.photos/400/300?random=38", "https://picsum.photos/400/300?random=39", "https://picsum.photos/400/300?random=40"],
+          images: ["https://picsum.photos/seed/media_p1_1/400/300", "https://picsum.photos/seed/media_p1_2/400/300", "https://picsum.photos/seed/media_p1_3/400/300"],
         },
         {
           title: "Corporate Documentary",
           client: "Pinnacle Enterprise",
-          images: ["https://picsum.photos/400/300?random=41", "https://picsum.photos/400/300?random=42"],
+          images: ["https://picsum.photos/seed/media_p2_1/400/300", "https://picsum.photos/seed/media_p2_2/400/300"],
         },
         {
           title: "Event Coverage",
           client: "Catalyst Events",
-          images: ["https://picsum.photos/400/300?random=43", "https://picsum.photos/400/300?random=44"],
+          images: ["https://picsum.photos/seed/media_p3_1/400/300", "https://picsum.photos/seed/media_p3_2/400/300"],
         },
         {
           title: "Promotional Video",
           client: "Spark Innovations",
-          images: ["https://picsum.photos/400/300?random=45", "https://picsum.photos/400/300?random=46"],
+          images: ["https://picsum.photos/seed/media_p4_1/400/300", "https://picsum.photos/seed/media_p4_2/400/300"],
         },
       ],
     },
@@ -437,15 +437,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Hero image alternating rotation
   const imagePool = [
-    "https://picsum.photos/400/300?random=47",
-    "https://picsum.photos/400/300?random=48",
-    "https://picsum.photos/400/300?random=49",
-    "https://picsum.photos/400/300?random=50",
-    "https://picsum.photos/400/300?random=51",
-    "https://picsum.photos/400/300?random=52",
-    "https://picsum.photos/400/300?random=53",
-    "https://picsum.photos/400/300?random=54",
-    "https://picsum.photos/400/300?random=55",
+    "https://picsum.photos/seed/hero_rot1/400/300",
+    "https://picsum.photos/seed/hero_rot2/400/300",
+    "https://picsum.photos/seed/hero_rot3/400/300",
+    "https://picsum.photos/seed/hero_rot4/400/300",
+    "https://picsum.photos/seed/hero_rot5/400/300",
+    "https://picsum.photos/seed/hero_rot6/400/300",
+    "https://picsum.photos/seed/hero_rot7/400/300",
+    "https://picsum.photos/seed/hero_rot8/400/300",
+    "https://picsum.photos/seed/hero_rot9/400/300",
   ];
 
   const showcaseFrames = [
