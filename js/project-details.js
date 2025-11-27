@@ -22,37 +22,37 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "Brand Identity System",
           description: "A comprehensive visual identity system that captures the essence of modern branding.",
-          images: ["https://picsum.photos/400/300?random=2", "https://picsum.photos/400/300?random=3", "https://picsum.photos/400/300?random=4", "https://picsum.photos/400/300?random=5"],
+          images: ["https://loremflickr.com/400/300/architecture,minimal?random=110", "https://loremflickr.com/400/300/architecture,minimal?random=111", "https://loremflickr.com/400/300/architecture,minimal?random=112", "https://loremflickr.com/400/300/architecture,minimal?random=113"],
         },
         {
           title: "Logo Design",
           description: "Crafted distinctive and memorable logos that perfectly represent brand values and mission.",
-          images: ["https://picsum.photos/400/300?random=6", "https://picsum.photos/400/300?random=7", "https://picsum.photos/400/300?random=8", "https://picsum.photos/400/300?random=9"],
+          images: ["https://loremflickr.com/400/300/architecture,minimal?random=114", "https://loremflickr.com/400/300/architecture,minimal?random=115", "https://loremflickr.com/400/300/architecture,minimal?random=116", "https://loremflickr.com/400/300/architecture,minimal?random=117"],
         },
         {
           title: "Packaging Design",
           description: "Eye-catching product packaging that stands out on shelves and creates lasting impressions.",
-          images: ["https://picsum.photos/400/300?random=10", "https://picsum.photos/400/300?random=11", "https://picsum.photos/400/300?random=12"],
+          images: ["https://loremflickr.com/400/300/architecture,minimal?random=118", "https://loremflickr.com/400/300/architecture,minimal?random=119", "https://loremflickr.com/400/300/architecture,minimal?random=120"],
         },
         {
           title: "Corporate Branding",
           description: "Professional corporate identity that elevates business presence and builds trust with stakeholders.",
-          images: ["https://picsum.photos/400/300?random=13", "https://picsum.photos/400/300?random=14", "https://picsum.photos/400/300?random=15"],
+          images: ["https://loremflickr.com/400/300/architecture,minimal?random=121", "https://loremflickr.com/400/300/architecture,minimal?random=122", "https://loremflickr.com/400/300/architecture,minimal?random=123"],
         },
         {
           title: "Visual Identity",
           description: "A cohesive visual identity system that tells a compelling brand story across all platforms.",
-          images: ["https://picsum.photos/400/300?random=16", "https://picsum.photos/400/300?random=17", "https://picsum.photos/400/300?random=18"],
+          images: ["https://loremflickr.com/400/300/architecture,minimal?random=124", "https://loremflickr.com/400/300/architecture,minimal?random=125", "https://loremflickr.com/400/300/architecture,minimal?random=126"],
         },
         {
           title: "Brand Guidelines",
           description: "Comprehensive brand standards document that ensures consistent brand application across all media.",
-          images: ["https://picsum.photos/400/300?random=19", "https://picsum.photos/400/300?random=20", "https://picsum.photos/400/300?random=21"],
+          images: ["https://loremflickr.com/400/300/architecture,minimal?random=127", "https://loremflickr.com/400/300/architecture,minimal?random=128", "https://loremflickr.com/400/300/architecture,minimal?random=129"],
         },
         {
           title: "Print Design",
           description: "Professional business stationery and print materials including business cards, letterheads, and brochures.",
-          images: ["https://picsum.photos/400/300?random=22", "https://picsum.photos/400/300?random=23", "https://picsum.photos/400/300?random=24", "https://picsum.photos/400/300?random=25"],
+          images: ["https://loremflickr.com/400/300/architecture,minimal?random=130", "https://loremflickr.com/400/300/architecture,minimal?random=131", "https://loremflickr.com/400/300/architecture,minimal?random=132", "https://loremflickr.com/400/300/architecture,minimal?random=133"],
         },
       ],
     },
@@ -62,22 +62,22 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "Instagram Campaign",
           description: "Strategic Instagram campaign featuring curated content, engaging stories, and interactive posts.",
-          images: ["https://picsum.photos/400/300?random=27", "https://picsum.photos/400/300?random=28", "https://picsum.photos/400/300?random=29"],
+          images: ["https://loremflickr.com/400/300/street,urban?random=134", "https://loremflickr.com/400/300/street,urban?random=135", "https://loremflickr.com/400/300/street,urban?random=136"],
         },
         {
           title: "Social Media Graphics",
           description: "Attention-grabbing social media graphics designed to stop the scroll and drive engagement.",
-          images: ["https://picsum.photos/400/300?random=30", "https://picsum.photos/400/300?random=31", "https://picsum.photos/400/300?random=32"],
+          images: ["https://loremflickr.com/400/300/street,urban?random=137", "https://loremflickr.com/400/300/street,urban?random=138", "https://loremflickr.com/400/300/street,urban?random=139"],
         },
         {
           title: "Content Strategy",
           description: "Comprehensive content strategy that aligns with business goals and audience needs.",
-          images: ["https://picsum.photos/400/300?random=33", "https://picsum.photos/400/300?random=34"],
+          images: ["https://loremflickr.com/400/300/street,urban?random=140", "https://loremflickr.com/400/300/street,urban?random=141"],
         },
         {
           title: "Ad Campaign",
           description: "Multi-platform advertising campaign that delivered exceptional ROI.",
-          images: ["https://picsum.photos/400/300?random=35", "https://picsum.photos/400/300?random=36"],
+          images: ["https://loremflickr.com/400/300/street,urban?random=142", "https://loremflickr.com/400/300/street,urban?random=143"],
         },
       ],
     },
@@ -87,17 +87,17 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "Product Photography",
           description: "High-quality product photography that showcases details and creates desire.",
-          images: ["https://picsum.photos/400/300?random=37", "https://picsum.photos/400/300?random=38", "https://picsum.photos/400/300?random=39", "https://picsum.photos/400/300?random=40"],
+          images: ["https://loremflickr.com/400/300/concert,event?random=144", "https://loremflickr.com/400/300/concert,event?random=145", "https://loremflickr.com/400/300/concert,event?random=146", "https://loremflickr.com/400/300/concert,event?random=147"],
         },
         {
           title: "Corporate Documentary",
           description: "Compelling documentary-style video that tells the authentic story of the brand.",
-          images: ["https://picsum.photos/400/300?random=41", "https://picsum.photos/400/300?random=42"],
+          images: ["https://loremflickr.com/400/300/concert,event?random=148", "https://loremflickr.com/400/300/concert,event?random=149"],
         },
         {
           title: "Event Coverage",
           description: "Professional photography and videography services for corporate events, conferences, and product launches.",
-          images: ["https://picsum.photos/400/300?random=43", "https://picsum.photos/400/300?random=44"],
+          images: ["https://loremflickr.com/400/300/concert,event?random=150", "https://loremflickr.com/400/300/concert,event?random=151"],
         },
         {
           title: "Promotional Video",
