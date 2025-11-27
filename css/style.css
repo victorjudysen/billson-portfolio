@@ -284,7 +284,7 @@ h6 {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("https://picsum.photos/seed/hero_bg/1920/1080");
+  background-image: url("https://loremflickr.com/1920/1080/landscape,nature?random=1");
   background-size: cover;
   background-position: center center;
   transform-origin: center center;
@@ -300,6 +300,56 @@ h6 {
     rgba(0, 40, 244, 0.15) 100%
   );
   mix-blend-mode: multiply;
+}
+
+/* Section Backgrounds */
+.about,
+.portfolio,
+.pricing,
+.testimonials,
+.contact {
+  position: relative;
+}
+
+.about-bg,
+.services-bg,
+.pricing-bg,
+.testimonials-bg,
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.about-bg {
+  background-image: url("https://loremflickr.com/1920/1080/camera,lens?random=2");
+  background-size: cover;
+  background-position: center;
+}
+
+.services-bg {
+  background-image: url("https://loremflickr.com/1920/1080/studio,photography?random=3");
+  background-size: cover;
+  background-position: center;
+}
+
+.pricing-bg {
+  background-image: url("https://loremflickr.com/1920/1080/office,creative?random=4");
+  background-size: cover;
+  background-position: center;
+}
+
+.testimonials-bg {
+  background-image: url("https://loremflickr.com/1920/1080/people,meeting?random=5");
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-bg {
+  background-image: url("https://loremflickr.com/1920/1080/phone,typing?random=6");
+  background-size: cover;
+  background-position: center;
 }
 .hero-particles {
   position: absolute;
