@@ -411,10 +411,11 @@ h6 {
   display: inline-block;
 }
 .tagline {
-  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  font-size: clamp(0.6rem, 1.3vw, 0.9rem);
   margin: 0 0 1.25rem 0;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
 }
 .typing-text {
   color: var(--accent);
