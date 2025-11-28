@@ -770,47 +770,25 @@ h6 {
 }
 .about-right {
   position: relative;
+  padding: 2rem; /* Add padding for the offset effect */
 }
 .about-image-wrapper {
   position: relative;
   border-radius: 0;
-  overflow: hidden;
-  box-shadow: none;
-  transition: transform 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: none;
   height: 100%;
+  z-index: 2;
 }
 .about-image-wrapper::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  width: 50px;
-  height: 50px;
-  border-top: 2px solid var(--accent);
-  border-left: 2px solid var(--accent);
-  z-index: 2;
-  transition: all 0.3s ease;
+  display: none; /* Remove old corner borders */
 }
 .about-image-wrapper::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  right: -1px;
-  width: 50px;
-  height: 50px;
-  border-bottom: 2px solid var(--accent);
-  border-right: 2px solid var(--accent);
-  z-index: 2;
-  transition: all 0.3s ease;
+  display: none; /* Remove old corner borders */
 }
 .about-image-wrapper:hover {
-  transform: translateY(-5px);
-}
-.about-image-wrapper:hover::before,
-.about-image-wrapper:hover::after {
-  width: 80px;
-  height: 80px;
+  transform: translate(-10px, -10px);
 }
 .about-image-wrapper img {
   width: 100%;
@@ -818,13 +796,25 @@ h6 {
   object-fit: cover;
   display: block;
   border-radius: 0;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
+  filter: grayscale(100%); /* Start grayscale */
 }
 .about-image-wrapper:hover img {
-  transform: scale(1.03);
+  transform: scale(1.05);
+  filter: grayscale(0%); /* Color on hover */
 }
 .image-decoration {
-  display: none;
+  display: block;
+  position: absolute;
+  inset: 2rem 0 0 2rem; /* Offset from the main image position */
+  border: 2px solid var(--accent);
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.about-right:hover .image-decoration {
+  inset: 3rem -1rem -1rem 3rem; /* Expand offset on hover */
+  border-width: 4px;
+  opacity: 0.6;
 }
 @keyframes rotate {
   0% {
