@@ -416,7 +416,8 @@ h6 {
   margin: 0 0 1.25rem 0;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.85);
-  white-space: nowrap;
+  white-space: normal; /* Allow text to wrap */
+  line-height: 1.6;
 }
 .typing-text {
   color: var(--accent);
