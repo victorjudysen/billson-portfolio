@@ -2446,6 +2446,17 @@ h6 {
   .hero-stat span {
     font-size: 0.7rem;
   }
+
+  /* Hide scroll indicator on mobile */
+  .scroll-indicator {
+    display: none;
+  }
+
+  /* Center contact links on mobile */
+  .hero-contact-mini {
+    justify-content: center;
+    width: 100%;
+  }
   
   /* About */
   .stats-grid {
