@@ -2278,7 +2278,127 @@ h6 {
   font-weight: 500;
 }
 
+/* RESPONSIVE STYLES */
+
+/* Tablet & Small Desktop */
+@media (max-width: 992px) {
+  :root {
+    --container: 90%;
+  }
+  
+  /* Hero */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+    padding-top: 6rem;
+  }
+  .hero-text {
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-stats {
+    justify-content: center;
+    width: 100%;
+  }
+  .hero-showcase {
+    max-height: 50vh;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* About */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .about-image-wrapper {
+    height: 400px;
+  }
+  
+  /* Services */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Contact */
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
+  /* Nav */
+  .nav-links {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-link-cta {
+    display: none;
+  }
+  
+  /* Hero */
+  .intro-line {
+    font-size: 2.2rem;
+  }
+  .hero-showcase {
+    display: none; /* Hide complex 3D showcase on mobile for performance and space */
+  }
+  .hero-inner {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+  }
+  
+  /* About */
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-image-wrapper {
+    height: 300px;
+  }
+  
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Portfolio */
+  .portfolio-filters {
+    gap: 0.5rem;
+  }
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Contact */
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  /* Footer */
+  .footer-inner {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  .footer-links {
+    justify-content: center;
+  }
+  
+  /* Project Details Page */
   .category-profile-header {
     flex-direction: column;
     text-align: center;
@@ -2306,5 +2426,11 @@ h6 {
   }
   .project-gallery-grid {
     grid-template-columns: 1fr;
+  }
+  
+  /* Gallery Grid Mobile Adjustments */
+  .gallery-item:nth-child(n) {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
   }
 }
