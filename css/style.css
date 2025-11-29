@@ -2500,6 +2500,15 @@ h6 {
   }
   
   /* Portfolio */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center;
+  }
+  .port-item {
+    width: 100%;
+  }
   .portfolio-filters {
     gap: 0.5rem;
   }
