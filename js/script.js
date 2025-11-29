@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach((section) => {
     // Exclude portfolio items and testimonial cards from generic animation
     // They have their own specific animations
-    const elems = section.querySelectorAll("h3, h4, p, .service-card, .contact-form, .about-right img");
+    const elems = section.querySelectorAll("h3, h4, p, .service-card, .contact-form");
     if (elems.length > 0) {
       gsap.from(elems, {
         scrollTrigger: { trigger: section, start: "top 80%", once: true },
